@@ -1,9 +1,7 @@
 /**
  * Created by wangfei on 17/8/28.
  */
-/**
- * Created by wangfei on 17/8/28.
- */
+
 import React, { Component } from 'react';
 import {
     AppRegistry,
@@ -23,21 +21,27 @@ export default class UserCenter extends Component {
         this.state = {result: "结果"};
     }
     qqauth(){
-        ShareUtile.auth(0,(code,message) =>{
+        ShareUtile.auth(0,(code,result,message) =>{
             this.setState({result:message});
-
+            if (code == 0){
+                this.setState({result:result.uid});
+            }
         });
     }
     sinaauth(){
-        ShareUtile.auth(1,(code,message) =>{
+        ShareUtile.auth(1,(code,result,message) =>{
             this.setState({result:message});
-
+            if (code == 0){
+                this.setState({result:result.uid});
+            }
         });
     }
     wxauth(){
-        ShareUtile.auth(2,(code,message) =>{
+        ShareUtile.auth(2,(code,result,message) =>{
             this.setState({result:message});
-
+            if (code == 0){
+                this.setState({result:result.uid});
+            }
         });
     }
     render() {

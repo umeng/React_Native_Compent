@@ -7,11 +7,13 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.WritableMap;
 import com.umeng.commonsdk.framework.UMWorkDispatch;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMAuthListener;
@@ -129,17 +131,23 @@ public class ShareModule extends ReactContextBaseJavaModule {
 
                     @Override
                     public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-                        successCallback.invoke(0,"success");
+                        WritableMap result = Arguments.createMap();
+                        for (String key:map.keySet()){
+                            result.putString(key,map.get(key));
+                        }
+                        successCallback.invoke(0,result,"success");
                     }
 
                     @Override
                     public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-                        successCallback.invoke(1,"error");
+                        WritableMap result = Arguments.createMap();
+                        successCallback.invoke(1,result,throwable.getMessage());
                     }
 
                     @Override
                     public void onCancel(SHARE_MEDIA share_media, int i) {
-                        successCallback.invoke(2,"cancel");
+                        WritableMap result = Arguments.createMap();
+                        successCallback.invoke(2,result,"cancel");
                     }
                 });
             }
