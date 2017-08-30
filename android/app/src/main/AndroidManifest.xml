@@ -11,13 +11,13 @@
         android:targetSdkVersion="22" />
 
     <application
-      android:name="com.umeng.soexample.MainApplication"
+      android:name=".MainApplication"
       android:allowBackup="true"
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:theme="@style/AppTheme">
       <activity
-        android:name="com.umeng.soexample.MainActivity"
+        android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
         android:windowSoftInputMode="adjustResize">
@@ -70,6 +70,7 @@
             android:name="UMENG_APPKEY"
             android:value="561cae6ae0f55abd990035bf" >
         </meta-data>
+
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />

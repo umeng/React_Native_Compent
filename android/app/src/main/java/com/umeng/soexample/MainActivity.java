@@ -3,6 +3,8 @@ package com.umeng.soexample;
 import android.content.Intent;
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.MobclickAgent.EScenarioType;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.soexample.invokenative.ShareModule;
 
@@ -12,6 +14,20 @@ public class MainActivity extends ReactActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ShareModule.initSocialSDK(this);
+        MobclickAgent.setSessionContinueMillis(1000);
+        MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     /**

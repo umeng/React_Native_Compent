@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -17,6 +18,7 @@ import com.facebook.react.bridge.ReadableType;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.analytics.dplus.UMADplus;
 import com.umeng.analytics.game.UMGameAgent;
+import com.umeng.socialize.utils.Log;
 
 /**
  * Created by wangfei on 17/8/28.
@@ -106,6 +108,7 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
     /********************************U-App(Game)统计*********************************/
     @ReactMethod
     public void track(String eventName) {
+        Log.e("xxxxxx dddddd="+context);
         UMADplus.track(context,eventName);
     }
     @ReactMethod

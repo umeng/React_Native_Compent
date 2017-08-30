@@ -130,14 +130,15 @@ export default class UserCenter extends Component {
                     >
                         <Text style={styles.u_c_text}>{'获取超级属性'}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.u_c_item}
-                        onPress={this.clearSuperProperties.bind(this)}
-                    >
-                        <Text style={styles.u_c_text}>{'清除超级属性'}</Text>
-                    </TouchableOpacity>
+
 
                 </View>
+                <TouchableOpacity
+                    style={styles.u_c_item}
+                    onPress={this.clearSuperProperties.bind(this)}
+                >
+                    <Text style={styles.u_c_text}>{'清除超级属性'}</Text>
+                </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
                     onPress={this.setFirstLaunchEvent.bind(this)}
