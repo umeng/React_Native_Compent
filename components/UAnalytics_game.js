@@ -12,67 +12,94 @@ import {
     View
 } from 'react-native';
 import ColorUtil from './ColorUtil'
-
+import AnalyticsUtil from './../native/AnalyticsUtil'
 export default class UserCenter extends Component {
 
-
+    startLevel(){
+        AnalyticsUtil.startLevel("1");
+    }
+    failLevel(){
+        AnalyticsUtil.failLevel("1");
+    }
+    finishLevel(){
+        AnalyticsUtil.finishLevel("1");
+    }
+    pay(){
+        AnalyticsUtil.pay(10, 2000, 2);
+    }
+    payWithItem(){
+        AnalyticsUtil.payWithItem(10, "sword", 1, 1000, 2);
+    }
+    buy(){
+        AnalyticsUtil.buy("magic", 2, 100);
+    }
+    use(){
+        AnalyticsUtil.use("magic", 1, 100);
+    }
+    bonus(){
+        AnalyticsUtil.bonus(1000, 2);
+        AnalyticsUtil.bonusWithItem("sword", 1, 100, 2);
+    }
+    exchange(){
+        AnalyticsUtil.exchange(88.88, "USD", 10000, 2, "test-ordedid");
+    }
     render() {
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.u_c}>
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.startLevel.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'关卡开始'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.failLevel.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'关卡失败'}</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.failLevel.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'关卡通过'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.pay.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'充值付费'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.payWithItem.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'购买物品（真实消费）'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.failLevel.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'购买物品（虚拟消费）'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.use.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'使用物品'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
+                    onPress={this.bonus.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'游戏奖励'}</Text>
                 </TouchableOpacity>
+
                 <TouchableOpacity
                     style={styles.u_c_item}
-                >
-                    <Text style={styles.u_c_text}>{'用户登录'}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.u_c_item}
-                >
-                    <Text style={styles.u_c_text}>{'用户登出'}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.u_c_item}
+                    onPress={this.exchange.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'有订单的充值付费'}</Text>
                 </TouchableOpacity>
@@ -104,7 +131,7 @@ const styles = StyleSheet.create({
 
     },
     u_c_text: {
-        fontSize:13,
+        fontSize:18,
 
         color: ColorUtil.text_primary_color
     },
