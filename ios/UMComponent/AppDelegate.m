@@ -11,11 +11,18 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <UMCommon/UMConfigure.h>
+#import <UMAnalytics/MobClick.h>
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [UMConfigure setLogEnabled:YES];
+  [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
+  [UMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
+
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
