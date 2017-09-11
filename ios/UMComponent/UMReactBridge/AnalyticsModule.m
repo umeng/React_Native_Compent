@@ -9,11 +9,11 @@
 #import <UMAnalytics/MobClick.h>
 #import <UMAnalytics/MobClickGameAnalytics.h>
 #import <UMAnalytics/DplusMobClick.h>
-#import "analytics.h"
+#import "AnalyticsModule.h"
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>
 
-@implementation analytics
+@implementation AnalyticsModule
 
 RCT_EXPORT_MODULE();
 

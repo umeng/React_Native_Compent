@@ -35,7 +35,7 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* UMComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* UMComponentTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		633D4BAD1F6635F6005BCF19 /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D4BAC1F6635F6005BCF19 /* analytics.m */; };
+		633D4BAD1F6635F6005BCF19 /* AnalyticsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D4BAC1F6635F6005BCF19 /* AnalyticsModule.m */; };
 		633D4BD91F666101005BCF19 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D4BB11F666101005BCF19 /* libSocialQQ.a */; };
 		633D4BDA1F666101005BCF19 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D4BB31F666101005BCF19 /* TencentOpenAPI.framework */; };
 		633D4BDB1F666101005BCF19 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 633D4BB41F666101005BCF19 /* TencentOpenApi_IOS_Bundle.bundle */; };
@@ -52,8 +52,8 @@
 		633D4BE61F666101005BCF19 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 633D4BD61F666101005BCF19 /* UMSocialSDKResources.bundle */; };
 		633D4BE71F666101005BCF19 /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D4BD71F666101005BCF19 /* UShareUI.framework */; };
 		633D4BE81F666101005BCF19 /* UMPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D4BD81F666101005BCF19 /* UMPush.framework */; };
-		633D4BEE1F6661A0005BCF19 /* UMPushModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D4BED1F6661A0005BCF19 /* UMPushModule.m */; };
 		633D4BF11F6661B0005BCF19 /* ShareModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D4BF01F6661B0005BCF19 /* ShareModule.m */; };
+		633D4BF51F6694E2005BCF19 /* PushModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D4BF41F6694E2005BCF19 /* PushModule.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		838C27961F57D1B700CF261E /* UMAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C27941F57D1B700CF261E /* UMAnalytics.framework */; };
 		838C27971F57D1B700CF261E /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C27951F57D1B700CF261E /* UMCommon.framework */; };
@@ -305,8 +305,8 @@
 		2D02E47B1E0B4A5D006451C7 /* UMComponent-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMComponent-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* UMComponent-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UMComponent-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		633D4BAB1F6635F6005BCF19 /* analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analytics.h; sourceTree = "<group>"; };
-		633D4BAC1F6635F6005BCF19 /* analytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = analytics.m; sourceTree = "<group>"; };
+		633D4BAB1F6635F6005BCF19 /* AnalyticsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsModule.h; sourceTree = "<group>"; };
+		633D4BAC1F6635F6005BCF19 /* AnalyticsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsModule.m; sourceTree = "<group>"; };
 		633D4BB11F666101005BCF19 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
 		633D4BB31F666101005BCF19 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		633D4BB41F666101005BCF19 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
@@ -340,10 +340,10 @@
 		633D4BD61F666101005BCF19 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
 		633D4BD71F666101005BCF19 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
 		633D4BD81F666101005BCF19 /* UMPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMPush.framework; path = UMComponent/UMComponents/UMPush.framework; sourceTree = "<group>"; };
-		633D4BEC1F6661A0005BCF19 /* UMPushModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMPushModule.h; sourceTree = "<group>"; };
-		633D4BED1F6661A0005BCF19 /* UMPushModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMPushModule.m; sourceTree = "<group>"; };
 		633D4BEF1F6661B0005BCF19 /* ShareModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareModule.h; sourceTree = "<group>"; };
 		633D4BF01F6661B0005BCF19 /* ShareModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareModule.m; sourceTree = "<group>"; };
+		633D4BF31F6694E2005BCF19 /* PushModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushModule.h; sourceTree = "<group>"; };
+		633D4BF41F6694E2005BCF19 /* PushModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushModule.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		838C27941F57D1B700CF261E /* UMAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMAnalytics.framework; path = UMComponent/UMComponents/UMAnalytics.framework; sourceTree = "<group>"; };
@@ -545,10 +545,10 @@
 		633D4BAA1F6635F6005BCF19 /* UMReactBridge */ = {
 			isa = PBXGroup;
 			children = (
-				633D4BAB1F6635F6005BCF19 /* analytics.h */,
-				633D4BAC1F6635F6005BCF19 /* analytics.m */,
-				633D4BEC1F6661A0005BCF19 /* UMPushModule.h */,
-				633D4BED1F6661A0005BCF19 /* UMPushModule.m */,
+				633D4BAB1F6635F6005BCF19 /* AnalyticsModule.h */,
+				633D4BAC1F6635F6005BCF19 /* AnalyticsModule.m */,
+				633D4BF31F6694E2005BCF19 /* PushModule.h */,
+				633D4BF41F6694E2005BCF19 /* PushModule.m */,
 				633D4BEF1F6661B0005BCF19 /* ShareModule.h */,
 				633D4BF01F6661B0005BCF19 /* ShareModule.m */,
 			);
@@ -1212,9 +1212,9 @@
 			files = (
 				633D4BF11F6661B0005BCF19 /* ShareModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				633D4BEE1F6661A0005BCF19 /* UMPushModule.m in Sources */,
+				633D4BF51F6694E2005BCF19 /* PushModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				633D4BAD1F6635F6005BCF19 /* analytics.m in Sources */,
+				633D4BAD1F6635F6005BCF19 /* AnalyticsModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
