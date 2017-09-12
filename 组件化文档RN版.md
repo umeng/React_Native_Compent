@@ -37,6 +37,7 @@
 ```
 
 并在`onCreate()`中进行初始化：
+
 ```
  @Override
     public void onCreate() {
@@ -48,13 +49,40 @@
             "669c30a9584623e70e8cd01b0381dcb4");
     }
 ```
+
 至此，所有的工程配置已经完成，接下来请按照各个组件的文档进行初始化。
 
 ## iOS
 ### 初始化
 
 # 统计
-统计不需要再做额外的工程配置
+## Android
+找到React Native使用的Activity，添加对应的生命周期：
+
+```
+ @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+```
+
+如果需要设置时间间隔和使用场景，需要在onCreat中添加：
+
+```
+  @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        MobclickAgent.setSessionContinueMillis(1000);
+        MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
+    }
+```
+
 ## 接口说明
 首先需要引入`AnalyticsUtil`文件：
 
@@ -259,6 +287,43 @@ PushUtil.appInfo((result) =>{
 
 # Share
 ## Android
+在Application中设置使用的三方平台的appkey：
+
+```
+ {
+
+        PlatformConfig.setWeixin("wxdc1e388c3822c80b", "3baf1193c85774b3fd9d18447d76cab0");
+        //豆瓣RENREN平台目前只能在服务器端配置
+        PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad", "http://sns.whalecloud.com");
+        PlatformConfig.setYixin("yxc0614e80c9304c11b0391514d09f13bf");
+        PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");
+
+    }
+```
+
+找到React Native使用的Activity，添加初始化代码：
+
+```
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ShareModule.initSocialSDK(this);
+          }
+
+```
+
+并添加回调所需代码：
+
+```
+  @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+    }
+```
+
+分享其它工程配置请参照[分享工程配置](http://dev.umeng.com/sdk_integate/android_sdk/android_share_doc#1_3_2)
+
 ### 初始化
 ## iOS
 ### 初始化
