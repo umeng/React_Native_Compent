@@ -21,61 +21,52 @@ export default class UserCenter extends Component {
         this.state = {tag: "Tags/Alias/Excusive Alias",type:"Alias Type",result:"结果"};
     }
     addtag(){
-        PushUtil.addTag(this.state.tag,(code,result) =>{
+        PushUtil.addTag(this.state.tag,(code, remain) =>{
             if (code == 0){
-                this.setState({result:result.jsonString});
+                this.setState({result:remain});
             }
         })
     }
     deleteTag(){
-        PushUtil.deleteTag(this.state.tag,(code,result) =>{
+        PushUtil.deleteTag(this.state.tag,(code, remain) =>{
             if (code == 0){
-                this.setState({result:result.jsonString});
+                this.setState({result:remain});
             }
         })
     }
     listTag(){
-        PushUtil.listTag((code,result) =>{
+        PushUtil.listTag((code, remain, tagList) =>{
             if (code == 0){
                 var tags="tags:";
-                for(var i=0;i<result.length;i++){
-                    tags = tags+result[i]+"\n";
+                for(var i=0;i<tagList.length;i++){
+                    tags = tags+tagList[i]+"\n";
                 }
                 this.setState({result:tags});
             }
         })
     }
     addAlias(){
-        PushUtil.addAlias(this.state.tag,"UMENG",(code,result) =>{
+        PushUtil.addAlias(this.state.tag,"UMENG",(code) =>{
             if (code == 0){
-                this.setState({result:result});
+                this.setState({result:code});
             }
         })
     }
-    addAliasType(){
-        PushUtil.addAliasType()
-    }
     addExclusiveAlias(){
-        PushUtil.addExclusiveAlias(this.state.tag,"UMENG",(code,result) =>{
+        PushUtil.addExclusiveAlias(this.state.tag,"UMENG",(code) =>{
             if (code == 0){
-                this.setState({result:result});
+                this.setState({result:code});
             }
         })
     }
     deleteAlias(){
-        PushUtil.deleteAlias(this.state.tag,"UMENG",(code,result) =>{
+        PushUtil.deleteAlias(this.state.tag,"UMENG",(code) =>{
             if (code == 0){
-                this.setState({result:result});
+                this.setState({result:code});
             }
         })
     }
-    appInfo(){
-        PushUtil.appInfo((result) =>{
 
-                this.setState({result:result});
-
-        })
-    }
     render() {
         const { navigate } = this.props.navigation;
         return (
@@ -120,12 +111,6 @@ export default class UserCenter extends Component {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
-                        onPress={this.addAliasType.bind(this)}
-                    >
-                        <Text style={styles.u_c_text}>{'ALIAS TYPE'}</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.u_c_item}
                         onPress={this.addExclusiveAlias.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'ADD EXCLUSIVE ALIAS'}</Text>
@@ -143,12 +128,6 @@ export default class UserCenter extends Component {
 
                     >
                         <Text style={styles.u_c_text}>{'SERIALNET'}</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.u_c_item}
-                        onPress={this.appInfo.bind(this)}
-                    >
-                        <Text style={styles.u_c_text}>{'APP INFO'}</Text>
                     </TouchableOpacity>
                 </View>
             </View>

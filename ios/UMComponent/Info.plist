@@ -57,22 +57,22 @@
 			<array>
 				<string>QQ41E97DA9</string>
 			</array>
-    </dict>
-    <dict>
-      <key>CFBundleTypeRole</key>
-      <string>Editor</string>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>fb506027402887373</string>
-      </array>
-    </dict>
-  </array>
-  <key>FacebookAppID</key>
-  <string>506027402887373</string>
-  <key>FacebookDisplayName</key>
-  <string>UShare</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb506027402887373</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>506027402887373</string>
+	<key>FacebookDisplayName</key>
+	<string>UShare</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>wechat</string>
@@ -108,11 +108,11 @@
 		<string>mqqbrowser</string>
 		<string>mttbrowser</string>
 		<string>TencentWeibo</string>
-    <string>tencentweiboSdkv2</string>
-    <string>fbapi</string>
-    <string>fb-messenger-api</string>
-    <string>fbauth2</string>
-    <string>fbshareextension</string>
+		<string>tencentweiboSdkv2</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

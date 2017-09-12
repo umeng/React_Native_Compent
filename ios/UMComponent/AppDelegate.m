@@ -14,7 +14,12 @@
 #import <UMCommon/UMConfigure.h>
 #import <UMAnalytics/MobClick.h>
 #import <UMShare/UMShare.h>
+#import <UMPush/UMessage.h>
 
+@interface AppDelegate ()
+<UNUserNotificationCenterDelegate>
+
+@end
 
 @implementation AppDelegate
 
@@ -29,6 +34,20 @@
   /* Share init */
   [self setupUSharePlatforms];   // required: setting platforms on demand
   [self setupUShareSettings];
+  
+  
+  // Push's basic setting
+  UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
+  //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
+  entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert;
+  [UNUserNotificationCenter currentNotificationCenter].delegate=self;
+  
+  [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    if (granted) {
+    } else {
+    }
+  }];
+  
   
   NSURL *jsCodeLocation;
 
@@ -99,7 +118,7 @@
   [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Facebook appKey:@"506027402887373"  appSecret:nil redirectURL:@"http://www.umeng.com/social"];
 }
 
-
+#pragma mark - Share
 //#define __IPHONE_10_0    100000
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > 100000
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
@@ -130,6 +149,61 @@
     // 其他如支付等SDK的回调
   }
   return result;
+}
+
+#pragma mark - Push
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+  //关闭友盟自带的弹出框
+  [UMessage setAutoAlert:NO];
+  [UMessage didReceiveRemoteNotification:userInfo];
+  
+  //    self.userInfo = userInfo;
+  //    //定制自定的的弹出框
+  //    if([UIApplication sharedApplication].applicationState == UIApplicationStateActive)
+  //    {
+  //        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"标题"
+  //                                                            message:@"Test On ApplicationStateActive"
+  //                                                           delegate:self
+  //                                                  cancelButtonTitle:@"确定"
+  //                                                  otherButtonTitles:nil];
+  //
+  //        [alertView show];
+  //
+  //    }
+}
+
+//iOS10新增：处理前台收到通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+  NSDictionary * userInfo = notification.request.content.userInfo;
+  if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+
+    //应用处于前台时的远程推送接受
+    //关闭友盟自带的弹出框
+    [UMessage setAutoAlert:NO];
+    //必须加这句代码
+    [UMessage didReceiveRemoteNotification:userInfo];
+    
+  }else{
+    //应用处于前台时的本地推送接受
+  }
+  completionHandler(UNNotificationPresentationOptionSound|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionAlert);
+}
+
+//iOS10新增：处理后台点击通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+  NSDictionary * userInfo = response.notification.request.content.userInfo;
+  if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+
+    //应用处于后台时的远程推送接受
+    //必须加这句代码
+    [UMessage didReceiveRemoteNotification:userInfo];
+    
+  }else{
+    //应用处于后台时的本地推送接受
+  }
 }
 
 
