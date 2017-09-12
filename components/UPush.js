@@ -37,7 +37,11 @@ export default class UserCenter extends Component {
     listTag(){
         PushUtil.listTag((code,result) =>{
             if (code == 0){
-                this.setState({result:result[0]});
+                var tags="tags:";
+                for(var i=0;i<result.length;i++){
+                    tags = tags+result[i]+"\n";
+                }
+                this.setState({result:tags});
             }
         })
     }

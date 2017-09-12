@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Log;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -134,6 +135,7 @@ public class ShareModule extends ReactContextBaseJavaModule {
                         WritableMap result = Arguments.createMap();
                         for (String key:map.keySet()){
                             result.putString(key,map.get(key));
+                            Log.e("todoremove","key="+key+"   value"+map.get(key).toString());
                         }
                         successCallback.invoke(0,result,"success");
                     }

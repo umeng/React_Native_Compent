@@ -58,7 +58,7 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(final boolean isSuccess, final ITagManager.Result result) {
 
-
+                        Log.e("xxxxxx","isuccess"+isSuccess);
                         if (isSuccess) {
                             successCallback.invoke(0,resultToMap(result));
                         } else {
@@ -99,12 +99,12 @@ public class PushModule extends ReactContextBaseJavaModule {
                         if (isSuccess) {
                             if (result != null) {
 
-                                successCallback.invoke(200,resultToList(result));
+                                successCallback.invoke(0,resultToList(result));
                             } else {
                                 successCallback.invoke(-1,resultToList(result));
                             }
                         } else {
-                            successCallback.invoke(0,resultToList(result));
+                            successCallback.invoke(-2,resultToList(result));
                         }
 
                     }
@@ -118,13 +118,17 @@ public class PushModule extends ReactContextBaseJavaModule {
     public void addAlias(String alias, String aliasType, final Callback successCallback) {
         mPushAgent.addAlias(alias, aliasType, new UTrack.ICallBack() {
             @Override
-            public void onMessage(boolean isSuccess, String message) {
+            public void onMessage(final boolean isSuccess, final String message) {
                 Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
-                if (isSuccess) {
-                    successCallback.invoke(200,message);
-                } else {
-                    successCallback.invoke(0,"");
-                }
+
+                        Log.e("xxxxxx","isuccess"+isSuccess);
+                        if (isSuccess) {
+                            successCallback.invoke(0,message);
+                        } else {
+                            successCallback.invoke(-1,"");
+                        }
+
+
             }
         });
     }
@@ -138,13 +142,16 @@ public class PushModule extends ReactContextBaseJavaModule {
     public void addExclusiveAlias(String exclusiveAlias, String aliasType, final Callback successCallback) {
         mPushAgent.setAlias(exclusiveAlias, aliasType, new UTrack.ICallBack() {
             @Override
-            public void onMessage(boolean isSuccess, String message) {
-                Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
-                if (Boolean.TRUE.equals(isSuccess)) {
-                    successCallback.invoke(200,message);
-                }else {
-                    successCallback.invoke(0,"");
-                }
+            public void onMessage(final boolean isSuccess, final String message) {
+
+                        Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
+                        if (Boolean.TRUE.equals(isSuccess)) {
+                            successCallback.invoke(0,message);
+                        }else {
+                            successCallback.invoke(-1,"");
+                        }
+
+
 
             }
         });
@@ -156,9 +163,9 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(boolean isSuccess, String s) {
                 if (Boolean.TRUE.equals(isSuccess)) {
-                    successCallback.invoke(200,s);
+                    successCallback.invoke(0,s);
                 }else {
-                    successCallback.invoke(0,"");
+                    successCallback.invoke(-1,"");
                 }
             }
         });
