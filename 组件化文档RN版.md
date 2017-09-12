@@ -289,6 +289,7 @@ PushUtil.deleteAlias(alias,type,(code) =>{
 
 # Share
 ## Android
+### 初始化
 在Application中设置使用的三方平台的appkey：
 
 ```
@@ -326,9 +327,9 @@ PushUtil.deleteAlias(alias,type,(code) =>{
 
 分享其它工程配置请参照[分享工程配置](http://dev.umeng.com/sdk_integate/android_sdk/android_share_doc#1_3_2)
 
-### 初始化
 ## iOS
 ### 初始化
+UShare SDK 的平台配置与单独 Native 项目集成相同，请参考 [接入U-Share SDK](http://dev.umeng.com/social/ios/quick-integration#1_1) 以及 [初始化设置部分](http://dev.umeng.com/social/ios/quick-integration#2)
 ## 接口说明
 首先需要引入`ShareUtil`文件：
 
