@@ -24,9 +24,7 @@ export default class UserCenter extends Component {
     sinashare(){
         // alert('ok');
         ShareUtile.share('sssss','http://dev.umeng.com/images/tab2_1.png','http://www.umeng.com/','title',1,(code,message) =>{
-            // this.setState({result:message});
-            alert(code)
-            alert(message)
+            this.setState({result:message});
         });
     }
     qqshare(){
