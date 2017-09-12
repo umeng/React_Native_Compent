@@ -545,7 +545,6 @@
 		13B07FAE1A68108700A75B9A /* UMComponent */ = {
 			isa = PBXGroup;
 			children = (
-				633D4C621F67E703005BCF19 /* UMComponent.entitlements */,
 				633D4BAA1F6635F6005BCF19 /* UMReactBridge */,
 				838C27761F57D19D00CF261E /* UMComponents */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -555,6 +554,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				633D4C621F67E703005BCF19 /* UMComponent.entitlements */,
 			);
 			name = UMComponent;
 			sourceTree = "<group>";
