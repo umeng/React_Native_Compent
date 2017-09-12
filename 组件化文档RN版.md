@@ -198,7 +198,7 @@ AnalyticsUtil.bonusWithItem(item, amount, price, source); //赠送道具
 AnalyticsUtil.exchange(orderId, currencyAmount, currencyType, virtualAmount, channel);
 ```
 * currencyAmount 现金或等价物总额
-* currencyType 为ISO4217定义的3位字母代码，如CNY,USD等（如使用其它自定义等价物作为现金，可使￼用ISO4217中未定义的3位字母组合传入货币类型）￼
+* currencyType 为ISO4217定义的3位字母代码，如CNY,USD等（如使用其它自定义等价物作为现金，可使用ISO4217中未定义的3位字母组合传入货币类型）
 * virtualAmount 虚拟币数量
 * channel 支付渠道
 * orderId 交易订单ID
@@ -217,73 +217,57 @@ import PushUtil from './PushUtil'
 ```
 ### 添加tag
 ```
- PushUtil.addTag(tag,(code,result) =>{
+ PushUtil.addTag(tag,(code, remain) =>{
             
         })
 ```
 * tag 此参数为tag
-* callback 第一个参数code为错误码，当为0时标记成功。result为一个字典类型，对照如下：
-
-| key | value|
-| -------- | -------- | 
-| status     | 0     | 
-| remain     | 1     | 
-| interval     | 2     | 
-| errors     | 3     | 
-| last_requestTime     | 4     | 
-| jsonString     | 5     | 
+* callback 第一个参数code为错误码，当为0时标记成功。remain为剩余可用的tag数,为-1时表示异常
 
 ### 删除tag
 ```
-  PushUtil.deleteTag(tag,(code,result) =>{
+  PushUtil.deleteTag(tag,(code,remain) =>{
           
         })
 ```
 * tag 此参数为tag
-* callback 第一个参数code为错误码，当为0时标记成功。result为一个字典类型，属性请参照添加tag
+* callback 第一个参数code为错误码，当为0时标记成功。remain为剩余可用的tag数,为-1时表示异常
 ### 展示tag
 ```
-  PushUtil.listTag((code,result) =>{
+  PushUtil.listTag((code, remain, tagList) =>{
             
         })
 ```
 
-* callback 第一个参数code为错误码，当为0时标记成功。result为一个数组类型，内容为所有tag
+* callback 第一个参数code为错误码，当为0时标记成功。remain为剩余可用的tag数。tagList为一个数组类型，内容为所有tag
 
 ### 添加Alias
 ```
-PushUtil.addAlias(alias,type,(code,result) =>{
+PushUtil.addAlias(alias,type,(code) =>{
           
         })
 ```
 * alias 此参数为alias
 * type  此参数为alias type
-* callback 第一个参数code为错误码，当为0时标记成功。result为一个字符串类型，标记结果
+* callback 第一个参数code为错误码，当为0时标记成功
 ### 添加额外Alias
 ```
-PushUtil.addExclusiveAlias(alias,type,(code,result) =>{
+PushUtil.addExclusiveAlias(alias,type,(code) =>{
           
         })
 ```
 * alias 此参数为alias
 * type  此参数为alias type
-* callback 第一个参数code为错误码，当为0时标记成功。result为一个字符串类型，标记结果
+* callback 第一个参数code为错误码，当为0时标记成功
 ### 删除Alias
 ```
-PushUtil.deleteAlias(alias,type,(code,result) =>{
+PushUtil.deleteAlias(alias,type,(code) =>{
           
         })
 ```
 * alias 此参数为alias
 * type  此参数为alias type
-* callback 第一个参数code为错误码，当为0时标记成功。result为一个字符串类型，标记结果
-### appinfo
-```
-PushUtil.appInfo((result) =>{
-
-        })
-```
-* callback result为一个字符串类型，标记结果
+* callback 第一个参数code为错误码，当为0时标记成功。
 
 # Share
 ## Android
@@ -409,3 +393,4 @@ import ShareUtile from './ShareUtil'
 * title 为分享链接的标题
 * list 为分享平台数组，如：` var list = [0,1,2]`
 * callback中code为错误码，当为0时，标记成功。message为错误信息
+
