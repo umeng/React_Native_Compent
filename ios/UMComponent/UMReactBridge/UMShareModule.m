@@ -59,9 +59,19 @@ RCT_EXPORT_MODULE();
     
     messageObject.shareObject = shareObject;
   } else if (icon.length > 0) {
+    id img = nil;
+    if ([icon hasPrefix:@"http"]) {
+      img = icon;
+    } else {
+      if ([icon hasPrefix:@"/"]) {
+        img = [UIImage imageWithContentsOfFile:icon];
+      } else {
+        img = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:icon ofType:nil]];
+      }
+    }
     UMShareImageObject *shareObject = [[UMShareImageObject alloc] init];
-    shareObject.thumbImage = icon;
-    shareObject.shareImage = icon;
+    shareObject.thumbImage = img;
+    shareObject.shareImage = img;
     messageObject.shareObject = shareObject;
     
     messageObject.text = text;

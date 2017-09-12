@@ -157,7 +157,7 @@ import ShareUtile from './ShareUtil'
 ```
 
 * text 为分享内容
-* img 为图片地址，可以为链接，本地地址以及res图片（如果使用res,请使用如下写法：`res/icon.png`）
+* img 为图片地址，可以为链接，本地地址以及res图片（注：安卓平台如果使用res,请使用如下写法：`res/icon.png`；iOS平台若为完整路径，如以 / 开头的路径则直接加载图片分享，若为相对路径或直接未文件名，如 logo.png，则取 bundle 下图片）
 * url 为分享链接，可以为空
 * title 为分享链接的标题
 * platform为平台id，id对照表与授权相同
@@ -178,3 +178,5 @@ import ShareUtile from './ShareUtil'
 * title 为分享链接的标题
 * list 为分享平台数组，如：` var list = [0,1,2]`
 * callback中code为错误码，当为0时，标记成功。message为错误信息
+
+
