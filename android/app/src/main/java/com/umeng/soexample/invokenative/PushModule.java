@@ -21,6 +21,6 @@ public class PushModule extends ReactContextBaseJavaModule {
     }
     @Override
     public String getName() {
-        return "push";
+        return "UMPushModule";
     }
 }

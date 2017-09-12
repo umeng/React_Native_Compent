@@ -34,7 +34,7 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "analytics";
+        return "UMAnalyticsModule";
     }
     @ReactMethod
     private void initGame() {
