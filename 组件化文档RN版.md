@@ -54,6 +54,24 @@
 
 ## iOS
 ### 初始化
++ 将已下载的友盟SDK添加到项目
+![](http://upload-images.jianshu.io/upload_images/7304622-781e761f6f7092c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
++ 添加需要的组件桥接文件
+ ![](http://upload-images.jianshu.io/upload_images/7304622-62d16ae4a9e99442.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ 
+ 
++ 在 Appdelegate.m 中设置初始化代码
+
+```
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  [UMConfigure setLogEnabled:YES];
+  [UMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
+  ...
+}
+```
+ 
 
 # 统计
 ## Android
