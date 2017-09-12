@@ -42,6 +42,8 @@ RCT_EXPORT_MODULE();
       return UMSocialPlatformType_Facebook;
     case 8:
       return UMSocialPlatformType_Twitter;
+    case 9:
+      return UMSocialPlatformType_WechatFavorite;
     default:
       return UMSocialPlatformType_QQ;
   }
@@ -107,6 +109,13 @@ RCT_EXPORT_METHOD(share:(NSString *)text icon:(NSString *)icon link:(NSString *)
 
 RCT_EXPORT_METHOD(shareboard:(NSString *)text icon:(NSString *)icon link:(NSString *)link title:(NSString *)title platform:(NSArray *)platforms completion:(RCTResponseSenderBlock)completion)
 {
+  NSMutableArray *plfs = [NSMutableArray array];
+  for (NSNumber *plf in platforms) {
+    [plfs addObject:@([self platformType:plf.integerValue])];
+  }
+  if (plfs.count > 0) {
+    [UMSocialUIManager setPreDefinePlatforms:plfs];
+  }
   [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
     [self shareWithText:text icon:icon link:link title:title platform:platformType completion:^(id result, NSError *error) {
       if (completion) {
