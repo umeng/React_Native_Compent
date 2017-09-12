@@ -1,5 +1,5 @@
 //
-//  PushModule.h
+//  ShareModule.h
 //  UMComponent
 //
 //  Created by wyq.Cloudayc on 11/09/2017.
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
 
-@interface PushModule : NSObject <RCTBridgeModule>
+@interface UMShareModule : NSObject <RCTBridgeModule>
 
 @end
