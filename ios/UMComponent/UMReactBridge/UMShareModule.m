@@ -42,6 +42,8 @@ RCT_EXPORT_MODULE();
       return UMSocialPlatformType_Facebook;
     case 8:
       return UMSocialPlatformType_Twitter;
+    case 9:
+      return UMSocialPlatformType_WechatFavorite;
     default:
       return UMSocialPlatformType_QQ;
   }
@@ -57,9 +59,19 @@ RCT_EXPORT_MODULE();
     
     messageObject.shareObject = shareObject;
   } else if (icon.length > 0) {
+    id img = nil;
+    if ([icon hasPrefix:@"http"]) {
+      img = icon;
+    } else {
+      if ([icon hasPrefix:@"/"]) {
+        img = [UIImage imageWithContentsOfFile:icon];
+      } else {
+        img = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:icon ofType:nil]];
+      }
+    }
     UMShareImageObject *shareObject = [[UMShareImageObject alloc] init];
-    shareObject.thumbImage = icon;
-    shareObject.shareImage = icon;
+    shareObject.thumbImage = img;
+    shareObject.shareImage = img;
     messageObject.shareObject = shareObject;
     
     messageObject.text = text;
@@ -107,6 +119,13 @@ RCT_EXPORT_METHOD(share:(NSString *)text icon:(NSString *)icon link:(NSString *)
 
 RCT_EXPORT_METHOD(shareboard:(NSString *)text icon:(NSString *)icon link:(NSString *)link title:(NSString *)title platform:(NSArray *)platforms completion:(RCTResponseSenderBlock)completion)
 {
+  NSMutableArray *plfs = [NSMutableArray array];
+  for (NSNumber *plf in platforms) {
+    [plfs addObject:@([self platformType:plf.integerValue])];
+  }
+  if (plfs.count > 0) {
+    [UMSocialUIManager setPreDefinePlatforms:plfs];
+  }
   [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
     [self shareWithText:text icon:icon link:link title:title platform:platformType completion:^(id result, NSError *error) {
       if (completion) {
@@ -148,7 +167,7 @@ RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)co
           msg = @"share failed";
         }
         
-        completion(@[@(error.code), msg]);
+        completion(@[@(error.code), @{}, msg]);
       } else {
         UMSocialUserInfoResponse *authInfo = result;
         
@@ -169,7 +188,7 @@ RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)co
         retDict[@"province"] = originInfo[@"province"];
         retDict[@"country"] = originInfo[@"country"];
         
-        completion(@[@0, retDict]);
+        completion(@[@0, retDict, @""]);
       }
     }
   }];
