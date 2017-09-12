@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.analytics.MobclickAgent.EScenarioType;
+import com.umeng.message.PushAgent;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.soexample.invokenative.PushModule;
 import com.umeng.soexample.invokenative.ShareModule;
@@ -18,6 +19,7 @@ public class MainActivity extends ReactActivity {
         PushModule.initPushSDK(this);
         MobclickAgent.setSessionContinueMillis(1000);
         MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
+        PushAgent.getInstance(this).onAppStart();
     }
 
 
