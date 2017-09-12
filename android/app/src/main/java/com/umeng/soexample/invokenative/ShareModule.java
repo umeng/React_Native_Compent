@@ -215,7 +215,8 @@ public class ShareModule extends ReactContextBaseJavaModule {
                 return SHARE_MEDIA.FACEBOOK;
             case 8:
                 return SHARE_MEDIA.TWITTER;
-
+            case 9:
+                return SHARE_MEDIA.WEIXIN_FAVORITE;
             default:
                 return SHARE_MEDIA.QQ;
         }
