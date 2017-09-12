@@ -1,16 +1,16 @@
 #!/bin/bash
-myPath="UMCocos2dx"
-common_android="UMCocos2dx/common_android/"
-common_ios="UMCocos2dx/common_ios/"
-analytics_android="UMCocos2dx/analytics_android/"
-analytics_ios="UMCocos2dx/analytics_ios/"
-push_android="UMCocos2dx/push_android/"
-push_ios="UMCocos2dx/push_ios/"
-share_android="UMCocos2dx/share_android/"
-share_ios="UMCocos2dx/share_ios/"
-common_js="UMCocos2dx/js/"
-rm -r UMCocos2dx
-rm -r UMCocos2dx*.zip
+myPath="UMReactNative"
+common_android="UMReactNative/common_android/"
+common_ios="UMReactNative/common_ios/"
+analytics_android="UMReactNative/analytics_android/"
+analytics_ios="UMReactNative/analytics_ios/"
+push_android="UMReactNative/push_android/"
+push_ios="UMReactNative/push_ios/"
+share_android="UMReactNative/share_android/"
+share_ios="UMReactNative/share_ios/"
+common_js="UMReactNative/js/"
+rm -r UMReactNative
+rm -r UMReactNative*.zip
 if [ ! -d "$myPath" ]; then
 	
  mkdir "$myPath"
@@ -74,4 +74,4 @@ cp ./ios/UMComponent/UMReactBridge/UMShareModule.h "$share_ios"
 cp ./ios/UMComponent/UMReactBridge/UMShareModule.m "$share_ios"
 ## js
 cp ./native/* "$common_js"
-zip -r UMCocos2dx1.0.zip ./UMCocos2dx/*
+zip -r UMReactNative1.0.zip ./UMReactNative/*
