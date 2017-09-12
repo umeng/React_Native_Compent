@@ -3,11 +3,17 @@ package com.umeng.soexample.invokenative;
 import android.app.Activity;
 import java.util.List;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.Toast;
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.WritableArray;
+import com.facebook.react.bridge.WritableMap;
 import com.umeng.message.MsgConstant;
 import com.umeng.message.PushAgent;
 import com.umeng.message.UTrack;
@@ -22,7 +28,7 @@ import com.umeng.message.tag.TagManager;
 public class PushModule extends ReactContextBaseJavaModule {
 
     private static final String TAG = PushModule.class.getSimpleName();
-
+    private static Handler mSDKHandler = new Handler(Looper.getMainLooper());
     private ReactApplicationContext context;
     private boolean isGameInited = false;
     private static Activity ma;
@@ -43,18 +49,25 @@ public class PushModule extends ReactContextBaseJavaModule {
     public String getName() {
         return "UMPushModule";
     }
-
+    private static void runOnMainThread(Runnable runnable) {
+        mSDKHandler.postDelayed(runnable, 0);
+    }
     @ReactMethod
     public void addTag(String tag, final Callback successCallback) {
         mPushAgent.getTagManager().addTags(new TagManager.TCallBack() {
             @Override
             public void onMessage(final boolean isSuccess, final ITagManager.Result result) {
-                successCallback.invoke("");
-                if (isSuccess) {
-                    successCallback.invoke("Add Tag:" + result);
-                } else {
-                    successCallback.invoke("Add Tag:" + "加入tag失败");
-                }
+
+
+                        if (isSuccess) {
+                            successCallback.invoke(0,resultToMap(result));
+                        } else {
+                            successCallback.invoke(-1,resultToMap(result));
+                        }
+
+
+
+
 
             }
         }, tag);
@@ -66,8 +79,11 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(boolean isSuccess, final ITagManager.Result result) {
                 Log.i(TAG, "isSuccess:" + isSuccess);
-                if (isSuccess) { Log.i(TAG, "deletTag was set successfully."); }
-                successCallback.invoke("delet Tags:" + (isSuccess ? "Success" : "Fail"));
+                if (isSuccess) {
+                    successCallback.invoke(0,resultToMap(result));
+                } else {
+                    successCallback.invoke(-1,resultToMap(result));
+                }
             }
         }, tag);
     }
@@ -77,23 +93,18 @@ public class PushModule extends ReactContextBaseJavaModule {
         mPushAgent.getTagManager().getTags(new TagManager.TagListCallBack() {
             @Override
             public void onMessage(final boolean isSuccess, final List<String> result) {
-                handler.post(new Runnable() {
+                mSDKHandler.post(new Runnable() {
                     @Override
                     public void run() {
                         if (isSuccess) {
                             if (result != null) {
-                                StringBuilder info = new StringBuilder();
-                                info.append("Tags:");
-                                for (int i = 0; i < result.size(); i++) {
-                                    String tag = result.get(i);
-                                    info.append("\n" + tag);
-                                }
-                                successCallback.invoke(info.toString());
+
+                                successCallback.invoke(200,resultToList(result));
                             } else {
-                                successCallback.invoke("");
+                                successCallback.invoke(-1,resultToList(result));
                             }
                         } else {
-                            successCallback.invoke("Tags获取失败");
+                            successCallback.invoke(0,resultToList(result));
                         }
 
                     }
@@ -109,15 +120,18 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(boolean isSuccess, String message) {
                 Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
-                if (isSuccess) { Log.i(TAG, "alias was set successfully."); }
-                successCallback.invoke("", "", "Add Alias:" + (isSuccess ? "Success" : "Fail"));
+                if (isSuccess) {
+                    successCallback.invoke(200,message);
+                } else {
+                    successCallback.invoke(0,"");
+                }
             }
         });
     }
 
     @ReactMethod
     public void addAliasType() {
-
+        Toast.makeText(ma,"function will come soon",Toast.LENGTH_LONG);
     }
 
     @ReactMethod
@@ -127,9 +141,11 @@ public class PushModule extends ReactContextBaseJavaModule {
             public void onMessage(boolean isSuccess, String message) {
                 Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
                 if (Boolean.TRUE.equals(isSuccess)) {
-                    Log.i(TAG, "Exclusive alias was set successfully.");
+                    successCallback.invoke(200,message);
+                }else {
+                    successCallback.invoke(0,"");
                 }
-                successCallback.invoke("", "Add Exclusive Alias:" + (isSuccess ? "Success" : "Fail"));
+
             }
         });
     }
@@ -140,10 +156,10 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(boolean isSuccess, String s) {
                 if (Boolean.TRUE.equals(isSuccess)) {
-                    Log.i(TAG, "Delete alias was set successfully.");
+                    successCallback.invoke(200,s);
+                }else {
+                    successCallback.invoke(0,"");
                 }
-
-                successCallback.invoke("", "", "Delete Alias:" + (isSuccess ? "Success" : "Fail"));
             }
         });
     }
@@ -155,5 +171,26 @@ public class PushModule extends ReactContextBaseJavaModule {
             mPushAgent.getRegistrationId(), MsgConstant.SDK_VERSION,
             UmengMessageDeviceConfig.getAppVersionCode(context), UmengMessageDeviceConfig.getAppVersionName(context));
         successCallback.invoke("应用包名:" + pkgName + "\n" + info);
+    }
+    private WritableMap resultToMap(ITagManager.Result result){
+        WritableMap map = Arguments.createMap();
+        if (result!=null){
+            map.putString("status",result.status);
+            map.putInt("remain",result.remain);
+            map.putString("interval",result.interval+"");
+            map.putString("errors",result.errors);
+            map.putString("last_requestTime",result.last_requestTime+"");
+            map.putString("jsonString",result.jsonString);
+        }
+        return map;
+    }
+    private WritableArray resultToList(List<String> result){
+        WritableArray list = Arguments.createArray();
+        if (result!=null){
+            for (String key:result){
+                list.pushString(key);
+            }
+        }
+        return list;
     }
 }

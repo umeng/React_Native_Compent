@@ -13,12 +13,64 @@ import {
     View
 } from 'react-native';
 import ColorUtil from './ColorUtil'
-
+import PushUtil from './../native/PushUtil'
 export default class UserCenter extends Component {
 
     constructor(props) {
         super(props);
         this.state = {tag: "Tags/Alias/Excusive Alias",type:"Alias Type",result:"结果"};
+    }
+    addtag(){
+        PushUtil.addTag(this.state.tag,(code,result) =>{
+            if (code == 0){
+                this.setState({result:result.jsonString});
+            }
+        })
+    }
+    deleteTag(){
+        PushUtil.deleteTag(this.state.tag,(code,result) =>{
+            if (code == 0){
+                this.setState({result:result.jsonString});
+            }
+        })
+    }
+    listTag(){
+        PushUtil.listTag((code,result) =>{
+            if (code == 0){
+                this.setState({result:result[0]});
+            }
+        })
+    }
+    addAlias(){
+        PushUtil.addAlias(this.state.tag,"UMENG",(code,result) =>{
+            if (code == 0){
+                this.setState({result:result});
+            }
+        })
+    }
+    addAliasType(){
+        PushUtil.addAliasType()
+    }
+    addExclusiveAlias(){
+        PushUtil.addExclusiveAlias(this.state.tag,"UMENG",(code,result) =>{
+            if (code == 0){
+                this.setState({result:result});
+            }
+        })
+    }
+    deleteAlias(){
+        PushUtil.deleteAlias(this.state.tag,"UMENG",(code,result) =>{
+            if (code == 0){
+                this.setState({result:result});
+            }
+        })
+    }
+    appInfo(){
+        PushUtil.appInfo((result) =>{
+
+                this.setState({result:result});
+
+        })
     }
     render() {
         const { navigate } = this.props.navigation;
@@ -38,16 +90,19 @@ export default class UserCenter extends Component {
                 <View style = {{flexDirection: 'row'}}>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.addtag.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'ADD TAGS'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.deleteTag.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'DELE TAGS'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.listTag.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'LIST TAGS'}</Text>
                     </TouchableOpacity>
@@ -55,16 +110,19 @@ export default class UserCenter extends Component {
                 <View style = {{flexDirection: 'row'}}>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.addAlias.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'ADD ALIAS'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.addAliasType.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'ALIAS TYPE'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.addExclusiveAlias.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'ADD EXCLUSIVE ALIAS'}</Text>
                     </TouchableOpacity>
@@ -72,16 +130,19 @@ export default class UserCenter extends Component {
                 <View style = {{flexDirection: 'row'}}>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.deleteAlias.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'DEL ALIAS'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
+
                     >
                         <Text style={styles.u_c_text}>{'SERIALNET'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
+                        onPress={this.appInfo.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'APP INFO'}</Text>
                     </TouchableOpacity>
