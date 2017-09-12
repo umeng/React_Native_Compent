@@ -6,15 +6,20 @@
 //  Copyright © 2017 Facebook. All rights reserved.
 //
 
-#import "ShareModule.h"
+#import "UMShareModule.h"
 #import <UMShare/UMShare.h>
 #import <UShareUI/UShareUI.h>
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>
 
-@implementation ShareModule
+@implementation UMShareModule
 
 RCT_EXPORT_MODULE();
+
+- (dispatch_queue_t)methodQueue
+{
+  return dispatch_get_main_queue();
+}
 
 - (void)runOnMainThread:(void (^)())block
 {
@@ -27,8 +32,6 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(share:(NSString *)text icon:(NSString *)icon link:(NSString *)link title:(NSString *)title platform:(NSInteger)platform completion:(RCTResponseSenderBlock)completion)
 {
-  [self runOnMainThread:^{
-    
     UMSocialPlatformType plf = UMSocialPlatformType_UnKnown;
     switch (platform) {
       case 0: // QQ
@@ -86,26 +89,20 @@ RCT_EXPORT_METHOD(share:(NSString *)text icon:(NSString *)icon link:(NSString *)
         }
       }
     }];
-    
-  }];
 
 }
 
 
 RCT_EXPORT_METHOD(shareboard:(NSString *)text icon:(NSString *)icon link:(NSString *)link title:(NSString *)title platform:(NSArray *)platforms completion:(RCTResponseSenderBlock)completion)
 {
-  [self runOnMainThread:^{
     [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
       [self share:text icon:icon link:link title:title platform:platformType completion:completion];
     }];
-  }];
 }
 
 
 RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)completion)
 {
-  [self runOnMainThread:^{
-    
     UMSocialPlatformType plf = UMSocialPlatformType_UnKnown;
     switch (platform) {
       case 0: // QQ
@@ -138,8 +135,6 @@ RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)co
         }
       }
     }];
-    
-  }];
   
 }
 @end

@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
-@interface AnalyticsModule : NSObject  <RCTBridgeModule>
+@interface UMAnalyticsModule : NSObject  <RCTBridgeModule>
 
 @end

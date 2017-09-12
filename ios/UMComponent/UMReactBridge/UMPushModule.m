@@ -6,12 +6,12 @@
 //  Copyright © 2017 Facebook. All rights reserved.
 //
 
-#import "PushModule.h"
+#import "UMPushModule.h"
 #import <UMPush/UMessage.h>
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>
 
-@implementation PushModule
+@implementation UMPushModule
 
 RCT_EXPORT_MODULE();
 
