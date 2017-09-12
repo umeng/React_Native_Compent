@@ -148,7 +148,7 @@ RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)co
           msg = @"share failed";
         }
         
-        completion(@[@(error.code), msg]);
+        completion(@[@(error.code), @{}, msg]);
       } else {
         UMSocialUserInfoResponse *authInfo = result;
         
@@ -169,7 +169,7 @@ RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)co
         retDict[@"province"] = originInfo[@"province"];
         retDict[@"country"] = originInfo[@"country"];
         
-        completion(@[@0, retDict]);
+        completion(@[@0, retDict, @""]);
       }
     }
   }];
