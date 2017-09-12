@@ -42,7 +42,7 @@ public class ShareModule extends ReactContextBaseJavaModule {
     }
     @Override
     public String getName() {
-        return "share";
+        return "UMShareModule";
     }
     private static void runOnMainThread(Runnable runnable) {
         mSDKHandler.postDelayed(runnable, 0);
@@ -203,6 +203,16 @@ public class ShareModule extends ReactContextBaseJavaModule {
 
             case 3:
                 return SHARE_MEDIA.WEIXIN_CIRCLE;
+            case 4:
+                return SHARE_MEDIA.QZONE;
+            case 5:
+                return SHARE_MEDIA.EMAIL;
+            case 6:
+                return SHARE_MEDIA.SMS;
+            case 7:
+                return SHARE_MEDIA.FACEBOOK;
+            case 8:
+                return SHARE_MEDIA.TWITTER;
 
             default:
                 return SHARE_MEDIA.QQ;
