@@ -54,6 +54,7 @@ if [ ! -d "$common_js" ]; then
 fi 
 ## android common
 cp ./android/app/src/main/java/com/umeng/soexample/invokenative/DplusReactPackage.java "$common_android"
+cp ./android/app/src/main/java/com/umeng/soexample/invokenative/RNUMConfigure.java "$common_android"
 ## android 统计
 cp ./android/app/src/main/java/com/umeng/soexample/invokenative/AnalyticsModule.java "$analytics_android"
 ## android 推送

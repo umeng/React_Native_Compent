@@ -41,7 +41,7 @@
     public void onCreate() {
         super.onCreate();
         SoLoader.init(this, /* native exopackage */ false);
-        RNUMConfture.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
+        RNUMConfigure.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
             "669c30a9584623e70e8cd01b0381dcb4");
     }
 ```
@@ -192,6 +192,7 @@ AnalyticsUtil.exchange(orderId, currencyAmount, currencyType, virtualAmount, cha
 # 推送
 ## Android
 ### 初始化
+首先，Android push需要让Android app依赖我们提供的push module，再根据文档进行相应的初始化。
 找到React Native使用的Activity，添加初始化代码：
 
 ```

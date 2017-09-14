@@ -25,7 +25,7 @@ import com.umeng.message.common.UmLog;
 import com.umeng.message.entity.UMessage;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.soexample.invokenative.DplusReactPackage;
-import com.umeng.soexample.invokenative.RNUMConfture;
+import com.umeng.soexample.invokenative.RNUMConfigure;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -58,7 +58,7 @@ public class MainApplication extends Application implements ReactApplication {
         SoLoader.init(this, /* native exopackage */ false);
         UMConfigure.setLogEnabled(true);
         //初始化组件化基础库, 统计SDK/推送SDK/分享SDK都必须调用此初始化接口
-        RNUMConfture.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
+        RNUMConfigure.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
             "669c30a9584623e70e8cd01b0381dcb4");
         initUpush();
 
