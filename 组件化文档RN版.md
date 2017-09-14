@@ -207,7 +207,7 @@ UShare SDK 的平台配置与单独 Native 项目集成相同，请参考 [接�
 
 ## iOS
 ### 初始化
-Push SDK 的平台配置与单独 Native 项目集成相同，请参考 [接入Push SDK](http://dev.umeng.com/social/ios/quick-integration#1_1) 以及 [初始化设置部分](http://dev.umeng.com/social/ios/quick-integration#2)
+Push SDK 的平台配置与单独 Native 项目集成相同，请参考 [接入Push SDK](http://dev.umeng.com/sdk_integate/ios-integrate-guide/push#1) 以及 [初始化设置部分](http://dev.umeng.com/sdk_integate/ios-integrate-guide/push#1)
 ## 接口说明
 首先需要引入`PushUtil`文件：
 
