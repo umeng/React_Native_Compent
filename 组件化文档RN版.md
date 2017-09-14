@@ -5,9 +5,9 @@
 将下载的jar放入app下的libs中：
 
 ![](http://upload-images.jianshu.io/upload_images/1483670-67f20ad5d09b48c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-首先需要拷贝common_android文件夹中的`DplusReactPackage.java`文件到你的工程中：
+首先需要拷贝common_android文件夹中的文件拷贝到你的工程中：
 
-![](http://upload-images.jianshu.io/upload_images/1483670-2ac964446ec18042.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/1483670-5708bd30e3576ee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 然后再将对应平台的桥接文件拷入你的工程：
 
@@ -52,10 +52,55 @@
 
 ## iOS
 ### 初始化
++ 将已下载的友盟SDK添加到项目
+![](http://upload-images.jianshu.io/upload_images/7304622-781e761f6f7092c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
++ 添加需要的组件桥接文件
+ ![](http://upload-images.jianshu.io/upload_images/7304622-62d16ae4a9e99442.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ 
++ 添加友盟初始化配置文件
+![](http://upload-images.jianshu.io/upload_images/7304622-3d241fcca2d977a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ 
++ 在 Appdelegate.m 中设置初始化代码
+
+```
+#import "RNUMConfigure.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  [UMConfigure setLogEnabled:YES];
+  [RNUMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
+  ...
+}
+```
+
 ## 接口说明
 # 统计
 ## Android
 ### 初始化
+首先需要找到Activity的生命周期，添加如下代码：
+
+```
+  @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+```
+
+
+并在`onCreat`中设置统计的场景，以及发送间隔：
+
+```
+MobclickAgent.setSessionContinueMillis(1000);
+MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
+```
+
 ## iOS
 ### 初始化
 在工程的 AppDelegate.m 文件中引入相关组件头文件 ，且在 application:didFinishLaunchingWithOptions: 方法中添加如下代码：
@@ -200,6 +245,7 @@ AnalyticsUtil.exchange(orderId, currencyAmount, currencyType, virtualAmount, cha
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        PushModule.initPushSDK(this);
+       PushAgent.getInstance(this).onAppStart();
           }
 
 ```

@@ -63,6 +63,10 @@ cp -r ./android/push "$push_android"
 ## android 分享
 cp ./android/app/src/main/java/com/umeng/soexample/invokenative/ShareModule.java "$share_android"
 
+## ios common
+cp ./ios/UMComponent/UMReactBridge/RNUMConfigure.h "$common_ios"
+cp ./ios/UMComponent/UMReactBridge/RNUMConfigure.h "$common_ios"
+
 ## ios 统计
 cp ./ios/UMComponent/UMReactBridge/UMAnalyticsModule.h "$analytics_ios"
 cp ./ios/UMComponent/UMReactBridge/UMAnalyticsModule.m "$analytics_ios"
