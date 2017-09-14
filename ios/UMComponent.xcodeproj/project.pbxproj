@@ -67,6 +67,7 @@
 		633D4C221F67B77C005BCF19 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D4C151F67B77C005BCF19 /* TwitterCore.framework */; };
 		633D4C231F67B77C005BCF19 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D4C161F67B77C005BCF19 /* TwitterKit.framework */; };
 		633D4C251F67B8BD005BCF19 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 633D4C241F67B8BD005BCF19 /* TwitterKitResources.bundle */; };
+		638F81001F6A526700AFBD73 /* RNUMConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F80FF1F6A526700AFBD73 /* RNUMConfigure.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		838C27961F57D1B700CF261E /* UMAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C27941F57D1B700CF261E /* UMAnalytics.framework */; };
 		838C27971F57D1B700CF261E /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C27951F57D1B700CF261E /* UMCommon.framework */; };
@@ -376,6 +377,8 @@
 		633D4C171F67B77C005BCF19 /* UMSocialTwitterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialTwitterHandler.h; sourceTree = "<group>"; };
 		633D4C241F67B8BD005BCF19 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		633D4C621F67E703005BCF19 /* UMComponent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = UMComponent.entitlements; path = UMComponent/UMComponent.entitlements; sourceTree = "<group>"; };
+		638F80FE1F6A526700AFBD73 /* RNUMConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNUMConfigure.h; sourceTree = "<group>"; };
+		638F80FF1F6A526700AFBD73 /* RNUMConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNUMConfigure.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		838C27941F57D1B700CF261E /* UMAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMAnalytics.framework; path = UMComponent/UMComponents/UMAnalytics.framework; sourceTree = "<group>"; };
@@ -596,6 +599,8 @@
 				633D4BF41F6694E2005BCF19 /* UMPushModule.m */,
 				633D4BEF1F6661B0005BCF19 /* UMShareModule.h */,
 				633D4BF01F6661B0005BCF19 /* UMShareModule.m */,
+				638F80FE1F6A526700AFBD73 /* RNUMConfigure.h */,
+				638F80FF1F6A526700AFBD73 /* RNUMConfigure.m */,
 			);
 			name = UMReactBridge;
 			path = UMComponent/UMReactBridge;
@@ -1314,6 +1319,7 @@
 			files = (
 				633D4BF11F6661B0005BCF19 /* UMShareModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				638F81001F6A526700AFBD73 /* RNUMConfigure.m in Sources */,
 				633D4BF51F6694E2005BCF19 /* UMPushModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				633D4BAD1F6635F6005BCF19 /* UMAnalyticsModule.m in Sources */,

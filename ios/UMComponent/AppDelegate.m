@@ -11,7 +11,7 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
-#import <UMCommon/UMConfigure.h>
+#import "RNUMConfigure.h"
 #import <UMAnalytics/MobClick.h>
 #import <UMShare/UMShare.h>
 #import <UMPush/UMessage.h>
@@ -29,7 +29,7 @@
   
   /* Umeng init */
   [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
-  [UMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
+  [RNUMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
 
   /* Share init */
   [self setupUSharePlatforms];   // required: setting platforms on demand
