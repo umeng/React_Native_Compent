@@ -58,11 +58,11 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(final boolean isSuccess, final ITagManager.Result result) {
 
-                        Log.e("xxxxxx","isuccess"+isSuccess);
+
                         if (isSuccess) {
-                            successCallback.invoke(0,resultToMap(result));
+                            successCallback.invoke(0,result.remain);
                         } else {
-                            successCallback.invoke(-1,resultToMap(result));
+                            successCallback.invoke(-1,0);
                         }
 
 
@@ -80,9 +80,9 @@ public class PushModule extends ReactContextBaseJavaModule {
             public void onMessage(boolean isSuccess, final ITagManager.Result result) {
                 Log.i(TAG, "isSuccess:" + isSuccess);
                 if (isSuccess) {
-                    successCallback.invoke(0,resultToMap(result));
+                    successCallback.invoke(0,result.remain);
                 } else {
-                    successCallback.invoke(-1,resultToMap(result));
+                    successCallback.invoke(-1,0);
                 }
             }
         }, tag);
@@ -123,9 +123,9 @@ public class PushModule extends ReactContextBaseJavaModule {
 
                         Log.e("xxxxxx","isuccess"+isSuccess);
                         if (isSuccess) {
-                            successCallback.invoke(0,message);
+                            successCallback.invoke(0);
                         } else {
-                            successCallback.invoke(-1,"");
+                            successCallback.invoke(-1);
                         }
 
 
@@ -146,9 +146,9 @@ public class PushModule extends ReactContextBaseJavaModule {
 
                         Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
                         if (Boolean.TRUE.equals(isSuccess)) {
-                            successCallback.invoke(0,message);
+                            successCallback.invoke(0);
                         }else {
-                            successCallback.invoke(-1,"");
+                            successCallback.invoke(-1);
                         }
 
 
@@ -163,9 +163,9 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(boolean isSuccess, String s) {
                 if (Boolean.TRUE.equals(isSuccess)) {
-                    successCallback.invoke(0,s);
+                    successCallback.invoke(0);
                 }else {
-                    successCallback.invoke(-1,"");
+                    successCallback.invoke(-1);
                 }
             }
         });
