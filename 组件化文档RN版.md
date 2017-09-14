@@ -52,6 +52,29 @@
 
 ## iOS
 ### 初始化
++ 将已下载的友盟SDK添加到项目
+![](http://upload-images.jianshu.io/upload_images/7304622-781e761f6f7092c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
++ 添加需要的组件桥接文件
+ ![](http://upload-images.jianshu.io/upload_images/7304622-62d16ae4a9e99442.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ 
++ 添加友盟初始化配置文件
+![](http://upload-images.jianshu.io/upload_images/7304622-3d241fcca2d977a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ 
++ 在 Appdelegate.m 中设置初始化代码
+
+```
+#import "RNUMConfigure.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  [UMConfigure setLogEnabled:YES];
+  [RNUMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
+  ...
+}
+```
+ 
+
 ## 接口说明
 # 统计
 ## Android
@@ -183,7 +206,7 @@ AnalyticsUtil.bonusWithItem(item, amount, price, source); //赠送道具
 AnalyticsUtil.exchange(orderId, currencyAmount, currencyType, virtualAmount, channel);
 
 * currencyAmount 现金或等价物总额
-* currencyType 为ISO4217定义的3位字母代码，如CNY,USD等（如使用其它自定义等价物作为现金，可使￼用ISO4217中未定义的3位字母组合传入货币类型）￼
+* currencyType 为ISO4217定义的3位字母代码，如CNY,USD等（如使用其它自定义等价物作为现金，可使用ISO4217中未定义的3位字母组合传入货币类型）
 * virtualAmount 虚拟币数量
 * channel 支付渠道
 * orderId 交易订单ID
@@ -407,3 +430,5 @@ import ShareUtile from './ShareUtil'
 * title 为分享链接的标题
 * list 为分享平台数组，如：` var list = [0,1,2]`
 * callback中code为错误码，当为0时，标记成功。message为错误信息
+
+
