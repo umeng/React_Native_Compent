@@ -43,12 +43,12 @@
     public void onCreate() {
         super.onCreate();
         SoLoader.init(this, /* native exopackage */ false);
-        UMConfigure.setLogEnabled(true);
-        //初始化组件化基础库, 统计SDK/推送SDK/分享SDK都必须调用此初始化接口
-        UMConfigure.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
+        RNUMConfture.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
             "669c30a9584623e70e8cd01b0381dcb4");
     }
 ```
+ 
+ >`RNUMConfture.init`接口一共五个参数，其中第一个参数为Context，第二个参数为友盟Appkey，第三个参数为channel，第四个参数为应用类型（手机或平板），第五个参数为push的secret（如果没有使用push，可以为空）。
 
 至此，所有的工程配置已经完成，接下来请按照各个组件的文档进行初始化。
 
