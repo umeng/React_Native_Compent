@@ -1,4 +1,7 @@
 # 工程配置
+首先需要说明，Cocos2dx下载的只是桥接文件，不含最新版本的jar，对应组件的jar请去[下载中心](http://mobile.umeng.com/custom_sdk)下载。
+如果对于文档仍有疑问的，请参照我们在github上的[demo](https://github.com/umeng/React_Native_Compent)
+
 ## Android
 ### 初始化
 
@@ -249,7 +252,7 @@ AnalyticsUtil.exchange(orderId, currencyAmount, currencyType, virtualAmount, cha
           }
 
 ```
-UShare SDK 的平台配置与单独 Native 项目集成相同，请参考 [接入U-Share SDK](http://dev.umeng.com/sdk_integate/android_sdk/android_push_doc#1) 以及 [初始化设置部分](http://dev.umeng.com/sdk_integate/android_sdk/android_push_doc#2_1)
+Push SDK 的平台配置与单独 Native 项目集成相同，请参考 [接入Push SDK](http://dev.umeng.com/sdk_integate/android_sdk/android_push_doc#1) 以及 [初始化设置部分](http://dev.umeng.com/sdk_integate/android_sdk/android_push_doc#2_1)
 
 
 ## iOS
