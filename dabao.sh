@@ -1,16 +1,17 @@
 #!/bin/bash
 myPath="UMReactNative"
-common_android="UMReactNative/common_android/"
-common_ios="UMReactNative/common_ios/"
-analytics_android="UMReactNative/analytics_android/"
-analytics_ios="UMReactNative/analytics_ios/"
-push_android="UMReactNative/push_android/"
-push_ios="UMReactNative/push_ios/"
-share_android="UMReactNative/share_android/"
-share_ios="UMReactNative/share_ios/"
-common_js="UMReactNative/js/"
-rm -r UMReactNative
-rm -r UMReactNative*.zip
+version="1.0"
+common_android="${myPath}/common_android/"
+common_ios="${myPath}/common_ios/"
+analytics_android="${myPath}/analytics_android/"
+analytics_ios="${myPath}/analytics_ios/"
+push_android="${myPath}/push_android/"
+push_ios="${myPath}/push_ios/"
+share_android="${myPath}/share_android/"
+share_ios="${myPath}/share_ios/"
+common_js="${myPath}/js/"
+rm -r ${myPath}
+rm -r ${myPath}*.zip
 if [ ! -d "$myPath" ]; then
 	
  mkdir "$myPath"
@@ -65,7 +66,7 @@ cp ./android/app/src/main/java/com/umeng/soexample/invokenative/ShareModule.java
 
 ## ios common
 cp ./ios/UMComponent/UMReactBridge/RNUMConfigure.h "$common_ios"
-cp ./ios/UMComponent/UMReactBridge/RNUMConfigure.h "$common_ios"
+cp ./ios/UMComponent/UMReactBridge/RNUMConfigure.m "$common_ios"
 
 ## ios 统计
 cp ./ios/UMComponent/UMReactBridge/UMAnalyticsModule.h "$analytics_ios"
@@ -79,4 +80,4 @@ cp ./ios/UMComponent/UMReactBridge/UMShareModule.h "$share_ios"
 cp ./ios/UMComponent/UMReactBridge/UMShareModule.m "$share_ios"
 ## js
 cp ./native/* "$common_js"
-zip -r UMReactNative1.0.zip ./UMReactNative/*
+zip -r ${myPath}${version}.zip ./${myPath}/*

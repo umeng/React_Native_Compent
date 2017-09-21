@@ -198,6 +198,7 @@ public class PushModule extends ReactContextBaseJavaModule {
                 list.pushString(key);
             }
         }
+        Log.e("xxxxxx","list="+list);
         return list;
     }
 }
