@@ -35,14 +35,16 @@ export default class UserCenter extends Component {
         })
     }
     listTag(){
-        PushUtil.listTag((code, remain, tagList) =>{
-            if (code == 0){
+        PushUtil.listTag((code,tagList) =>{
+                if (code == 0){
                 var tags="tags:";
+                console.log("xxxxxx length="+tagList.length)
                 for(var i=0;i<tagList.length;i++){
                     tags = tags+tagList[i]+"\n";
+                    console.log("xxxxxx tags="+tags)
                 }
                 this.setState({result:tags});
-            }
+                }
         })
     }
     addAlias(){
