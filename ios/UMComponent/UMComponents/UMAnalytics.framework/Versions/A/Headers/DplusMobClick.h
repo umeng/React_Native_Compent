@@ -48,6 +48,29 @@
 +(void)clearSuperProperties;
 
 /**
+ * 设置预置事件属性 键值对 会覆盖同名的key
+ */
++(void) registerPreProperties:(NSDictionary *)property;
+
+/**
+ *
+ * 删除指定预置事件属性
+ @param key
+ */
++(void) unregisterPreProperty:(NSString *)propertyName;
+
+/**
+ * 获取预置事件所有属性；如果不存在，则返回空。
+ */
++(NSDictionary *)getPreProperties;
+
+/**
+ *清空所有预置事件属性。
+ */
++(void)clearPreProperties;
+
+
+/**
  * 设置关注事件是否首次触发,只关注eventList前五个合法eventID.只要已经保存五个,此接口无效
  */
 +(void)setFirstLaunchEvent:(NSArray *)eventList;
