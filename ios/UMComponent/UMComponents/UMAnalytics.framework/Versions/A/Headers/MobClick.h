@@ -205,23 +205,4 @@ typedef NS_ENUM (NSUInteger, eScenarioType)
 
 + (void)setCrashCBBlock:(CallbackBlock)cbBlock;
 
-#pragma mark REMOVED APIs -
-
-/** 组件化的友盟SDK产品，设置是否打开console和对日志信息功能已经统一迁移到UMCommon库中UMConfigure类中完成.
- */
-+ (void)setEncryptEnabled:(BOOL)value  API_DEPRECATED_WITH_REPLACEMENT("Please use [UMConfigure setEncryptEnabled:YES/NO]", ios(2.0, 5.0));
-+ (void)setLogEnabled:(BOOL)value API_DEPRECATED_WITH_REPLACEMENT("Please use [UMConfigure setLogEnabled:YES/NO]", ios(2.0, 5.0));
-
-/** 组件化的友盟SDK产品，统一了app的版本号为shortversion,不再使用历史遗留的Build号(CFBundleVersion)，开发者直接删除该API.
- */
-+ (void)setAppVersion:(NSString *)appVersion API_UNAVAILABLE(ios);
-
-/** 新版iOS 的发送策略已经调整，并不需要开发者设置，日志数据可以在app切到后台时统一发送。
- */
-+ (void)setReportPolicy:(int)ePolicy API_UNAVAILABLE(ios);
-+ (void)setLogSendInterval:(double)second API_UNAVAILABLE(ios);
-
-/** 因业务调整，结构化事件暂时不可用。
- */
-+ (void)event:(NSArray *)keyPath value:(int)value label:(NSString *)label API_UNAVAILABLE(ios);
 @end
