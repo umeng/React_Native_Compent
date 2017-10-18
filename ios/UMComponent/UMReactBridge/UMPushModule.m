@@ -64,7 +64,7 @@ RCT_EXPORT_MODULE();
       if ([responseObject isKindOfClass:[NSDictionary class]]) {
         NSDictionary *retDict = responseObject;
         if ([retDict[@"success"] isEqualToString:@"ok"]) {
-          completion(@[@0, @(remain)]);
+          completion(@[@200, @(remain)]);
         } else {
           completion(@[@(-1), @(remain)]);
         }
@@ -88,7 +88,7 @@ RCT_EXPORT_MODULE();
     } else {
       if ([responseTags isKindOfClass:[NSSet class]]) {
         NSArray *retList = responseTags.allObjects;
-        completion(@[@0, @(remain), retList]);
+        completion(@[@200, @(remain), retList]);
       } else {
         completion(@[@(-1), @(remain), @[]]);
       }
@@ -108,7 +108,7 @@ RCT_EXPORT_MODULE();
       if ([responseObject isKindOfClass:[NSDictionary class]]) {
         NSDictionary *retDict = responseObject;
         if ([retDict[@"success"] isEqualToString:@"ok"]) {
-          completion(@[@0]);
+          completion(@[@200]);
         } else {
           completion(@[@(-1)]);
         }
