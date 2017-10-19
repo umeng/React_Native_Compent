@@ -155,10 +155,13 @@ RCT_EXPORT_METHOD(share:(NSString *)text icon:(NSString *)icon link:(NSString *)
         }if (!msg) {
           msg = @"share failed";
         }
-        
-        completion(@[@(error.code), msg]);
+        int stcode =error.code;
+        if(stcode == 0){
+         stcode = 200;
+        }
+        completion(@[@(stcode), msg]);
       } else {
-        completion(@[@0, @"share success"]);
+        completion(@[@200, @"share success"]);
       }
     }
   }];
@@ -184,10 +187,13 @@ RCT_EXPORT_METHOD(shareboard:(NSString *)text icon:(NSString *)icon link:(NSStri
           }if (!msg) {
             msg = @"share failed";
           }
-          
-          completion(@[@(error.code), msg]);
+          int stcode =error.code;
+          if(stcode == 0){
+            stcode = 200;
+          }
+          completion(@[@(stcode), msg]);
         } else {
-          completion(@[@0, @"share success"]);
+          completion(@[@200, @"share success"]);
         }
       }
     }];

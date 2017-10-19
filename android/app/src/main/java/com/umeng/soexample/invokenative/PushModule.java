@@ -26,7 +26,9 @@ import com.umeng.message.tag.TagManager;
  */
 
 public class PushModule extends ReactContextBaseJavaModule {
-
+    private final int SUCCESS = 200;
+    private final int ERROR = 0;
+    private final int CANCEL = -1;
     private static final String TAG = PushModule.class.getSimpleName();
     private static Handler mSDKHandler = new Handler(Looper.getMainLooper());
     private ReactApplicationContext context;
@@ -60,9 +62,9 @@ public class PushModule extends ReactContextBaseJavaModule {
 
 
                         if (isSuccess) {
-                            successCallback.invoke(0,result.remain);
+                            successCallback.invoke(SUCCESS,result.remain);
                         } else {
-                            successCallback.invoke(-1,0);
+                            successCallback.invoke(ERROR,0);
                         }
 
 
@@ -80,9 +82,9 @@ public class PushModule extends ReactContextBaseJavaModule {
             public void onMessage(boolean isSuccess, final ITagManager.Result result) {
                 Log.i(TAG, "isSuccess:" + isSuccess);
                 if (isSuccess) {
-                    successCallback.invoke(0,result.remain);
+                    successCallback.invoke(SUCCESS,result.remain);
                 } else {
-                    successCallback.invoke(-1,0);
+                    successCallback.invoke(ERROR,0);
                 }
             }
         }, tag);
@@ -99,12 +101,12 @@ public class PushModule extends ReactContextBaseJavaModule {
                         if (isSuccess) {
                             if (result != null) {
 
-                                successCallback.invoke(0,resultToList(result));
+                                successCallback.invoke(SUCCESS,resultToList(result));
                             } else {
-                                successCallback.invoke(-1,resultToList(result));
+                                successCallback.invoke(ERROR,resultToList(result));
                             }
                         } else {
-                            successCallback.invoke(-2,resultToList(result));
+                            successCallback.invoke(ERROR,resultToList(result));
                         }
 
                     }
@@ -123,9 +125,9 @@ public class PushModule extends ReactContextBaseJavaModule {
 
                         Log.e("xxxxxx","isuccess"+isSuccess);
                         if (isSuccess) {
-                            successCallback.invoke(0);
+                            successCallback.invoke(SUCCESS);
                         } else {
-                            successCallback.invoke(-1);
+                            successCallback.invoke(ERROR);
                         }
 
 
@@ -146,9 +148,9 @@ public class PushModule extends ReactContextBaseJavaModule {
 
                         Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
                         if (Boolean.TRUE.equals(isSuccess)) {
-                            successCallback.invoke(0);
+                            successCallback.invoke(SUCCESS);
                         }else {
-                            successCallback.invoke(-1);
+                            successCallback.invoke(ERROR);
                         }
 
 
@@ -163,9 +165,9 @@ public class PushModule extends ReactContextBaseJavaModule {
             @Override
             public void onMessage(boolean isSuccess, String s) {
                 if (Boolean.TRUE.equals(isSuccess)) {
-                    successCallback.invoke(0);
+                    successCallback.invoke(SUCCESS);
                 }else {
-                    successCallback.invoke(-1);
+                    successCallback.invoke(ERROR);
                 }
             }
         });

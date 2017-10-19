@@ -1,5 +1,5 @@
 # 工程配置
-首先需要说明，Cocos2dx下载的只是桥接文件，不含最新版本的jar，对应组件的jar请去[下载中心](http://mobile.umeng.com/custom_sdk)下载。
+首先需要说明，React Native下载的只是桥接文件，不含最新版本的jar，对应组件的jar请去[下载中心](http://mobile.umeng.com/custom_sdk)下载。
 如果对于文档仍有疑问的，请参照我们在github上的[demo](https://github.com/umeng/React_Native_Compent)
 
 ## Android
@@ -231,7 +231,7 @@ AnalyticsUtil.bonusWithItem(item, amount, price, source); //赠送道具
 AnalyticsUtil.exchange(orderId, currencyAmount, currencyType, virtualAmount, channel);
 
 * currencyAmount 现金或等价物总额
-* currencyType 为ISO4217定义的3位字母代码，如CNY,USD等（如使用其它自定义等价物作为现金，可使￼用ISO4217中未定义的3位字母组合传入货币类型）￼
+* currencyType 为ISO4217定义的3位字母代码，如CNY,USD等（如使用其它自定义等价物作为现金，可使用ISO4217中未定义的3位字母组合传入货币类型）
 * virtualAmount 虚拟币数量
 * channel 支付渠道
 * orderId 交易订单ID
@@ -386,17 +386,42 @@ import ShareUtile from './ShareUtil'
 平台与id的对应关系如下：
 
 
-| 平台 | id|
-| -------- | -------- | 
-| QQ     | 0     | 
-| 新浪微博     | 1     | 
-| 微信     | 2     | 
-| 微信朋友圈     | 3     | 
-| Qzone     | 4     | 
-| 电子邮件     | 5     | 
-| 短信     | 6     | 
-| Facebook     | 7     | 
-| Twitter     | 8     | 
+| id |平台 | 备注 |
+| -------- | -------- | -------- |
+| 0     | QQ     |     |
+| 1     | SINA     |     |
+| 2     | 微信     |     |
+| 3     | 朋友圈     |     |
+| 4     | QQ空间     |     |
+| 5     | 电子邮件     |     |
+| 6     | 短信     |     |
+| 7     | facebook     |     |
+| 8     | twitter     |     |
+| 9     | 微信收藏     |     |
+| 10     | google+     |     |
+| 11     | 人人     |     |
+| 12     | 腾讯微博     |     |
+| 13     | 豆瓣     |     |
+| 14     | facebook messager     |     |
+| 15     | 易信     |     |
+| 16     | 易信朋友圈     |     |
+| 17     | INSTAGRAM     |     |
+| 18     | PINTEREST     |     |
+| 19     | 印象笔记     |     |
+| 20     | POCKET     |     |
+| 21     | LINKEDIN     |     |
+| 22     | FOURSQUARE     |     |
+| 23     | 有道云笔记     |     |
+| 24     | WHATSAPP     |     |
+| 25     | LINE     |     |
+| 26     | FLICKR     |     |
+| 27     | TUMBLR     |     |
+| 28     | 支付宝     |     |
+| 29     | KAKAO     |     |
+| 30     | DROPBOX     |     |
+| 31     | VKONTAKTE     |     |
+| 32     | 钉钉     |     |
+| 33     | 系统菜单     |     |
 
 回调示例如下：
 
@@ -457,3 +482,5 @@ import ShareUtile from './ShareUtil'
 * title 为分享链接的标题
 * list 为分享平台数组，如：` var list = [0,1,2]`
 * callback中code为错误码，当为0时，标记成功。message为错误信息
+
+
