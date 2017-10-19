@@ -75,7 +75,7 @@ RCT_EXPORT_MODULE();
     case 24:
       return UMSocialPlatformType_Whatsapp;
     case 25:
-      return UMSocialPlatformType_Linkedin;
+      return UMSocialPlatformType_Line;
     case 26:
       return UMSocialPlatformType_Flickr;
     case 27:
