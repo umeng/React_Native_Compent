@@ -31,6 +31,9 @@ import com.umeng.socialize.media.UMWeb;
 
 public class ShareModule extends ReactContextBaseJavaModule {
     private static Activity ma;
+    private final int SUCCESS = 200;
+    private final int ERROR = 0;
+    private final int CANCEL = -1;
     private static Handler mSDKHandler = new Handler(Looper.getMainLooper());
     private ReactApplicationContext contect;
     public ShareModule(ReactApplicationContext reactContext) {
@@ -92,17 +95,17 @@ public class ShareModule extends ReactContextBaseJavaModule {
 
             @Override
             public void onResult(SHARE_MEDIA share_media) {
-                successCallback.invoke(0, "success");
+                successCallback.invoke(SUCCESS, "success");
             }
 
             @Override
             public void onError(SHARE_MEDIA share_media, Throwable throwable) {
-                successCallback.invoke(1, throwable.getMessage());
+                successCallback.invoke(ERROR, throwable.getMessage());
             }
 
             @Override
             public void onCancel(SHARE_MEDIA share_media) {
-                successCallback.invoke(2, "cancel");
+                successCallback.invoke(CANCEL, "cancel");
             }
         };
     }
