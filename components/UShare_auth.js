@@ -23,7 +23,7 @@ export default class UserCenter extends Component {
     qqauth(){
         ShareUtile.auth(0,(code,result,message) =>{
             this.setState({result:message});
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:result.uid});
             }
         });
@@ -31,7 +31,7 @@ export default class UserCenter extends Component {
     sinaauth(){
         ShareUtile.auth(1,(code,result,message) =>{
             this.setState({result:message});
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:result.uid});
             }
         });
@@ -39,7 +39,7 @@ export default class UserCenter extends Component {
     wxauth(){
         ShareUtile.auth(2,(code,result,message) =>{
             this.setState({result:message});
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:result.uid});
             }
         });
