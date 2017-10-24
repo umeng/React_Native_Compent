@@ -22,21 +22,21 @@ export default class UserCenter extends Component {
     }
     addtag(){
         PushUtil.addTag(this.state.tag,(code, remain) =>{
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:remain});
             }
         })
     }
     deleteTag(){
         PushUtil.deleteTag(this.state.tag,(code, remain) =>{
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:remain});
             }
         })
     }
     listTag(){
         PushUtil.listTag((code,tagList) =>{
-                if (code == 0){
+                if (code == 200){
                 var tags="tags:";
                 console.log("xxxxxx length="+tagList.length)
                 for(var i=0;i<tagList.length;i++){
@@ -49,21 +49,21 @@ export default class UserCenter extends Component {
     }
     addAlias(){
         PushUtil.addAlias(this.state.tag,"UMENG",(code) =>{
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:code});
             }
         })
     }
     addExclusiveAlias(){
         PushUtil.addExclusiveAlias(this.state.tag,"UMENG",(code) =>{
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:code});
             }
         })
     }
     deleteAlias(){
         PushUtil.deleteAlias(this.state.tag,"UMENG",(code) =>{
-            if (code == 0){
+            if (code == 200){
                 this.setState({result:code});
             }
         })

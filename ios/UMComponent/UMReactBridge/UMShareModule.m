@@ -75,7 +75,7 @@ RCT_EXPORT_MODULE();
     case 24:
       return UMSocialPlatformType_Whatsapp;
     case 25:
-      return UMSocialPlatformType_Linkedin;
+      return UMSocialPlatformType_Line;
     case 26:
       return UMSocialPlatformType_Flickr;
     case 27:
@@ -155,9 +155,9 @@ RCT_EXPORT_METHOD(share:(NSString *)text icon:(NSString *)icon link:(NSString *)
         }if (!msg) {
           msg = @"share failed";
         }
-        int stcode =error.code;
-        if(stcode == 0){
-         stcode = 200;
+        NSInteger stcode =error.code;
+        if(stcode == 2009){
+         stcode = -1;
         }
         completion(@[@(stcode), msg]);
       } else {
@@ -187,9 +187,9 @@ RCT_EXPORT_METHOD(shareboard:(NSString *)text icon:(NSString *)icon link:(NSStri
           }if (!msg) {
             msg = @"share failed";
           }
-          int stcode =error.code;
-          if(stcode == 0){
-            stcode = 200;
+          NSInteger stcode =error.code;
+          if(stcode == 2009){
+            stcode = -1;
           }
           completion(@[@(stcode), msg]);
         } else {
@@ -220,8 +220,11 @@ RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)co
         }if (!msg) {
           msg = @"share failed";
         }
-        
-        completion(@[@(error.code), @{}, msg]);
+        NSInteger stCode = error.code;
+        if(stCode == 2009){
+          stCode = -1;
+        }
+        completion(@[@(stCode), @{}, msg]);
       } else {
         UMSocialUserInfoResponse *authInfo = result;
         
@@ -242,7 +245,7 @@ RCT_EXPORT_METHOD(auth:(NSInteger)platform completion:(RCTResponseSenderBlock)co
         retDict[@"province"] = originInfo[@"province"];
         retDict[@"country"] = originInfo[@"country"];
         
-        completion(@[@0, retDict, @""]);
+        completion(@[@200, retDict, @""]);
       }
     }
   }];
