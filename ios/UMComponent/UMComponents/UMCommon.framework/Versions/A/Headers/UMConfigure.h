@@ -31,11 +31,6 @@
 
 + (NSString *)umidString;
 
-/** 设置第三方框架的平台类型和平台版本
- @param wraperType  wraperType需要传入的合法字符串native,cocos2dx,unity3d,react-native,phonegap,weex
- @param wrapperVersion  对应平台的版本号
- @return BOOL
- */
-+(BOOL)setWraperType:(NSString*)wraperType wrapperVersion:(NSString*)wrapperVersion;
+
 
 @end
