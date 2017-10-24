@@ -31,6 +31,9 @@ import com.umeng.socialize.media.UMWeb;
 
 public class ShareModule extends ReactContextBaseJavaModule {
     private static Activity ma;
+    private final int SUCCESS = 200;
+    private final int ERROR = 0;
+    private final int CANCEL = -1;
     private static Handler mSDKHandler = new Handler(Looper.getMainLooper());
     private ReactApplicationContext contect;
     public ShareModule(ReactApplicationContext reactContext) {
@@ -92,17 +95,17 @@ public class ShareModule extends ReactContextBaseJavaModule {
 
             @Override
             public void onResult(SHARE_MEDIA share_media) {
-                successCallback.invoke(0, "success");
+                successCallback.invoke(SUCCESS, "success");
             }
 
             @Override
             public void onError(SHARE_MEDIA share_media, Throwable throwable) {
-                successCallback.invoke(1, throwable.getMessage());
+                successCallback.invoke(ERROR, throwable.getMessage());
             }
 
             @Override
             public void onCancel(SHARE_MEDIA share_media) {
-                successCallback.invoke(2, "cancel");
+                successCallback.invoke(CANCEL, "cancel");
             }
         };
     }
@@ -217,6 +220,54 @@ public class ShareModule extends ReactContextBaseJavaModule {
                 return SHARE_MEDIA.TWITTER;
             case 9:
                 return SHARE_MEDIA.WEIXIN_FAVORITE;
+            case 10:
+                return SHARE_MEDIA.GOOGLEPLUS;
+            case 11:
+                return SHARE_MEDIA.RENREN;
+            case 12:
+                return SHARE_MEDIA.TENCENT;
+            case 13:
+                return SHARE_MEDIA.DOUBAN;
+            case 14:
+                return SHARE_MEDIA.FACEBOOK_MESSAGER;
+            case 15:
+                return SHARE_MEDIA.YIXIN;
+            case 16:
+                return SHARE_MEDIA.YIXIN_CIRCLE;
+            case 17:
+                return SHARE_MEDIA.INSTAGRAM;
+            case 18:
+                return SHARE_MEDIA.PINTEREST;
+            case 19:
+                return SHARE_MEDIA.EVERNOTE;
+            case 20:
+                return SHARE_MEDIA.POCKET;
+            case 21:
+                return SHARE_MEDIA.LINKEDIN;
+            case 22:
+                return SHARE_MEDIA.FOURSQUARE;
+            case 23:
+                return SHARE_MEDIA.YNOTE;
+            case 24:
+                return SHARE_MEDIA.WHATSAPP;
+            case 25:
+                return SHARE_MEDIA.LINE;
+            case 26:
+                return SHARE_MEDIA.FLICKR;
+            case 27:
+                return SHARE_MEDIA.TUMBLR;
+            case 28:
+                return SHARE_MEDIA.ALIPAY;
+            case 29:
+                return SHARE_MEDIA.KAKAO;
+            case 30:
+                return SHARE_MEDIA.DROPBOX;
+            case 31:
+                return SHARE_MEDIA.VKONTAKTE;
+            case 32:
+                return SHARE_MEDIA.DINGTALK;
+            case 33:
+                return SHARE_MEDIA.MORE;
             default:
                 return SHARE_MEDIA.QQ;
         }

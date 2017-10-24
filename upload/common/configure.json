@@ -1,0 +1,24 @@
+{
+    "name": "commonrn",
+    "title": "",
+    "description": "rn common",
+    "docslink": "http://dev.umeng.com/sdk_integate/android_sdk/android_common_guide",
+    "show": 0,
+    "required": 1,
+    "display_platform": "React Native",
+    "packages": [
+        {
+            "required": 1,
+            "docslink": "",
+            "key": "androidrn",
+            "description": "",
+            "title": "",
+            "destination": "",
+            "files": [
+                "UMReactNative/common_android/*",
+                "UMReactNative/js/*",
+                "UMReactNative/common_ios/*"
+            ]
+        }
+    ]
+}

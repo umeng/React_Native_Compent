@@ -44,6 +44,54 @@ RCT_EXPORT_MODULE();
       return UMSocialPlatformType_Twitter;
     case 9:
       return UMSocialPlatformType_WechatFavorite;
+    case 10:
+      return UMSocialPlatformType_GooglePlus;
+    case 11:
+      return UMSocialPlatformType_Renren;
+    case 12:
+      return UMSocialPlatformType_TencentWb;
+    case 13:
+      return UMSocialPlatformType_Douban;
+    case 14:
+      return UMSocialPlatformType_FaceBookMessenger;
+    case 15:
+      return UMSocialPlatformType_YixinSession;
+    case 16:
+      return UMSocialPlatformType_YixinTimeLine;
+    case 17:
+      return UMSocialPlatformType_Instagram;
+    case 18:
+      return UMSocialPlatformType_Pinterest;
+    case 19:
+      return UMSocialPlatformType_EverNote;
+    case 20:
+      return UMSocialPlatformType_Pocket;
+    case 21:
+      return UMSocialPlatformType_Linkedin;
+    case 22:
+      return UMSocialPlatformType_UnKnown; // foursquare on android
+    case 23:
+      return UMSocialPlatformType_YouDaoNote;
+    case 24:
+      return UMSocialPlatformType_Whatsapp;
+    case 25:
+      return UMSocialPlatformType_Linkedin;
+    case 26:
+      return UMSocialPlatformType_Flickr;
+    case 27:
+      return UMSocialPlatformType_Tumblr;
+    case 28:
+      return UMSocialPlatformType_AlipaySession;
+    case 29:
+      return UMSocialPlatformType_KakaoTalk;
+    case 30:
+      return UMSocialPlatformType_DropBox;
+    case 31:
+      return UMSocialPlatformType_VKontakte;
+    case 32:
+      return UMSocialPlatformType_DingDing;
+    case 33:
+      return UMSocialPlatformType_UnKnown; // more
     default:
       return UMSocialPlatformType_QQ;
   }
@@ -107,10 +155,13 @@ RCT_EXPORT_METHOD(share:(NSString *)text icon:(NSString *)icon link:(NSString *)
         }if (!msg) {
           msg = @"share failed";
         }
-        
-        completion(@[@(error.code), msg]);
+        int stcode =error.code;
+        if(stcode == 0){
+         stcode = 200;
+        }
+        completion(@[@(stcode), msg]);
       } else {
-        completion(@[@0, @"share success"]);
+        completion(@[@200, @"share success"]);
       }
     }
   }];
@@ -136,10 +187,13 @@ RCT_EXPORT_METHOD(shareboard:(NSString *)text icon:(NSString *)icon link:(NSStri
           }if (!msg) {
             msg = @"share failed";
           }
-          
-          completion(@[@(error.code), msg]);
+          int stcode =error.code;
+          if(stcode == 0){
+            stcode = 200;
+          }
+          completion(@[@(stcode), msg]);
         } else {
-          completion(@[@0, @"share success"]);
+          completion(@[@200, @"share success"]);
         }
       }
     }];

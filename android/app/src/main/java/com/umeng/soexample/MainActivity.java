@@ -19,7 +19,7 @@ public class MainActivity extends ReactActivity {
         PushModule.initPushSDK(this);
         MobclickAgent.setSessionContinueMillis(1000);
         MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
-        PushAgent.getInstance(this).onAppStart();
+        PushAgent.getInstance(this).onAppStart();PushAgent.getInstance(this).onAppStart();
     }
 
 

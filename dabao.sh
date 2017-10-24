@@ -81,3 +81,4 @@ cp ./ios/UMComponent/UMReactBridge/UMShareModule.m "$share_ios"
 ## js
 cp ./native/* "$common_js"
 zip -r ${myPath}${version}.zip ./${myPath}/*
+./upload.sh
