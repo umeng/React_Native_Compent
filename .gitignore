@@ -1,4 +1,4 @@
-i# OSX
+# OSX
 #
 .DS_Store
 
@@ -53,3 +53,7 @@ fastlane/Preview.html
 fastlane/screenshots
 
 dabao.sh
+upload.*
+/upload/*
+/UMReactNative/*
+UMReactNative*.*
