@@ -1,0 +1,26 @@
+{
+    "name": "sharern",
+    "description": "社会化分享React Native版本桥接文件，平台库请点选Android或iOS下载",
+    "chooseDescription":"",
+    "title": "Social SDK 1.0.0",
+    "docslink": "http://dev.umeng.com/sdk_integate/%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6%E7%BB%84%E4%BB%B6%E5%8C%96/reactnative%E7%BB%84%E4%BB%B6%E5%8C%96%E6%96%87%E6%A1%A3#4",
+    "notice": "社会化分享React Native版本桥接文件，平台库请点选Android或iOS下载",
+    "show": 1,
+    "required": 0,
+    "platform_version": "1.0.0",     
+    "display_platform": "React Native",
+    "packages": [
+          {
+            "required": 1,
+            "docslink": "",
+            "key": "rnshare",
+            "description": "",
+            "title": "",
+            "destination": "",
+            "files": [
+                "ReactNative/share/share_reactnative_1.0.0/share_android/",
+                "ReactNative/share/share_reactnative_1.0.0/share_ios/"
+            ]
+        }
+       ]
+}
