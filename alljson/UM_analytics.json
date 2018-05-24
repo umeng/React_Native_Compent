@@ -1,26 +1,32 @@
 {
-    "name": "analyticsrn",
-    "description": "统计React Native版本桥接文件，平台库请点选Android或iOS下载",
-    "chooseDescription":"",
-    "title": "Analytics SDK 1.0.0",
+    "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
+    "notice": "统计React Native版本桥接文件，平台库请点选Android或iOS下载", 
+    "required": 0, 
+    "name": "analyticsrn", 
+    "title": "移动统计 SDK", 
+    "show": 1, 
+    "chooseDescription": "", 
     "platform_version": "1.0.0", 
-    "docslink": "http://dev.umeng.com/sdk_integate/%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6%E7%BB%84%E4%BB%B6%E5%8C%96/reactnative%E7%BB%84%E4%BB%B6%E5%8C%96%E6%96%87%E6%A1%A3#2",
-    "notice": "统计React Native版本桥接文件，平台库请点选Android或iOS下载",
-    "show": 1,
-    "display_platform": "React Native",
-    "required": 0,
+    "display_platform": "React Native", 
+    "log": {
+        "date": "2017-12-03", 
+        "content": "1.整体进行了重构，使其适配了组件化版本", 
+        "title": "v1.0.0"
+    }, 
     "packages": [
-          {
-            "required": 1,
-            "docslink": "",
-            "key": "rnanalytics",
-            "description": "",
-            "title": "",
-            "destination": "",
+        {
             "files": [
-                "ReactNative/analytics/analytics_reactnative_1.0.0/analytics_android/",
+                "ReactNative/analytics/analytics_reactnative_1.0.0/analytics_android/", 
                 "ReactNative/analytics/analytics_reactnative_1.0.0/analytics_ios/"
-            ]
+            ], 
+            "docslink": "", 
+            "required": 1, 
+            "description": "", 
+            "title": "", 
+            "destination": "", 
+            "key": "rnanalytics"
         }
-       ]
+    ], 
+    "index":0,
+    "description": "统计React Native版本桥接文件，平台库请点选Android或iOS下载"
 }

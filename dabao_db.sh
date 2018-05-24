@@ -102,19 +102,19 @@ cp ./native/* "$common_js"
 
 cd ${pro_name}
 cd share
-zip -r -m $sharename . -i "/share_${platform}_$version/*"
+# zip -r -m $sharename . -i "/share_${platform}_$version/*"
 cd ../../
 cd ${pro_name}
 cd push
-zip -r -m $pushname  . -i "/push_${platform}_$version/*"
+# zip -r -m $pushname  . -i "/push_${platform}_$version/*"
 cd ../../
 cd ${pro_name}
 cd analytics
-zip -r -m $analyticsname  . -i "/analytics_${platform}_$version/*"
+# zip -r -m $analyticsname  . -i "/analytics_${platform}_$version/*"
 cd ../../
 cd ${pro_name}
 cd common
-zip -r -m $commonname . -i  "/common_${platform}_$version/*"
+# zip -r -m $commonname . -i  "/common_${platform}_$version/*"
 cd ../../
 zip -r -m ${pro_name}".zip" . -i "/${pro_name}/*"
 
@@ -136,3 +136,4 @@ value=`cat alljson/UM_analytics.json | awk -F '"' '/platform_version/{print$4}'`
 echo $value
 sed -i '' "s/$value/$version/g" alljson/UM_analytics.json
 #########################版本号修改##################################
+./addlog.py

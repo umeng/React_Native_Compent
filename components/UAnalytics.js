@@ -15,6 +15,7 @@ import ColorUtil from './ColorUtil'
 import { StackNavigator } from 'react-navigation';
 import APP from './UAnalytics_app'
 import Game from './UAnalytics_game'
+import AnalyticsUtil from './../native/AnalyticsUtil'
 class AnalyticsMain extends Component {
 
 
@@ -24,17 +25,44 @@ class AnalyticsMain extends Component {
             <View style={styles.u_c}>
                 <TouchableOpacity
                     style={styles.u_c_item}
-                    onPress={() => navigate('APP', {user: ''})}
+                    onPress={() => {navigate('APP', {user: ''})}
+                      }
                 >
                     <Text style={styles.u_c_text}>{'应用统计'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.u_c_item}
-                    onPress={() => navigate('Game', {user: ''})}
+                    onPress={() => {navigate('Game', {user: ''})}}
                 >
                     <Text style={styles.u_c_text}>{'游戏统计'}</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.u_c_item}
+                    onPress={() => { AnalyticsUtil.onPageStart('app');}}
+                >
+                    <Text style={styles.u_c_text}>{'app start'}</Text>
+                </TouchableOpacity>
 
+                <TouchableOpacity
+                    style={styles.u_c_item}
+                    onPress={() => { AnalyticsUtil.onPageEnd('app');}}
+                >
+                    <Text style={styles.u_c_text}>{'app end'}</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.u_c_item}
+                    onPress={() => { AnalyticsUtil.onPageStart('game');}}
+                >
+                    <Text style={styles.u_c_text}>{'game start'}</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.u_c_item}
+                    onPress={() => { AnalyticsUtil.onPageEnd('game');}}
+                >
+                    <Text style={styles.u_c_text}>{'game end'}</Text>
+                </TouchableOpacity>
             </View>
         );
     }

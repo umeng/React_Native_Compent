@@ -1,25 +1,30 @@
 {
-    "name": "commonrn",
-    "title": "",
-    "description": "rn common",
-    "docslink": "http://dev.umeng.com/sdk_integate/android_sdk/android_common_guide",
-    "show": 0,
-    "required": 1,
+    "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
+    "description": "rn common", 
+    "show": 0, 
+    "required": 1, 
     "platform_version": "1.0.0", 
-    "display_platform": "React Native",
+    "display_platform": "React Native", 
+    "log": {
+        "date": "2017-12-03", 
+        "content": "1.整体进行了重构，使其适配了组件化版本", 
+        "title": "v1.0.0"
+    }, 
+    "title": "", 
     "packages": [
         {
-            "required": 1,
-            "docslink": "",
-            "key": "rncommon",
-            "description": "",
-            "title": "",
-            "destination": "",
             "files": [
-                "ReactNative/common/common_reactnative_1.0.0/common_android/",
-                "ReactNative/common/common_reactnative_1.0.0/js/",
+                "ReactNative/common/common_reactnative_1.0.0/common_android/", 
+                "ReactNative/common/common_reactnative_1.0.0/js/", 
                 "ReactNative/common/common_reactnative_1.0.0/common_ios/"
-            ]
+            ], 
+            "docslink": "", 
+            "required": 1, 
+            "description": "", 
+            "title": "", 
+            "destination": "", 
+            "key": "rncommon"
         }
-    ]
+    ], 
+    "name": "commonrn"
 }

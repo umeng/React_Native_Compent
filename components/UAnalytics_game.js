@@ -103,6 +103,7 @@ export default class UserCenter extends Component {
                 >
                     <Text style={styles.u_c_text}>{'有订单的充值付费'}</Text>
                 </TouchableOpacity>
+
             </View>
         );
     }

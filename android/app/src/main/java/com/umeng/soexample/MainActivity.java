@@ -2,6 +2,7 @@ package com.umeng.soexample;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import com.facebook.react.ReactActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.analytics.MobclickAgent.EScenarioType;
@@ -19,6 +20,7 @@ public class MainActivity extends ReactActivity {
         PushModule.initPushSDK(this);
         MobclickAgent.setSessionContinueMillis(1000);
         MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
+        MobclickAgent.openActivityDurationTrack(false);
         PushAgent.getInstance(this).onAppStart();PushAgent.getInstance(this).onAppStart();
     }
 
@@ -26,12 +28,21 @@ public class MainActivity extends ReactActivity {
     @Override
     public void onResume() {
         super.onResume();
+        android.util.Log.e("xxxxxx","onResume=");
         MobclickAgent.onResume(this);
     }
     @Override
     protected void onPause() {
         super.onPause();
+        android.util.Log.e("xxxxxx","onPause=");
+
         MobclickAgent.onPause(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //MobclickAgent.onKillProcess(this);
     }
 
     /**

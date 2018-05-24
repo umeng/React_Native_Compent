@@ -146,6 +146,7 @@ export default class UserCenter extends Component {
                     <Text style={styles.u_c_text}>{'关注首次触发事件'}</Text>
                 </TouchableOpacity>
 
+
             </View>
         );
     }

@@ -1,26 +1,35 @@
 {
-    "name": "pushrn",
-    "description": "推送React Native版本桥接文件，平台库请点选Android或iOS下载",
-    "chooseDescription":"",
-    "title": "Push SDK 1.0.0",
-    "docslink": "http://dev.umeng.com/sdk_integate/%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6%E7%BB%84%E4%BB%B6%E5%8C%96/reactnative%E7%BB%84%E4%BB%B6%E5%8C%96%E6%96%87%E6%A1%A3#2",
-    "notice": "推送React Native版本桥接文件，平台库请点选Android或iOS下载",
-    "show": 1,
-    "required": 0,
-    "platform_version": "1.0.0",     
-    "display_platform": "React Native",
+    "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
+    "notice": "推送React Native版本桥接文件，平台库请点选Android或iOS下载", 
+    "required": 0, 
+    "name": "pushrn", 
+    "title": "消息推送 SDK", 
+    "show": 1, 
+    "chooseDescription": "", 
+    "platform_version": "1.0.0", 
+    "display_platform": "React Native", 
+    "log": {
+        "date": "2017-12-03", 
+        "content": "1.整体进行了重构，使其适配了组件化版本", 
+        "title": "v1.0.0"
+    }, 
     "packages": [
-          {
-            "required": 1,
-            "docslink": "",
-            "key": "rnpush",
-            "description": "",
-            "title": "",
-            "destination": "",
+        {
             "files": [
-                "ReactNative/push/push_reactnative_1.0.0/push_android/",
+                "ReactNative/push/push_reactnative_1.0.0/push_android/", 
                 "ReactNative/push/push_reactnative_1.0.0/push_ios/"
-            ]
+            ], 
+            "docslink": "", 
+            "required": 1, 
+            "description": "", 
+            "title": "", 
+            "destination": "", 
+            "key": "rnpush"
         }
-       ]
+    ], 
+      "defaultSelect": [
+                        "androidpush_rn"
+                    ], 
+    "index":1,
+    "description": "推送React Native版本桥接文件，平台库请点选Android或iOS下载"
 }

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+import android.text.TextUtils;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -19,6 +19,7 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.analytics.dplus.UMADplus;
 import com.umeng.analytics.game.UMGameAgent;
 import com.umeng.socialize.utils.Log;
+import com.umeng.soexample.MainActivity;
 
 /**
  * Created by wangfei on 17/8/28.
@@ -46,13 +47,14 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
     /********************************U-App统计*********************************/
     @ReactMethod
     public void onPageStart(String mPageName) {
+        android.util.Log.e("xxxxxx","onPageStart="+mPageName);
 
         MobclickAgent.onPageStart(mPageName);
-
     }
 
     @ReactMethod
     public void onPageEnd(String mPageName) {
+        android.util.Log.e("xxxxxx","onPageEnd="+mPageName);
 
         MobclickAgent.onPageEnd(mPageName);
 
