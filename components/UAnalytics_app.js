@@ -39,11 +39,9 @@ export default class UserCenter extends Component {
     onEventWithMapAndCount(){
         AnalyticsUtil.onEventWithMapAndCount("eventname",{name:"umeng",sex:"man"},100);
     }
-    onTrack(){
-        AnalyticsUtil.track("trackname");
-    }
-    onTrackWithMap(){
-        AnalyticsUtil.trackWithMap("trackname",{name:"umeng",sex:"man"});
+  
+    onEventObject(){
+        AnalyticsUtil.onEventObject("onEventObject",{name:"umeng",sex:"man"});
     }
     registerSuperProperty(){
         AnalyticsUtil.registerSuperProperty({name:"umeng",sex:"man"});
@@ -103,17 +101,12 @@ export default class UserCenter extends Component {
 
 
                 <View style = {{flexDirection: 'row'}}>
+                 
                     <TouchableOpacity
                         style={styles.u_c_item}
-                        onPress={this.onTrack.bind(this)}
+                        onPress={this.onEventObject.bind(this)}
                     >
-                        <Text style={styles.u_c_text}>{'track事件'}</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.u_c_item}
-                        onPress={this.onTrackWithMap.bind(this)}
-                    >
-                        <Text style={styles.u_c_text}>{'自定义track事件'}</Text>
+                        <Text style={styles.u_c_text}>{'自定义事件'}</Text>
                     </TouchableOpacity>
 
                 </View>

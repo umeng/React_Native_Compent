@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.text.TextUtils;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -16,10 +15,6 @@ import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.ReadableNativeMap;
 import com.facebook.react.bridge.ReadableType;
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.dplus.UMADplus;
-import com.umeng.analytics.game.UMGameAgent;
-import com.umeng.socialize.utils.Log;
-import com.umeng.soexample.MainActivity;
 
 /**
  * Created by wangfei on 17/8/28.
@@ -39,9 +34,9 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
     }
     @ReactMethod
     private void initGame() {
-        UMGameAgent.init(context);
-        UMGameAgent.setPlayerLevel(1);
-        MobclickAgent.setScenarioType(context, MobclickAgent.EScenarioType.E_UM_GAME);
+        //UMGameAgent.init(context);
+        //UMGameAgent.setPlayerLevel(1);
+
         isGameInited = true;
     }
     /********************************U-App统计*********************************/
@@ -108,13 +103,13 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         MobclickAgent.onEventValue(context, eventId, rMap, value);
     }
     /********************************U-App(Game)统计*********************************/
+    //@ReactMethod
+    //public void track(String eventName) {
+    //    Log.e("xxxxxx dddddd="+context);
+    //    UMADplus.track(context,eventName);
+    //}
     @ReactMethod
-    public void track(String eventName) {
-        Log.e("xxxxxx dddddd="+context);
-        UMADplus.track(context,eventName);
-    }
-    @ReactMethod
-    public void trackWithMap(String eventID,ReadableMap property) {
+    public void onEventObject(String eventID,ReadableMap property) {
         Map<String, Object> map = new HashMap();
         ReadableMapKeySetIterator iterator = property.keySetIterator();
         while (iterator.hasNextKey()) {
@@ -132,7 +127,7 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
             }
         }
 
-        UMADplus.track(context, eventID, map);
+        MobclickAgent.onEventObject(context, eventID, map);
 
     }
     @ReactMethod
@@ -140,19 +135,19 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         ReadableNativeMap map2 = (ReadableNativeMap) map;
         Map<String, Object> map3  = map2.toHashMap();
         for (String key:map3.keySet()){
-            UMADplus.registerSuperProperty(context, key, map3.get(key));
+            MobclickAgent.registerSuperProperty(context, key, map3.get(key));
         }
 
     }
     @ReactMethod
     public void unregisterSuperProperty(String propertyName) {
-        UMADplus.unregisterSuperProperty(context, propertyName);
+        MobclickAgent.unregisterSuperProperty(context, propertyName);
 
     }
     @ReactMethod
     public void getSuperProperty(String propertyName, Callback callback) {
         try {
-            String result = UMADplus.getSuperProperty(context, propertyName).toString();
+            String result = MobclickAgent.getSuperProperty(context, propertyName).toString();
             callback.invoke(result);
         } catch (Exception e) {
         }
@@ -161,12 +156,12 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getSuperProperties(Callback callback) {
-        String result = UMADplus.getSuperProperties(context);
+        String result = MobclickAgent.getSuperProperties(context);
         callback.invoke(result);
     }
     @ReactMethod
     public void clearSuperProperties() {
-        UMADplus.clearSuperProperties(context);
+        MobclickAgent.clearSuperProperties(context);
 
     }
     @ReactMethod
@@ -185,7 +180,7 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
                 list.add(array.getMap(i).toString());
             }
         }
-        UMADplus.setFirstLaunchEvent(context, list);
+        MobclickAgent.setFirstLaunchEvent(context, list);
     }
     /********************************U-Dplus*********************************/
     @ReactMethod
@@ -205,103 +200,103 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         MobclickAgent.onProfileSignOff();
     }
 
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void setUserLevelId(int level) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.setPlayerLevel(level);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void startLevel(String level) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.startLevel(level);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void failLevel(String level) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.failLevel(level);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void finishLevel(String level) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.finishLevel(level);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void exchange(double currencyAmount, String currencyType, double virtualAmount, int channel,
-                         String orderId) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.exchange(currencyAmount, currencyType, virtualAmount, channel, orderId);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void pay(double money, double coin, int source) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.pay(money, coin, source);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void payWithItem(double money, String item, int number, double price, int source) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.pay(money, item, number, price, source);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void buy(String item, int number, double price) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.buy(item, number, price);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void use(String item, int number, double price) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.use(item, number, price);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void bonus(double coin, int source) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.bonus(coin, source);
-    }
-
-    @ReactMethod
-    @SuppressWarnings("unused")
-    public void bonusWithItem(String item, int number, double price, int source) {
-        if (!isGameInited) {
-            initGame();
-        }
-        UMGameAgent.bonus(item, number, price, source);
-    }
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void setUserLevelId(int level) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.setPlayerLevel(level);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void startLevel(String level) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.startLevel(level);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void failLevel(String level) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.failLevel(level);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void finishLevel(String level) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.finishLevel(level);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void exchange(double currencyAmount, String currencyType, double virtualAmount, int channel,
+    //                     String orderId) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.exchange(currencyAmount, currencyType, virtualAmount, channel, orderId);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void pay(double money, double coin, int source) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.pay(money, coin, source);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void payWithItem(double money, String item, int number, double price, int source) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.pay(money, item, number, price, source);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void buy(String item, int number, double price) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.buy(item, number, price);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void use(String item, int number, double price) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.use(item, number, price);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void bonus(double coin, int source) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.bonus(coin, source);
+    //}
+    //
+    //@ReactMethod
+    //@SuppressWarnings("unused")
+    //public void bonusWithItem(String item, int number, double price, int source) {
+    //    if (!isGameInited) {
+    //        initGame();
+    //    }
+    //    UMGameAgent.bonus(item, number, price, source);
+    //}
 }

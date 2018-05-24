@@ -51,7 +51,7 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
-
+dabao_db.sh
 dabao.sh
 upload.*
 /upload/*

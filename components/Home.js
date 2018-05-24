@@ -14,7 +14,7 @@ import { TabNavigator } from 'react-navigation';
 
 import UShare from './UShare'
 import Upush from './UPush'
-import UAnalytics from './UAnalytics'
+import UAnalytics from './UAnalytics_app'
 import ColorUtil from './ColorUtil'
 const Home = TabNavigator({
         UAnalytics: { screen: UAnalytics,
