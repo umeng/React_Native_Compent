@@ -7,8 +7,7 @@
 //
 
 #import <UMAnalytics/MobClick.h>
-#import <UMAnalytics/MobClickGameAnalytics.h>
-#import <UMAnalytics/DplusMobClick.h>
+
 #import "UMAnalyticsModule.h"
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>

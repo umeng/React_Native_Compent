@@ -1,0 +1,175 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package com.umeng.socialize.utils;
+
+import android.os.Bundle;
+import android.util.Log;
+import com.umeng.commonsdk.UMConfigure;
+import com.umeng.commonsdk.debug.UMLog;
+import com.umeng.commonsdk.debug.UMRTLog;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class SLog {
+    private static final String TAG = "Social";
+    private static final String PRIVATE = "priviteSocial";
+    private static boolean DEBUG = true;
+    private static final int E = 0;
+    private static final int I = 2;
+
+    public SLog() {
+    }
+
+    public static void AQ(String var0, String var1) {
+        UMLog var10000 = UMConfigure.umDebugLog;
+        UMLog.aq("Social", 0, var0, var1);
+    }
+
+    public static void mutlE(String... var0) {
+        UMLog var10000 = UMConfigure.umDebugLog;
+        UMLog.mutlInfo("Social", 0, var0);
+    }
+
+    public static void mutlI(String... var0) {
+        UMLog var10000 = UMConfigure.umDebugLog;
+        UMLog.mutlInfo("Social", 2, var0);
+    }
+
+    public static void E(String var0) {
+        if(UMConfigure.umDebugLog != null) {
+            String[] var1 = var0.split("\n");
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.mutlInfo("Social", 0, var1);
+        }
+
+    }
+
+    public static void I(String var0) {
+        if(UMConfigure.umDebugLog != null) {
+            String[] var1 = var0.split("\n");
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.mutlInfo("Social", 2, var1);
+        }
+
+    }
+
+    public static void TE(String var0, String var1) {
+        if(UMConfigure.umDebugLog != null) {
+            String[] var2 = var1.split("\n");
+            String var3 = "Social_" + var0;
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.mutlInfo(var3, 0, var2);
+        }
+
+    }
+
+    public static void TI(String var0, String var1) {
+        if(UMConfigure.umDebugLog != null) {
+            String[] var2 = var1.split("\n");
+            String var3 = "Social_" + var0;
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.mutlInfo(var3, 2, var2);
+        }
+
+    }
+
+    public static void debug(String var0) {
+        if(UMConfigure.umDebugLog != null && DEBUG) {
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.mutlInfo("priviteSocial", 2, "[private log]  " + var0);
+        }
+
+    }
+
+    public static void selfLog(String var0) {
+        Log.e("priviteSocial", var0);
+    }
+
+    public static boolean isDebug() {
+        return UMConfigure.umDebugLog != null?UMConfigure.isDebugLog():false;
+    }
+
+    public static void JSON(JSONObject var0) {
+        if(UMConfigure.umDebugLog != null) {
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.jsonObject("Social", var0);
+        }
+
+    }
+
+    public static void JARRY(JSONArray var0) {
+        if(UMConfigure.umDebugLog != null) {
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.jsonArry("Social", var0);
+        }
+
+    }
+
+    public static void BUNDLE(Bundle var0) {
+        if(UMConfigure.umDebugLog != null) {
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.bundle("Social", 2, var0);
+        }
+
+    }
+
+    public static void error(Throwable var0) {
+        if(UMConfigure.umDebugLog != null) {
+            StackTraceElement[] var1 = var0.getStackTrace();
+            String[] var2 = new String[var1.length + 2];
+            var2[0] = "错误信息如下:";
+            var2[1] = "错误类型:" + var0.getMessage();
+            int var3 = 2;
+            StackTraceElement[] var4 = var1;
+            int var5 = var1.length;
+
+            for(int var6 = 0; var6 < var5; ++var6) {
+                StackTraceElement var7 = var4[var6];
+                var2[var3] = "        at\t " + var7.toString();
+                ++var3;
+            }
+
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.mutlInfo("Social", 0, var2);
+        }
+
+    }
+
+    public static void welcome() {
+        if(UMConfigure.isDebugLog()) {
+            Log.e("priviteSocial", "欢迎使用友盟社会化分享业务，您已添加debug包，可以使用UM Debug模式");
+        } else {
+            Log.e("priviteSocial", "欢迎使用友盟社会化分享业务，您没有添加debug库，如需看log，请根据文档提示添加：https://developer.umeng.com/docs/66632/detail/66890#h2-u67E5u770Bu65E5u5FD74");
+        }
+
+    }
+
+    public static void error(String var0, Throwable var1) {
+        if(UMConfigure.umDebugLog != null && var1 != null) {
+            StackTraceElement[] var2 = var1.getStackTrace();
+            String[] var3 = new String[var2.length + 2];
+            var3[0] = var0;
+            var3[1] = "错误类型:" + var1.getMessage();
+            int var4 = 2;
+            StackTraceElement[] var5 = var2;
+            int var6 = var2.length;
+
+            for(int var7 = 0; var7 < var6; ++var7) {
+                StackTraceElement var8 = var5[var7];
+                var3[var4] = "        at\t " + var8.toString();
+                ++var4;
+            }
+
+            UMLog var10000 = UMConfigure.umDebugLog;
+            UMLog.mutlInfo("Social", 0, var3);
+        }
+
+    }
+
+    public static void runtimePrint(String var0) {
+        UMRTLog.e("priviteSocial", var0);
+    }
+}
