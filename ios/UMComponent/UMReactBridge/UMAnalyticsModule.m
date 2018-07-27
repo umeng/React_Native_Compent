@@ -100,113 +100,7 @@ RCT_EXPORT_METHOD(profileSignOff)
 {
   [MobClick profileSignOff];
 }
-//游戏统计
 
-RCT_EXPORT_METHOD(setUserLevelId:(int)level)
-{
-  [MobClickGameAnalytics setUserLevelId:level];
-}
-
-RCT_EXPORT_METHOD(startLevel:(NSString *)level)
-{
-  if (level == nil || [level isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics startLevel:level];
-}
-
-RCT_EXPORT_METHOD(finishLevel:(NSString *)level)
-{
-  if (level == nil || [level isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics finishLevel:level];
-}
-
-RCT_EXPORT_METHOD(failLevel:(NSString *)level)
-{
-  if (level == nil || [level isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics failLevel:level];
-}
-
-RCT_EXPORT_METHOD(exchange:(double)currencyAmount currencyType:(NSString *)currencyType virtualAmount:(double)virtualAmount channel:(int)channel orderId:(NSString *)orderId)
-{
-  if (currencyType == nil && [currencyType isKindOfClass:[NSNull class]]) {
-    currencyType = nil;
-  }
-  if (orderId == nil || [orderId isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics exchange:orderId currencyAmount:currencyAmount currencyType:currencyType virtualCurrencyAmount:virtualAmount paychannel:channel];
-}
-
-RCT_EXPORT_METHOD(pay:(double)cash coin:(int)coin source:(double)source)
-{
-  [MobClickGameAnalytics pay:cash source:source coin:coin];
-}
-
-RCT_EXPORT_METHOD(payWithItem:(double)cash item:(NSString *)item amount:(int)amount price:(double)price source:(int)source)
-{
-  if (item == nil && [item isKindOfClass:[NSNull class]]) {
-    item = nil;
-  }
-  [MobClickGameAnalytics pay:cash source:source item:item amount:amount price:price];
-}
-
-RCT_EXPORT_METHOD(buy:(NSString *)item amount:(int)amount price:(double)price)
-{
-  if (item == nil || [item isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics buy:item amount:amount price:price];
-}
-
-RCT_EXPORT_METHOD(use:(NSString *)item amount:(int)amount price:(double)price)
-{
-  if (item == nil || [item isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics use:item amount:amount price:price];
-}
-
-RCT_EXPORT_METHOD(bonus:(double)coin source:(int)source)
-{
-  [MobClickGameAnalytics bonus:coin source:source];
-}
-
-RCT_EXPORT_METHOD(bonusWithItem:(NSString *)item amount:(int)amount price:(double)price source:(int)source)
-{
-  if (item == nil || [item isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics bonus:item amount:amount price:price source:source];
-}
-
-//Dplus
-
-RCT_EXPORT_METHOD(track:(NSString *)eventName)
-{
-  
-  if (eventName == nil && [eventName isKindOfClass:[NSNull class]]) {
-    eventName = nil;
-  }
-  [DplusMobClick track:eventName];
-}
-
-RCT_EXPORT_METHOD(trackWithMap:(NSString *)eventName property:(NSDictionary *) property)
-{
-  
-  if (eventName == nil && [eventName isKindOfClass:[NSNull class]]) {
-    eventName = nil;
-  }
-  
-  if (property == nil && [property isKindOfClass:[NSNull class]]) {
-    property = nil;
-  }
-  [DplusMobClick track:eventName property:property];
-}
 
 RCT_EXPORT_METHOD(registerSuperProperty:(NSDictionary *)property)
 {
@@ -214,7 +108,7 @@ RCT_EXPORT_METHOD(registerSuperProperty:(NSDictionary *)property)
   if (property == nil && [property isKindOfClass:[NSNull class]]) {
     property = nil;
   }
-  [DplusMobClick registerSuperProperty:property];
+  [MobClick registerPreProperties:property];
 }
 
 RCT_EXPORT_METHOD(unregisterSuperProperty:(NSString *)propertyName)
@@ -223,27 +117,16 @@ RCT_EXPORT_METHOD(unregisterSuperProperty:(NSString *)propertyName)
   if (propertyName == nil && [propertyName isKindOfClass:[NSNull class]]) {
     propertyName = nil;
   }
-  [DplusMobClick unregisterSuperProperty:propertyName];
+  [MobClick unregisterPreProperty:propertyName];
   
 }
 
-
-
-RCT_EXPORT_METHOD(getSuperProperty:(NSString *)propertyName  callback:(RCTResponseSenderBlock)callback)
-{
-  
-  if (propertyName == nil && [propertyName isKindOfClass:[NSNull class]]) {
-    propertyName = nil;
-  }
-  callback(@[[DplusMobClick getSuperProperty:propertyName]]);
-  
-}
 
 RCT_EXPORT_METHOD(getSuperProperties:(RCTResponseSenderBlock)callback)
 {
   NSString *jsonString = nil;
   NSError *error = nil;
-  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[DplusMobClick getSuperProperties]
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[MobClick getPreProperties]
                                                      options:kNilOptions //TODO: NSJSONWritingPrettyPrinted  // kNilOptions
                                                        error:&error];
   if ([jsonData length] && (error == nil))
@@ -259,7 +142,7 @@ RCT_EXPORT_METHOD(getSuperProperties:(RCTResponseSenderBlock)callback)
 
 RCT_EXPORT_METHOD(clearSuperProperties)
 {
-  [DplusMobClick clearSuperProperties];
+  [MobClick clearPreProperties];
   
 }
 
@@ -268,7 +151,7 @@ RCT_EXPORT_METHOD(setFirstLaunchEvent:(NSArray *)eventList)
   if (eventList == nil && [eventList isKindOfClass:[NSNull class]]) {
     eventList = nil;
   }
-  [DplusMobClick setFirstLaunchEvent:eventList];
+  [MobClick setFirstLaunchEvent:eventList];
 }
 
 @end

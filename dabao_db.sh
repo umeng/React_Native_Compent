@@ -1,7 +1,7 @@
 #!/bin/bash
 myPath="UMReactNative"
 pro_name="ReactNative"
-version="1.0.0"
+version="2.0.0"
 platform="reactnative"
 sharename="share_${platform}_$version.zip"
 pushname="push_${platform}_$version.zip"

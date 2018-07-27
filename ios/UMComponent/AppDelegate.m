@@ -28,7 +28,7 @@
   [UMConfigure setLogEnabled:YES];
   
   /* Umeng init */
-  [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
+  [MobClick setScenarioType:E_UM_NORMAL];
   [RNUMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
 
   /* Share init */

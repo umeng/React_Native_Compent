@@ -10,12 +10,11 @@
 typedef void(^CallbackBlock)();
 
 /**
- 统计的场景类别，默认为普通统计；若使用游戏统计API，则需选择游戏场景类别，如E_UM_GAME。
+ 统计的场景类别，默认为普通统计；若使用游戏统计API，则需选择游戏场景类别，如E_UM_NORMAL。
  */
 typedef NS_ENUM (NSUInteger, eScenarioType)
 {
     E_UM_NORMAL = 0,    // default value
-    E_UM_GAME   = 1,    // game
 };
 
 @class CLLocation;
@@ -28,7 +27,7 @@ typedef NS_ENUM (NSUInteger, eScenarioType)
 ///---------------------------------------------------------------------------------------
 
 /** 设置 统计场景类型，默认为普通应用统计：E_UM_NORMAL
- @param 游戏统计必须设置为：E_UM_GAME.
+ @param 
  @return void.
  */
 + (void)setScenarioType:(eScenarioType)eSType;
@@ -211,37 +210,6 @@ typedef NS_ENUM (NSUInteger, eScenarioType)
 + (void)onDeepLinkReceived:(NSURL *)link;
 
 /**
- * 设置属性 键值对 会覆盖同名的key
- * 将该函数指定的key-value写入dplus专用文件；APP启动时会自动读取该文件的所有key-value，并将key-value自动作为后续所有track事件的属性。
- */
-+(void) registerSuperProperty:(NSDictionary *)property;
-
-/**
- *
- * 从dplus专用文件中删除指定key-value
- @param key
- */
-+(void) unregisterSuperProperty:(NSString *)propertyName;
-
-/**
- *
- * 返回dplus专用文件中key对应的value；如果不存在，则返回空。
- @param key
- @return void
- */
-+(NSString *)getSuperProperty:(NSString *)propertyName;
-
-/**
- * 返回专用文件中的所有key-value；如果不存在，则返回空。
- */
-+(NSDictionary *)getSuperProperties;
-
-/**
- *清空专用文件中的所有key-value。
- */
-+(void)clearSuperProperties;
-
-/**
  * 设置预置事件属性 键值对 会覆盖同名的key
  */
 +(void) registerPreProperties:(NSDictionary *)property;
@@ -269,7 +237,7 @@ typedef NS_ENUM (NSUInteger, eScenarioType)
  */
 +(void)setFirstLaunchEvent:(NSArray *)eventList;
 
-/** 设置是否自动采集页面, 默认NO(不加密).
+/** 设置是否自动采集页面, 默认NO(不自动采集).
  @param value 设置为YES, umeng SDK 会将自动采集页面信息
  */
 + (void)setAutoPageEnabled:(BOOL)value;

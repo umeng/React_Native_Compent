@@ -40,9 +40,6 @@ export default class UserCenter extends Component {
         AnalyticsUtil.onEventWithMapAndCount("eventname",{name:"umeng",sex:"man"},100);
     }
   
-    onEventObject(){
-        AnalyticsUtil.onEventObject("onEventObject",{name:"umeng",sex:"man"});
-    }
     registerSuperProperty(){
         AnalyticsUtil.registerSuperProperty({name:"umeng",sex:"man"});
     }
@@ -98,18 +95,6 @@ export default class UserCenter extends Component {
                     <Text style={styles.u_c_text}>{'数值性统计'}</Text>
                 </TouchableOpacity>
 
-
-
-                <View style = {{flexDirection: 'row'}}>
-                 
-                    <TouchableOpacity
-                        style={styles.u_c_item}
-                        onPress={this.onEventObject.bind(this)}
-                    >
-                        <Text style={styles.u_c_text}>{'自定义事件'}</Text>
-                    </TouchableOpacity>
-
-                </View>
                 <View style = {{flexDirection: 'row'}}>
                     <TouchableOpacity
                         style={styles.u_c_item}

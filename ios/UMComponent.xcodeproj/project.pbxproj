@@ -74,6 +74,8 @@
 		838C27A01F57D4F800CF261E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C279F1F57D4F800CF261E /* libz.tbd */; };
 		838C27A21F57D4FD00CF261E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C27A11F57D4FD00CF261E /* libsqlite3.tbd */; };
 		838C27A41F57D50300CF261E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C27A31F57D50300CF261E /* CoreTelephony.framework */; };
+		9D953958210B005500A43D49 /* UMCommonLog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D953939210B005400A43D49 /* UMCommonLog.bundle */; };
+		9D953959210B005500A43D49 /* UMCommonLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D953957210B005500A43D49 /* UMCommonLog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,6 +388,8 @@
 		838C279F1F57D4F800CF261E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		838C27A11F57D4FD00CF261E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		838C27A31F57D50300CF261E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9D953939210B005400A43D49 /* UMCommonLog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = UMCommonLog.bundle; path = UMComponent/UMComponents/UMCommonLog.bundle; sourceTree = "<group>"; };
+		9D953957210B005500A43D49 /* UMCommonLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMCommonLog.framework; path = UMComponent/UMComponents/UMCommonLog.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +419,7 @@
 				633D4C231F67B77C005BCF19 /* TwitterKit.framework in Frameworks */,
 				838C27971F57D1B700CF261E /* UMCommon.framework in Frameworks */,
 				633D4C211F67B77C005BCF19 /* libSocialTwitter.a in Frameworks */,
+				9D953959210B005500A43D49 /* UMCommonLog.framework in Frameworks */,
 				633D4C1F1F67B77C005BCF19 /* libSocialSMS.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				633D4BDF1F666101005BCF19 /* libSocialWeChat.a in Frameworks */,
@@ -807,6 +812,8 @@
 		838C27761F57D19D00CF261E /* UMComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9D953939210B005400A43D49 /* UMCommonLog.bundle */,
+				9D953957210B005500A43D49 /* UMCommonLog.framework */,
 				633D4BAE1F666101005BCF19 /* UMShare */,
 				633D4BD81F666101005BCF19 /* UMPush.framework */,
 				838C27941F57D1B700CF261E /* UMAnalytics.framework */,
@@ -1245,6 +1252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D953958210B005500A43D49 /* UMCommonLog.bundle in Resources */,
 				633D4C251F67B8BD005BCF19 /* TwitterKitResources.bundle in Resources */,
 				633D4BDB1F666101005BCF19 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				633D4BE51F666101005BCF19 /* UMSocialSDKPromptResources.bundle in Resources */,
