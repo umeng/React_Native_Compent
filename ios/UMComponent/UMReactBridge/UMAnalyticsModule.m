@@ -108,6 +108,7 @@ RCT_EXPORT_METHOD(registerSuperProperty:(NSDictionary *)property)
   if (property == nil && [property isKindOfClass:[NSNull class]]) {
     property = nil;
   }
+
   [MobClick registerPreProperties:property];
 }
 

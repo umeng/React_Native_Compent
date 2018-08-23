@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.json.JSONObject;
+import org.json.JSONException;
+import java.util.Iterator;
 
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -134,34 +137,34 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
     public void registerSuperProperty(ReadableMap map) {
         ReadableNativeMap map2 = (ReadableNativeMap) map;
         Map<String, Object> map3  = map2.toHashMap();
-        for (String key:map3.keySet()){
-            MobclickAgent.registerSuperProperty(context, key, map3.get(key));
-        }
+        Iterator entries = map3.entrySet().iterator();
+        JSONObject json = new JSONObject();
+        while (entries.hasNext()) {
+            Map.Entry entry = (Map.Entry) entries.next();
+            String key = (String)entry.getKey();
+            String value = (String)entry.getValue();
+            try {
+                json.put(key,value);
+            }catch (JSONException e){
 
+            }
+        }
+        MobclickAgent.registerPreProperties(context,json);
     }
     @ReactMethod
     public void unregisterSuperProperty(String propertyName) {
-        MobclickAgent.unregisterSuperProperty(context, propertyName);
-
-    }
-    @ReactMethod
-    public void getSuperProperty(String propertyName, Callback callback) {
-        try {
-            String result = MobclickAgent.getSuperProperty(context, propertyName).toString();
-            callback.invoke(result);
-        } catch (Exception e) {
-        }
+        MobclickAgent.unregisterPreProperty(context, propertyName);
 
     }
 
     @ReactMethod
     public void getSuperProperties(Callback callback) {
-        String result = MobclickAgent.getSuperProperties(context);
+        String result = MobclickAgent.getPreProperties(context).toString();
         callback.invoke(result);
     }
     @ReactMethod
     public void clearSuperProperties() {
-        MobclickAgent.clearSuperProperties(context);
+        MobclickAgent.clearPreProperties(context);
 
     }
     @ReactMethod
