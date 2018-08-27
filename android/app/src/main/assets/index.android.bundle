@@ -6399,7 +6399,7 @@ module.exports = logError;
 __d(/* ActivityIndicator */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -23645,7 +23645,7 @@ module.exports = ReactNativeStackEntry;
 __d(/* View */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/View/View.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/View/View.js';
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
 var PropTypes = require(19          ); // 19 = prop-types
@@ -25091,7 +25091,7 @@ module.exports = requireNativeComponent;
 __d(/* UnimplementedView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 
@@ -32624,7 +32624,7 @@ module.exports = ReactNativeStackEntry;
 __d(/* ReactNativeART */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/ART/ReactNativeART.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/ART/ReactNativeART.js';
 var Color = require(173             ); // 173 = art/core/color
 var Path = require(174                  ); // 174 = ARTSerializablePath
 var Transform = require(177                 ); // 177 = art/core/transform
@@ -33964,7 +33964,7 @@ module.exports = Class({
 __d(/* Button */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Button.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Button.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -34111,7 +34111,7 @@ module.exports = Button;
 __d(/* Text */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Text/Text.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Text/Text.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var EdgeInsetsPropType = require(145                 ); // 145 = EdgeInsetsPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
@@ -34347,7 +34347,7 @@ __d(/* Touchable */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Touchable/Touchable.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/Touchable.js';
 var BoundingDimensions = require(181                 ); // 181 = BoundingDimensions
 var Platform = require(37        ); // 37 = Platform
 var Position = require(183       ); // 183 = Position
@@ -35351,7 +35351,7 @@ module.exports = ensurePositiveDelayProps;
 __d(/* TouchableOpacity */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js';
 
 
 var Animated = require(192       ); // 192 = Animated
@@ -35531,7 +35531,7 @@ module.exports = Animated;
 __d(/* AnimatedImplementation */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Animated/src/AnimatedImplementation.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Animated/src/AnimatedImplementation.js';
 var InteractionManager = require(194                 ); // 194 = InteractionManager
 var Interpolation = require(196            ); // 196 = Interpolation
 var NativeAnimatedHelper = require(197                   ); // 197 = NativeAnimatedHelper
@@ -38886,7 +38886,7 @@ module.exports = function bezier(mX1, mY1, mX2, mY2) {
 __d(/* Image */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Image/Image.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Image/Image.android.js';
 var ImageResizeMode = require(131              ); // 131 = ImageResizeMode
 var ImageStylePropTypes = require(130                  ); // 130 = ImageStylePropTypes
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
@@ -39180,7 +39180,7 @@ module.exports = filterObject;
 __d(/* ScrollView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js';
 var Animated = require(192       ); // 192 = Animated
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var EdgeInsetsPropType = require(145                 ); // 145 = EdgeInsetsPropType
@@ -39992,7 +39992,7 @@ module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactNativeC
 __d(/* ScrollViewStickyHeader */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js';
 var Animated = require(192       ); // 192 = Animated
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -40113,7 +40113,7 @@ __d(/* DatePickerIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -40174,7 +40174,7 @@ module.exports = DummyDatePickerIOS;
 __d(/* DrawerLayoutAndroid */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -40620,7 +40620,7 @@ module.exports = StatusBar;
 __d(/* FlatList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Lists/FlatList.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Lists/FlatList.js';
 var MetroListView = require(218            ); // 218 = MetroListView
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
@@ -40869,7 +40869,7 @@ module.exports = FlatList;
 __d(/* MetroListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Lists/MetroListView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Lists/MetroListView.js';
 var ListView = require(219       ); // 219 = ListView
 var React = require(128    ); // 128 = React
 var RefreshControl = require(224             ); // 224 = RefreshControl
@@ -41059,7 +41059,7 @@ module.exports = MetroListView;
 __d(/* ListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Lists/ListView/ListView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Lists/ListView/ListView.js';
 var ListViewDataSource = require(220                 ); // 220 = ListViewDataSource
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -41853,7 +41853,7 @@ module.exports = cloneReferencedElement;
 __d(/* RefreshControl */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -41948,7 +41948,7 @@ module.exports = RefreshControl;
 __d(/* VirtualizedList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Lists/VirtualizedList.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Lists/VirtualizedList.js';
 var Batchinator = require(226          ); // 226 = Batchinator
 var FillRateHelper = require(227             ); // 227 = FillRateHelper
 var PropTypes = require(19          ); // 19 = prop-types
@@ -43504,7 +43504,7 @@ module.exports = VirtualizeUtils;
 __d(/* ImageBackground */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Image/ImageBackground.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Image/ImageBackground.js';
 var Image = require(203    ); // 203 = Image
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -43624,7 +43624,7 @@ module.exports = ImageStore;
 __d(/* KeyboardAvoidingView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js';
 var createReactClass = require(153                 ); // 153 = create-react-class
 var Keyboard = require(54        ); // 54 = Keyboard
 var LayoutAnimation = require(234              ); // 234 = LayoutAnimation
@@ -43905,7 +43905,7 @@ module.exports = LayoutAnimation;
 __d(/* Modal */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Modal/Modal.js',
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Modal/Modal.js',
     _container;
 
 var AppContainer = require(236           ); // 236 = AppContainer
@@ -44064,7 +44064,7 @@ __d(/* AppContainer */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/ReactNative/AppContainer.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/AppContainer.js';
 var EmitterSubscription = require(49                   ); // 49 = EmitterSubscription
 var PropTypes = require(19          ); // 19 = prop-types
 var RCTDeviceEventEmitter = require(47                     ); // 47 = RCTDeviceEventEmitter
@@ -44216,7 +44216,7 @@ __d(/* Inspector */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/Inspector.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/Inspector.js';
 var Dimensions = require(158         ); // 158 = Dimensions
 var InspectorOverlay = require(238               ); // 238 = InspectorOverlay
 var InspectorPanel = require(242             ); // 242 = InspectorPanel
@@ -44500,7 +44500,7 @@ module.exports = Inspector;
 __d(/* InspectorOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js';
 var Dimensions = require(158         ); // 158 = Dimensions
 var ElementBox = require(239         ); // 239 = ElementBox
 var PropTypes = require(19          ); // 19 = prop-types
@@ -44591,7 +44591,7 @@ module.exports = InspectorOverlay;
 __d(/* ElementBox */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/ElementBox.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/ElementBox.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -44687,7 +44687,7 @@ module.exports = ElementBox;
 __d(/* BorderBox */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/BorderBox.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/BorderBox.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 
@@ -44771,7 +44771,7 @@ module.exports = resolveBoxStyle;
 __d(/* InspectorPanel */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/InspectorPanel.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/InspectorPanel.js';
 var ElementProperties = require(243                ); // 243 = ElementProperties
 var NetworkOverlay = require(251             ); // 251 = NetworkOverlay
 var PerformanceOverlay = require(254                 ); // 254 = PerformanceOverlay
@@ -45011,7 +45011,7 @@ module.exports = InspectorPanel;
 __d(/* ElementProperties */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/ElementProperties.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/ElementProperties.js';
 var BoxInspector = require(244           ); // 244 = BoxInspector
 var PropTypes = require(19          ); // 19 = prop-types
 var React = require(128    ); // 128 = React
@@ -45231,7 +45231,7 @@ module.exports = ElementProperties;
 __d(/* BoxInspector */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/BoxInspector.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/BoxInspector.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -45448,7 +45448,7 @@ module.exports = BoxInspector;
 __d(/* StyleInspector */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/StyleInspector.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/StyleInspector.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -45563,7 +45563,7 @@ module.exports = StyleInspector;
 __d(/* TouchableHighlight */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js';
 
 
 var ColorPropType = require(62             ); // 62 = ColorPropType
@@ -45839,7 +45839,7 @@ module.exports = openFileInEditor;
 __d(/* NetworkOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js';
 var ListView = require(219       ); // 219 = ListView
 var React = require(128    ); // 128 = React
 var ScrollView = require(205         ); // 205 = ScrollView
@@ -46768,7 +46768,7 @@ module.exports = XHRInterceptor;
 __d(/* PerformanceOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js';
 var PerformanceLogger = require(109                ); // 109 = PerformanceLogger
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -46862,7 +46862,7 @@ __d(/* YellowBox */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/ReactNative/YellowBox.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/YellowBox.js';
 var EventEmitter = require(48            ); // 48 = EventEmitter
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -47516,7 +47516,7 @@ __d(/* Picker */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Picker/Picker.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Picker/Picker.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var PickerIOS = require(259        ); // 259 = PickerIOS
 var PickerAndroid = require(260            ); // 260 = PickerAndroid
@@ -47647,7 +47647,7 @@ __d(/* PickerAndroid */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var React = require(128    ); // 128 = React
 var ReactPropTypes = require(19          ); // 19 = prop-types
@@ -47798,7 +47798,7 @@ module.exports = PickerAndroid;
 __d(/* ProgressBarAndroid */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroid.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroid.android.js';
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var React = require(128    ); // 128 = React
 var PropTypes = require(19          ); // 19 = prop-types
@@ -47873,7 +47873,7 @@ __d(/* ProgressViewIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -47934,7 +47934,7 @@ module.exports = DummyProgressViewIOS;
 __d(/* SectionList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Lists/SectionList.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Lists/SectionList.js';
 var MetroListView = require(218            ); // 218 = MetroListView
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -48018,7 +48018,7 @@ module.exports = SectionList;
 __d(/* VirtualizedSectionList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 var VirtualizedList = require(225              ); // 225 = VirtualizedList
@@ -48393,7 +48393,7 @@ __d(/* SegmentedControlIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -48454,7 +48454,7 @@ module.exports = DummySegmentedControlIOS;
 __d(/* Slider */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Slider/Slider.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Slider/Slider.js';
 var Image = require(203    ); // 203 = Image
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
@@ -48595,7 +48595,7 @@ module.exports = require(155                ); // 155 = UnimplementedView
 __d(/* Switch */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/Switch/Switch.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/Switch/Switch.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -48706,7 +48706,7 @@ module.exports = Switch;
 __d(/* SwipeableListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js';
 var ListView = require(219       ); // 219 = ListView
 var PropTypes = require(19          ); // 19 = prop-types
 var React = require(128    ); // 128 = React
@@ -48960,7 +48960,7 @@ module.exports = SwipeableListViewDataSource;
 __d(/* SwipeableRow */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js';
 var Animated = require(192       ); // 192 = Animated
 var I18nManager = require(256          ); // 256 = I18nManager
 var PanResponder = require(272           ); // 272 = PanResponder
@@ -49410,7 +49410,7 @@ __d(/* TabBarIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var TabBarItemIOS = require(275            ); // 275 = TabBarItemIOS
@@ -49456,7 +49456,7 @@ __d(/* TabBarItemIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.android.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -49510,7 +49510,7 @@ module.exports = DummyTab;
 __d(/* TextInput */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/TextInput/TextInput.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/TextInput/TextInput.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var DocumentSelectionState = require(277                     ); // 277 = DocumentSelectionState
 var EventEmitter = require(48            ); // 48 = EventEmitter
@@ -50439,7 +50439,7 @@ __d(/* ToolbarAndroid */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/ToolbarAndroid/ToolbarAndroid.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/ToolbarAndroid/ToolbarAndroid.android.js';
 var Image = require(203    ); // 203 = Image
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var React = require(128    ); // 128 = React
@@ -50549,7 +50549,7 @@ module.exports = ToolbarAndroid;
 __d(/* ViewPagerAndroid */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/ViewPager/ViewPagerAndroid.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/ViewPager/ViewPagerAndroid.android.js';
 var React = require(128    ); // 128 = React
 var PropTypes = require(19          ); // 19 = prop-types
 var ReactNative = require(65           ); // 65 = ReactNative
@@ -50674,7 +50674,7 @@ module.exports = ViewPagerAndroid;
 __d(/* WebView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/Components/WebView/WebView.android.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/Components/WebView/WebView.android.js';
 var EdgeInsetsPropType = require(145                 ); // 145 = EdgeInsetsPropType
 var ActivityIndicator = require(61                 ); // 61 = ActivityIndicator
 var React = require(128    ); // 128 = React
@@ -51280,7 +51280,7 @@ __d(/* renderApplication */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native/Libraries/ReactNative/renderApplication.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/renderApplication.js';
 var AppContainer = require(236           ); // 236 = AppContainer
 var React = require(128    ); // 128 = React
 var ReactNative = require(65           ); // 65 = ReactNative
@@ -52460,7 +52460,7 @@ module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.takeSnapshot
 __d(/* UMComponent/components/Home.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/Home.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/components/Home.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -52478,23 +52478,23 @@ var _UPush = require(373      ); // 373 = ./UPush
 
 var _UPush2 = babelHelpers.interopRequireDefault(_UPush);
 
-var _UAnalytics = require(375           ); // 375 = ./UAnalytics
+var _UAnalytics_app = require(375               ); // 375 = ./UAnalytics_app
 
-var _UAnalytics2 = babelHelpers.interopRequireDefault(_UAnalytics);
+var _UAnalytics_app2 = babelHelpers.interopRequireDefault(_UAnalytics_app);
 
 var _ColorUtil = require(369          ); // 369 = ./ColorUtil
 
 var _ColorUtil2 = babelHelpers.interopRequireDefault(_ColorUtil);
 
 var Home = (0, _reactNavigation.TabNavigator)({
-    UAnalytics: { screen: _UAnalytics2.default,
+    UAnalytics: { screen: _UAnalytics_app2.default,
         navigationOptions: {
 
             tabBarLabel: '统计',
             tabBarIcon: function tabBarIcon(_ref) {
                 var tintColor = _ref.tintColor;
                 return _react2.default.createElement(_reactNative.Image, {
-                    source: require(379                        ), // 379 = ./../images/analytics.png
+                    source: require(377                        ), // 377 = ./../images/analytics.png
                     style: [{ tintColor: tintColor }, styles.icon],
                     __source: {
                         fileName: _jsxFileName,
@@ -52511,7 +52511,7 @@ var Home = (0, _reactNavigation.TabNavigator)({
             tabBarIcon: function tabBarIcon(_ref2) {
                 var tintColor = _ref2.tintColor;
                 return _react2.default.createElement(_reactNative.Image, {
-                    source: require(380                   ), // 380 = ./../images/push.png
+                    source: require(378                   ), // 378 = ./../images/push.png
                     style: [{ tintColor: tintColor }, styles.icon],
                     __source: {
                         fileName: _jsxFileName,
@@ -52528,7 +52528,7 @@ var Home = (0, _reactNavigation.TabNavigator)({
             tabBarIcon: function tabBarIcon(_ref3) {
                 var tintColor = _ref3.tintColor;
                 return _react2.default.createElement(_reactNative.Image, {
-                    source: require(381                    ), // 381 = ./../images/share.png
+                    source: require(379                    ), // 379 = ./../images/share.png
                     style: [{ tintColor: tintColor }, styles.icon],
                     __source: {
                         fileName: _jsxFileName,
@@ -52646,7 +52646,7 @@ module.exports = {
 __d(/* react-navigation/src/createNavigationContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/createNavigationContainer.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/createNavigationContainer.js';
 exports.default = createNavigationContainer;
 
 var _react = require(12     ); // 12 = react
@@ -53069,7 +53069,7 @@ exports.default = StateUtils;
 __d(/* react-navigation/src/navigators/createNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/navigators/createNavigator.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/navigators/createNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53113,7 +53113,7 @@ exports.default = createNavigator;
 __d(/* react-navigation/src/navigators/StackNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/navigators/StackNavigator.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/navigators/StackNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53182,7 +53182,7 @@ exports.default = function (routeConfigMap) {
 __d(/* react-navigation/src/views/CardStackTransitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/CardStackTransitioner.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/CardStackTransitioner.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53285,7 +53285,7 @@ exports.default = CardStackTransitioner;
 __d(/* react-navigation/src/views/CardStack.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/CardStack.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/CardStack.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53703,7 +53703,7 @@ function clamp(value, min, max) {
 __d(/* react-navigation/src/views/Card.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/Card.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/Card.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53771,7 +53771,7 @@ exports.default = Card;
 __d(/* react-navigation/src/views/PointerEventsContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/PointerEventsContainer.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/PointerEventsContainer.js';
 exports.default = create;
 
 var _react = require(12     ); // 12 = react
@@ -53919,7 +53919,7 @@ __d(/* react-navigation/src/views/Header.js */function(global, require, module, 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/Header.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/Header.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54263,7 +54263,7 @@ exports.default = Header;
 __d(/* react-navigation/src/views/HeaderTitle.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/HeaderTitle.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/HeaderTitle.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54301,7 +54301,7 @@ exports.default = HeaderTitle;
 __d(/* react-navigation/src/views/HeaderBackButton.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/HeaderBackButton.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/HeaderBackButton.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54452,7 +54452,7 @@ exports.default = HeaderBackButton;
 __d(/* react-navigation/src/views/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/TouchableItem.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/TouchableItem.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54583,7 +54583,7 @@ exports.default = {
 __d(/* react-navigation/src/views/SceneView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/SceneView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/SceneView.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54838,7 +54838,7 @@ exports.default = {
 __d(/* react-navigation/src/views/Transitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/Transitioner.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/Transitioner.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -56120,7 +56120,7 @@ exports.default = {
 __d(/* react-navigation/src/navigators/TabNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/navigators/TabNavigator.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/navigators/TabNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -56484,7 +56484,7 @@ exports.default = function (routeConfigs) {
 __d(/* react-navigation/src/views/TabView/TabView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/TabView/TabView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabView.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -56698,7 +56698,7 @@ module.exports = {
 __d(/* react-native-tab-view/src/TabViewAnimated.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native-tab-view/src/TabViewAnimated.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewAnimated.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57039,7 +57039,7 @@ var SceneRendererPropType = exports.SceneRendererPropType = {
 __d(/* react-native-tab-view/src/TabViewPagerAndroid.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native-tab-view/src/TabViewPagerAndroid.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerAndroid.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57215,7 +57215,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TabViewPagerScroll.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native-tab-view/src/TabViewPagerScroll.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerScroll.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57381,7 +57381,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TabViewPagerPan.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native-tab-view/src/TabViewPagerPan.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerPan.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57639,7 +57639,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TabBar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native-tab-view/src/TabBar.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native-tab-view/src/TabBar.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58182,7 +58182,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native-tab-view/src/TouchableItem.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native-tab-view/src/TouchableItem.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58283,7 +58283,7 @@ exports.default = TouchableItem;
 __d(/* react-native-tab-view/src/SceneMap.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-native-tab-view/src/SceneMap.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-native-tab-view/src/SceneMap.js';
 exports.default = SceneMap;
 
 var _react = require(12     ); // 12 = react
@@ -58321,7 +58321,7 @@ function SceneMap(scenes) {
 __d(/* react-navigation/src/withCachedChildNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/withCachedChildNavigation.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/withCachedChildNavigation.js';
 exports.default = withCachedChildNavigation;
 
 var _react = require(12     ); // 12 = react
@@ -58394,7 +58394,7 @@ function withCachedChildNavigation(Comp) {
 __d(/* react-navigation/src/views/TabView/TabBarTop.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/TabView/TabBarTop.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarTop.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58540,7 +58540,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/views/TabView/TabBarIcon.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/TabView/TabBarIcon.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarIcon.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58645,7 +58645,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/views/TabView/TabBarBottom.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/TabView/TabBarBottom.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarBottom.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58848,7 +58848,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/navigators/DrawerNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/navigators/DrawerNavigator.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/navigators/DrawerNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58943,7 +58943,7 @@ exports.default = DrawerNavigator;
 __d(/* react-navigation/src/views/Drawer/DrawerScreen.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/Drawer/DrawerScreen.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerScreen.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58998,7 +58998,7 @@ exports.default = (0, _withCachedChildNavigation2.default)(DrawerScreen);
 __d(/* react-navigation/src/views/Drawer/DrawerView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/Drawer/DrawerView.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerView.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59143,7 +59143,7 @@ __d(/* react-native-drawer-layout-polyfill/dist/index.android.js */function(glob
 __d(/* react-navigation/src/views/Drawer/DrawerSidebar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/Drawer/DrawerSidebar.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerSidebar.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59256,7 +59256,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/views/Drawer/DrawerNavigatorItems.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/Drawer/DrawerNavigatorItems.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerNavigatorItems.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59378,7 +59378,7 @@ exports.default = DrawerNavigatorItems;
 __d(/* react-navigation/src/views/withNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/node_modules/react-navigation/src/views/withNavigation.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/node_modules/react-navigation/src/views/withNavigation.js';
 exports.default = withNavigation;
 
 var _react = require(12     ); // 12 = react
@@ -59460,7 +59460,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 __d(/* UMComponent/components/UShare.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/UShare.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/components/UShare.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59639,7 +59639,7 @@ exports.default = {
 __d(/* UMComponent/components/UShare_share.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/UShare_share.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/components/UShare_share.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59852,7 +59852,7 @@ module.exports = NativeModules.UMShareModule;
 __d(/* UMComponent/components/UShare_auth.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/UShare_auth.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/components/UShare_auth.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -60039,7 +60039,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* UMComponent/components/UPush.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/UPush.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/components/UPush.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -60392,178 +60392,10 @@ __d(/* UMComponent/native/PushUtil.js */function(global, require, module, export
 
 module.exports = NativeModules.UMPushModule;
 }, 374, null, "UMComponent/native/PushUtil.js");
-__d(/* UMComponent/components/UAnalytics.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/UAnalytics.js';
-
-var _react = require(12     ); // 12 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var _reactNative = require(26            ); // 26 = react-native
-
-var _ColorUtil = require(369          ); // 369 = ./ColorUtil
-
-var _ColorUtil2 = babelHelpers.interopRequireDefault(_ColorUtil);
-
-var _reactNavigation = require(309               ); // 309 = react-navigation
-
-var _UAnalytics_app = require(376               ); // 376 = ./UAnalytics_app
-
-var _UAnalytics_app2 = babelHelpers.interopRequireDefault(_UAnalytics_app);
-
-var _UAnalytics_game = require(378                ); // 378 = ./UAnalytics_game
-
-var _UAnalytics_game2 = babelHelpers.interopRequireDefault(_UAnalytics_game);
-
-var _AnalyticsUtil = require(377                        ); // 377 = ./../native/AnalyticsUtil
-
-var _AnalyticsUtil2 = babelHelpers.interopRequireDefault(_AnalyticsUtil);
-
-var AnalyticsMain = function (_Component) {
-    babelHelpers.inherits(AnalyticsMain, _Component);
-
-    function AnalyticsMain() {
-        babelHelpers.classCallCheck(this, AnalyticsMain);
-        return babelHelpers.possibleConstructorReturn(this, (AnalyticsMain.__proto__ || Object.getPrototypeOf(AnalyticsMain)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(AnalyticsMain, [{
-        key: 'render',
-        value: function render() {
-            var navigate = this.props.navigation.navigate;
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: styles.u_c, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 25
-                    }
-                },
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: function onPress() {
-                            navigate('APP', { user: '' });_AnalyticsUtil2.default.onPageStart('app');
-                        },
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 26
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 31
-                            }
-                        },
-                        '应用统计'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: function onPress() {
-                            navigate('Game', { user: '' });_AnalyticsUtil2.default.onPageStart('game');
-                        },
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 33
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 37
-                            }
-                        },
-                        '游戏统计'
-                    )
-                )
-            );
-        }
-    }]);
-    return AnalyticsMain;
-}(_react.Component);
-
-var ShareNav = (0, _reactNavigation.StackNavigator)({
-    AnalyticsMain: { screen: AnalyticsMain },
-    APP: { screen: _UAnalytics_app2.default,
-        navigationOptions: {
-            headerTitle: '应用统计',
-            headerStyle: {
-                backgroundColor: _ColorUtil2.default.default_primary_color
-            },
-            titleStyle: {
-                color: _ColorUtil2.default.text_primary_color,
-                textAlign: 'center'
-            },
-            headerTitleStyle: {
-                alignSelf: 'center',
-                color: _ColorUtil2.default.text_primary_color
-            }
-
-        } },
-    Game: { screen: _UAnalytics_game2.default,
-        navigationOptions: {
-            headerTitle: '游戏统计',
-            headerStyle: {
-                backgroundColor: _ColorUtil2.default.default_primary_color
-            },
-            titleStyle: {
-                color: _ColorUtil2.default.text_primary_color,
-                textAlign: 'center'
-            },
-            headerTitleStyle: {
-                alignSelf: 'center',
-                color: _ColorUtil2.default.text_primary_color
-            }
-
-        } }
-
-}, {
-    initialRouteName: 'AnalyticsMain',
-    mode: 'card',
-    headerMode: 'screen' });
-var styles = _reactNative.StyleSheet.create({
-    u_c: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'stretch',
-        backgroundColor: _ColorUtil2.default.background
-    },
-    u_c_item: {
-        margin: 10,
-        backgroundColor: _ColorUtil2.default.default_primary_color,
-        elevation: 10,
-        borderColor: _ColorUtil2.default.default_primary_color,
-        borderRadius: 15,
-        borderWidth: 1.5,
-        shadowOffset: { width: 0, height: 0 },
-        shadowColor: _ColorUtil2.default.default_primary_color,
-        shadowOpacity: 1,
-        shadowRadius: 5,
-        justifyContent: 'center',
-        alignItems: 'center'
-
-    },
-    u_c_text: {
-        fontSize: 26,
-
-        color: _ColorUtil2.default.text_primary_color
-    }
-});
-exports.default = ShareNav;
-}, 375, null, "UMComponent/components/UAnalytics.js");
 __d(/* UMComponent/components/UAnalytics_app.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/UAnalytics_app.js';
+var _jsxFileName = '/Users/zhz/Desktop/work/React_Native_Compent/components/UAnalytics_app.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -60575,7 +60407,7 @@ var _ColorUtil = require(369          ); // 369 = ./ColorUtil
 
 var _ColorUtil2 = babelHelpers.interopRequireDefault(_ColorUtil);
 
-var _AnalyticsUtil = require(377                        ); // 377 = ./../native/AnalyticsUtil
+var _AnalyticsUtil = require(376                        ); // 376 = ./../native/AnalyticsUtil
 
 var _AnalyticsUtil2 = babelHelpers.interopRequireDefault(_AnalyticsUtil);
 
@@ -60628,31 +60460,26 @@ var UserCenter = function (_Component) {
             _AnalyticsUtil2.default.onEventWithMapAndCount("eventname", { name: "umeng", sex: "man" }, 100);
         }
     }, {
-        key: 'onTrack',
-        value: function onTrack() {
-            _AnalyticsUtil2.default.track("trackname");
+        key: 'registerPreProperties',
+        value: function registerPreProperties() {
+            _AnalyticsUtil2.default.registerPreProperties({ name: "umeng", sex: "man" });
         }
     }, {
-        key: 'onTrackWithMap',
-        value: function onTrackWithMap() {
-            _AnalyticsUtil2.default.trackWithMap("trackname", { name: "umeng", sex: "man" });
+        key: 'unregisterPreProperty',
+        value: function unregisterPreProperty() {
+            _AnalyticsUtil2.default.unregisterPreProperty("umeng");
         }
     }, {
-        key: 'registerSuperProperty',
-        value: function registerSuperProperty() {
-            _AnalyticsUtil2.default.registerSuperProperty({ name: "umeng", sex: "man" });
-        }
-    }, {
-        key: 'getSuperProperty',
-        value: function getSuperProperty() {
-            _AnalyticsUtil2.default.getSuperProperties(function (result) {
+        key: 'getPreProperties',
+        value: function getPreProperties() {
+            _AnalyticsUtil2.default.getPreProperties(function (result) {
                 console.log(result);
             });
         }
     }, {
-        key: 'clearSuperProperties',
-        value: function clearSuperProperties() {
-            _AnalyticsUtil2.default.clearSuperProperties();
+        key: 'clearPreProperties',
+        value: function clearPreProperties() {
+            _AnalyticsUtil2.default.clearPreProperties();
         }
     }, {
         key: 'setFirstLaunchEvent',
@@ -60668,14 +60495,14 @@ var UserCenter = function (_Component) {
                 _reactNative.View,
                 { style: styles.u_c, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 65
+                        lineNumber: 63
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 66
+                            lineNumber: 64
                         }
                     },
                     _react2.default.createElement(
@@ -60685,14 +60512,14 @@ var UserCenter = function (_Component) {
                             onPress: this.profileSignInWithPUID.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 67
+                                lineNumber: 65
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 71
+                                    lineNumber: 69
                                 }
                             },
                             '用户登录'
@@ -60705,14 +60532,14 @@ var UserCenter = function (_Component) {
                             onPress: this.profileSignOff.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 73
+                                lineNumber: 71
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 77
+                                    lineNumber: 75
                                 }
                             },
                             '用户登出'
@@ -60723,7 +60550,7 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 81
+                            lineNumber: 79
                         }
                     },
                     _react2.default.createElement(
@@ -60733,14 +60560,14 @@ var UserCenter = function (_Component) {
                             onPress: this.onEvent.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 82
+                                lineNumber: 80
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 86
+                                    lineNumber: 84
                                 }
                             },
                             '普通事件'
@@ -60753,14 +60580,14 @@ var UserCenter = function (_Component) {
                             onPress: this.onEventWithMap.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 88
+                                lineNumber: 86
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 92
+                                    lineNumber: 90
                                 }
                             },
                             '多属性事件'
@@ -60774,14 +60601,14 @@ var UserCenter = function (_Component) {
                         onPress: this.onEventWithMapAndCount.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 96
+                            lineNumber: 94
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 100
+                                lineNumber: 98
                             }
                         },
                         '数值性统计'
@@ -60791,72 +60618,24 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 105
+                            lineNumber: 101
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.TouchableOpacity,
                         {
                             style: styles.u_c_item,
-                            onPress: this.onTrack.bind(this),
+                            onPress: this.registerPreProperties.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 106
+                                lineNumber: 102
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 110
-                                }
-                            },
-                            'track事件'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        _reactNative.TouchableOpacity,
-                        {
-                            style: styles.u_c_item,
-                            onPress: this.onTrackWithMap.bind(this),
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 112
-                            }
-                        },
-                        _react2.default.createElement(
-                            _reactNative.Text,
-                            { style: styles.u_c_text, __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 116
-                                }
-                            },
-                            '自定义track事件'
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.View,
-                    { style: { flexDirection: 'row' }, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 120
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.TouchableOpacity,
-                        {
-                            style: styles.u_c_item,
-                            onPress: this.registerSuperProperty.bind(this),
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 121
-                            }
-                        },
-                        _react2.default.createElement(
-                            _reactNative.Text,
-                            { style: styles.u_c_text, __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 125
+                                    lineNumber: 106
                                 }
                             },
                             '设置超级属性'
@@ -60866,17 +60645,45 @@ var UserCenter = function (_Component) {
                         _reactNative.TouchableOpacity,
                         {
                             style: styles.u_c_item,
-                            onPress: this.getSuperProperty.bind(this),
+                            onPress: this.unregisterPreProperty.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 127
+                                lineNumber: 108
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 131
+                                    lineNumber: 112
+                                }
+                            },
+                            '删除超级属性'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: { flexDirection: 'row' }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 115
+                        }
+                    },
+                    _react2.default.createElement(
+                        _reactNative.TouchableOpacity,
+                        {
+                            style: styles.u_c_item,
+                            onPress: this.getPreProperties.bind(this),
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 116
+                            }
+                        },
+                        _react2.default.createElement(
+                            _reactNative.Text,
+                            { style: styles.u_c_text, __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 120
                                 }
                             },
                             '获取超级属性'
@@ -60887,17 +60694,17 @@ var UserCenter = function (_Component) {
                     _reactNative.TouchableOpacity,
                     {
                         style: styles.u_c_item,
-                        onPress: this.clearSuperProperties.bind(this),
+                        onPress: this.clearPreProperties.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 136
+                            lineNumber: 125
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 140
+                                lineNumber: 129
                             }
                         },
                         '清除超级属性'
@@ -60910,39 +60717,17 @@ var UserCenter = function (_Component) {
                         onPress: this.setFirstLaunchEvent.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 142
+                            lineNumber: 131
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 146
+                                lineNumber: 135
                             }
                         },
                         '关注首次触发事件'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: function onPress() {
-                            navigate('Game', { user: '' });_AnalyticsUtil2.default.onPageEnd('app');_AnalyticsUtil2.default.onPageStart('game');
-                        },
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 148
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 152
-                            }
-                        },
-                        'test'
                     )
                 )
             );
@@ -60982,343 +60767,18 @@ var styles = _reactNative.StyleSheet.create({
         color: _ColorUtil2.default.text_primary_color
     }
 });
-}, 376, null, "UMComponent/components/UAnalytics_app.js");
+}, 375, null, "UMComponent/components/UAnalytics_app.js");
 __d(/* UMComponent/native/AnalyticsUtil.js */function(global, require, module, exports) {var _require = require(26            ), // 26 = react-native
     NativeModules = _require.NativeModules;
 
 module.exports = NativeModules.UMAnalyticsModule;
-}, 377, null, "UMComponent/native/AnalyticsUtil.js");
-__d(/* UMComponent/components/UAnalytics_game.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var _jsxFileName = '/Users/umeng/file/ReactNative/UMComponent/components/UAnalytics_game.js';
-
-var _react = require(12     ); // 12 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var _reactNative = require(26            ); // 26 = react-native
-
-var _ColorUtil = require(369          ); // 369 = ./ColorUtil
-
-var _ColorUtil2 = babelHelpers.interopRequireDefault(_ColorUtil);
-
-var _AnalyticsUtil = require(377                        ); // 377 = ./../native/AnalyticsUtil
-
-var _AnalyticsUtil2 = babelHelpers.interopRequireDefault(_AnalyticsUtil);
-
-var UserCenter = function (_Component) {
-    babelHelpers.inherits(UserCenter, _Component);
-
-    function UserCenter() {
-        babelHelpers.classCallCheck(this, UserCenter);
-        return babelHelpers.possibleConstructorReturn(this, (UserCenter.__proto__ || Object.getPrototypeOf(UserCenter)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(UserCenter, [{
-        key: 'startLevel',
-        value: function startLevel() {
-            _AnalyticsUtil2.default.startLevel("1");
-        }
-    }, {
-        key: 'failLevel',
-        value: function failLevel() {
-            _AnalyticsUtil2.default.failLevel("1");
-        }
-    }, {
-        key: 'finishLevel',
-        value: function finishLevel() {
-            _AnalyticsUtil2.default.finishLevel("1");
-        }
-    }, {
-        key: 'pay',
-        value: function pay() {
-            _AnalyticsUtil2.default.pay(10, 2000, 2);
-        }
-    }, {
-        key: 'payWithItem',
-        value: function payWithItem() {
-            _AnalyticsUtil2.default.payWithItem(10, "sword", 1, 1000, 2);
-        }
-    }, {
-        key: 'buy',
-        value: function buy() {
-            _AnalyticsUtil2.default.buy("magic", 2, 100);
-        }
-    }, {
-        key: 'use',
-        value: function use() {
-            _AnalyticsUtil2.default.use("magic", 1, 100);
-        }
-    }, {
-        key: 'bonus',
-        value: function bonus() {
-            _AnalyticsUtil2.default.bonus(1000, 2);
-            _AnalyticsUtil2.default.bonusWithItem("sword", 1, 100, 2);
-        }
-    }, {
-        key: 'exchange',
-        value: function exchange() {
-            _AnalyticsUtil2.default.exchange(88.88, "USD", 10000, 2, "test-ordedid");
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var navigate = this.props.navigation.navigate;
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: styles.u_c, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 49
-                    }
-                },
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.startLevel.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 50
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 54
-                            }
-                        },
-                        '关卡开始'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.failLevel.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 56
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 60
-                            }
-                        },
-                        '关卡失败'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.failLevel.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 63
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 67
-                            }
-                        },
-                        '关卡通过'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.pay.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 69
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 73
-                            }
-                        },
-                        '充值付费'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.payWithItem.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 75
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 79
-                            }
-                        },
-                        '购买物品（真实消费）'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.failLevel.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 81
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 85
-                            }
-                        },
-                        '购买物品（虚拟消费）'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.use.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 87
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 91
-                            }
-                        },
-                        '使用物品'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.bonus.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 93
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 97
-                            }
-                        },
-                        '游戏奖励'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: this.exchange.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 100
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 104
-                            }
-                        },
-                        '有订单的充值付费'
-                    )
-                ),
-                _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
-                    {
-                        style: styles.u_c_item,
-                        onPress: function onPress() {
-                            navigate('APP', { user: '' });_AnalyticsUtil2.default.onPageEnd('game');_AnalyticsUtil2.default.onPageStart('app');
-                        },
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 106
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: styles.u_c_text, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 110
-                            }
-                        },
-                        'test'
-                    )
-                )
-            );
-        }
-    }]);
-    return UserCenter;
-}(_react.Component);
-
-exports.default = UserCenter;
-
-
-var styles = _reactNative.StyleSheet.create({
-    u_c: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'stretch',
-        backgroundColor: _ColorUtil2.default.background
-    },
-    u_c_item: {
-        margin: 10,
-        backgroundColor: _ColorUtil2.default.default_primary_color,
-        elevation: 10,
-        borderColor: _ColorUtil2.default.default_primary_color,
-
-        borderWidth: 1.5,
-        shadowOffset: { width: 0, height: 0 },
-        shadowColor: _ColorUtil2.default.default_primary_color,
-        shadowOpacity: 1,
-        shadowRadius: 5,
-        justifyContent: 'center',
-        alignItems: 'center'
-
-    },
-    u_c_text: {
-        fontSize: 18,
-
-        color: _ColorUtil2.default.text_primary_color
-    }
-});
-}, 378, null, "UMComponent/components/UAnalytics_game.js");
+}, 376, null, "UMComponent/native/AnalyticsUtil.js");
 __d(/* UMComponent/images/analytics.png */function(global, require, module, exports) {module.exports=require(166                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/images","width":96,"height":96,"scales":[1],"hash":"2acda2dcb3a5ada91a94070bf9122ba3","name":"analytics","type":"png"}); // 166 = react-native/Libraries/Image/AssetRegistry
-}, 379, null, "UMComponent/images/analytics.png");
+}, 377, null, "UMComponent/images/analytics.png");
 __d(/* UMComponent/images/push.png */function(global, require, module, exports) {module.exports=require(166                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/images","width":96,"height":96,"scales":[1],"hash":"b47fe8020c557c00e88ebfd2ab1e16f2","name":"push","type":"png"}); // 166 = react-native/Libraries/Image/AssetRegistry
-}, 380, null, "UMComponent/images/push.png");
+}, 378, null, "UMComponent/images/push.png");
 __d(/* UMComponent/images/share.png */function(global, require, module, exports) {module.exports=require(166                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/images","width":96,"height":96,"scales":[1],"hash":"f712de7fd327d2595e1daac12cc1b3e6","name":"share","type":"png"}); // 166 = react-native/Libraries/Image/AssetRegistry
-}, 381, null, "UMComponent/images/share.png");
+}, 379, null, "UMComponent/images/share.png");
 ;require(73);
 ;require(0);
 //# sourceMappingURL=/index.android.map

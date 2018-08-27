@@ -40,16 +40,19 @@ export default class UserCenter extends Component {
         AnalyticsUtil.onEventWithMapAndCount("eventname",{name:"umeng",sex:"man"},100);
     }
   
-    registerSuperProperty(){
-        AnalyticsUtil.registerSuperProperty({name:"umeng",sex:"man"});
+    registerPreProperties(){
+        AnalyticsUtil.registerPreProperties({name:"umeng",sex:"man"});
     }
-    getSuperProperty(){
-        AnalyticsUtil.getSuperProperties((result) =>{
+    unregisterPreProperty(){
+        AnalyticsUtil.unregisterPreProperty("umeng");
+    }
+    getPreProperties(){
+        AnalyticsUtil.getPreProperties((result) =>{
            console.log(result)
         });
     }
-    clearSuperProperties(){
-        AnalyticsUtil.clearSuperProperties();
+    clearPreProperties(){
+        AnalyticsUtil.clearPreProperties();
     }
     setFirstLaunchEvent(){
         AnalyticsUtil.setFirstLaunchEvent(["111","222","333"]);
@@ -98,22 +101,30 @@ export default class UserCenter extends Component {
                 <View style = {{flexDirection: 'row'}}>
                     <TouchableOpacity
                         style={styles.u_c_item}
-                        onPress={this.registerSuperProperty.bind(this)}
+                        onPress={this.registerPreProperties.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'设置超级属性'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
-                        onPress={this.getSuperProperty.bind(this)}
+                        onPress={this.unregisterPreProperty.bind(this)}
+                    >
+                        <Text style={styles.u_c_text}>{'删除超级属性'}</Text>
+                    </TouchableOpacity>
+                    </View>
+                    <View style = {{flexDirection: 'row'}}>
+                    <TouchableOpacity
+                        style={styles.u_c_item}
+                        onPress={this.getPreProperties.bind(this)}
                     >
                         <Text style={styles.u_c_text}>{'获取超级属性'}</Text>
                     </TouchableOpacity>
 
-
-                </View>
+                    </View>
+                
                 <TouchableOpacity
                     style={styles.u_c_item}
-                    onPress={this.clearSuperProperties.bind(this)}
+                    onPress={this.clearPreProperties.bind(this)}
                 >
                     <Text style={styles.u_c_text}>{'清除超级属性'}</Text>
                 </TouchableOpacity>

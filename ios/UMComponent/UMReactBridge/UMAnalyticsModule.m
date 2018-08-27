@@ -102,7 +102,7 @@ RCT_EXPORT_METHOD(profileSignOff)
 }
 
 
-RCT_EXPORT_METHOD(registerSuperProperty:(NSDictionary *)property)
+RCT_EXPORT_METHOD(registerPreProperties:(NSDictionary *)property)
 {
   
   if (property == nil && [property isKindOfClass:[NSNull class]]) {
@@ -112,7 +112,7 @@ RCT_EXPORT_METHOD(registerSuperProperty:(NSDictionary *)property)
   [MobClick registerPreProperties:property];
 }
 
-RCT_EXPORT_METHOD(unregisterSuperProperty:(NSString *)propertyName)
+RCT_EXPORT_METHOD(unregisterPreProperty:(NSString *)propertyName)
 {
   
   if (propertyName == nil && [propertyName isKindOfClass:[NSNull class]]) {
@@ -123,7 +123,7 @@ RCT_EXPORT_METHOD(unregisterSuperProperty:(NSString *)propertyName)
 }
 
 
-RCT_EXPORT_METHOD(getSuperProperties:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(getPreProperties:(RCTResponseSenderBlock)callback)
 {
   NSString *jsonString = nil;
   NSError *error = nil;
@@ -141,7 +141,7 @@ RCT_EXPORT_METHOD(getSuperProperties:(RCTResponseSenderBlock)callback)
   
 }
 
-RCT_EXPORT_METHOD(clearSuperProperties)
+RCT_EXPORT_METHOD(clearPreProperties)
 {
   [MobClick clearPreProperties];
   

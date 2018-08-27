@@ -134,7 +134,7 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
 
     }
     @ReactMethod
-    public void registerSuperProperty(ReadableMap map) {
+    public void registerPreProperties(ReadableMap map) {
         ReadableNativeMap map2 = (ReadableNativeMap) map;
         Map<String, Object> map3  = map2.toHashMap();
         Iterator entries = map3.entrySet().iterator();
@@ -152,18 +152,18 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         MobclickAgent.registerPreProperties(context,json);
     }
     @ReactMethod
-    public void unregisterSuperProperty(String propertyName) {
+    public void unregisterPreProperty(String propertyName) {
         MobclickAgent.unregisterPreProperty(context, propertyName);
 
     }
 
     @ReactMethod
-    public void getSuperProperties(Callback callback) {
+    public void getPreProperties(Callback callback) {
         String result = MobclickAgent.getPreProperties(context).toString();
         callback.invoke(result);
     }
     @ReactMethod
-    public void clearSuperProperties() {
+    public void clearPreProperties() {
         MobclickAgent.clearPreProperties(context);
 
     }
@@ -203,103 +203,4 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         MobclickAgent.onProfileSignOff();
     }
 
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void setUserLevelId(int level) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.setPlayerLevel(level);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void startLevel(String level) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.startLevel(level);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void failLevel(String level) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.failLevel(level);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void finishLevel(String level) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.finishLevel(level);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void exchange(double currencyAmount, String currencyType, double virtualAmount, int channel,
-    //                     String orderId) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.exchange(currencyAmount, currencyType, virtualAmount, channel, orderId);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void pay(double money, double coin, int source) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.pay(money, coin, source);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void payWithItem(double money, String item, int number, double price, int source) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.pay(money, item, number, price, source);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void buy(String item, int number, double price) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.buy(item, number, price);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void use(String item, int number, double price) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.use(item, number, price);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void bonus(double coin, int source) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.bonus(coin, source);
-    //}
-    //
-    //@ReactMethod
-    //@SuppressWarnings("unused")
-    //public void bonusWithItem(String item, int number, double price, int source) {
-    //    if (!isGameInited) {
-    //        initGame();
-    //    }
-    //    UMGameAgent.bonus(item, number, price, source);
-    //}
 }

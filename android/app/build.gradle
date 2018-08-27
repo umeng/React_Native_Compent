@@ -113,25 +113,17 @@ android {
     }
     signingConfigs {
         debug {
-            storeFile file('debug.keystore')
-            storePassword "android"
-            keyAlias "androiddebugkey"
-            keyPassword "android"
         }
     }
     buildTypes {
         release {
             // 是否进行混淆
             minifyEnabled false
-            // 混淆文件的位置
-            signingConfig signingConfigs.debug
             proguardFiles 'proguard-rules.pro'
         }
         debug {
             // 是否进行混淆
             minifyEnabled false
-            // 混淆文件的位置
-            signingConfig signingConfigs.debug
             proguardFiles 'proguard-rules.pro'
         }
     }
