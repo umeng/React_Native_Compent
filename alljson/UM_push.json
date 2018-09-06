@@ -1,18 +1,18 @@
 {
     "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
     "notice": "推送React Native版本桥接文件，平台库请点选Android或iOS下载", 
-    "required": 0, 
     "name": "pushrn", 
-    "title": "消息推送 SDK", 
     "show": 1, 
+    "index": 1, 
+    "description": "推送React Native版本桥接文件，平台库请点选Android或iOS下载", 
+    "required": 0, 
     "chooseDescription": "", 
     "platform_version": "1.0.0", 
     "display_platform": "React Native", 
-    "log": {
-        "date": "2017-12-03", 
-        "content": "1.整体进行了重构，使其适配了组件化版本", 
-        "title": "v1.0.0"
-    }, 
+    "title": "消息推送 SDK", 
+    "defaultSelect": [
+        "androidpush_rn"
+    ], 
     "packages": [
         {
             "files": [
@@ -25,11 +25,32 @@
             "title": "", 
             "destination": "", 
             "key": "rnpush"
+        }, 
+        {
+            "files": [
+                "Android/push/push_android_4.2.0/push/"
+            ], 
+            "style": " single", 
+            "required": 1, 
+            "description": "SDK核心库文件，必须添加到工程中", 
+            "title": "PushSDK标准版", 
+            "destination": "", 
+            "key": "androidpush_rn"
+        }, 
+        {
+            "files": [
+                "iOS/push/push_ios_3.2.2/UMPush.framework"
+            ], 
+            "required": 1, 
+            "description": "SDK核心库文件，必须添加到工程中", 
+            "title": "PushSDK核心库", 
+            "destination": "", 
+            "key": "iospush_rn"
         }
     ], 
-      "defaultSelect": [
-                        "androidpush_rn"
-                    ], 
-    "index":1,
-    "description": "推送React Native版本桥接文件，平台库请点选Android或iOS下载"
+    "log": {
+        "date": "2017-12-03", 
+        "content": "1.整体进行了重构，使其适配了组件化版本", 
+        "title": "v1.0.0"
+    }
 }

@@ -3,13 +3,9 @@
     "description": "rn common", 
     "show": 0, 
     "required": 1, 
+    "name": "commonrn", 
     "platform_version": "1.0.0", 
     "display_platform": "React Native", 
-    "log": {
-        "date": "2017-12-03", 
-        "content": "1.整体进行了重构，使其适配了组件化版本", 
-        "title": "v1.0.0"
-    }, 
     "title": "", 
     "packages": [
         {
@@ -24,7 +20,30 @@
             "title": "", 
             "destination": "", 
             "key": "rncommon"
+        }, 
+        {
+            "files": [
+                "Android/common/common_android_1.5.3/umeng-common-1.5.3.jar"
+            ], 
+            "docslink": "", 
+            "destination": "", 
+            "description": "common组件库，必须添加到工程中", 
+            "files_abroad": [
+                "Android/common/common_android_1.5.3/internation/umeng-common-1.5.3.jar", 
+                "iOS/common/common_ios_1.5.2/internation/000/UMCommon.framework"
+            ], 
+            "required": 1, 
+            "key": "androidcommon_rn", 
+            "title": "common组件库", 
+            "files_internal": [
+                "Android/common/common_android_1.5.3/normal/umeng-common-1.5.3.jar", 
+                "iOS/common/common_ios_1.5.2/normal/UMCommon.framework"
+            ]
         }
     ], 
-    "name": "commonrn"
+    "log": {
+        "date": "2017-12-03", 
+        "content": "1.整体进行了重构，使其适配了组件化版本", 
+        "title": "v1.0.0"
+    }
 }

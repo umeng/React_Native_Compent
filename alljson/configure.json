@@ -1,0 +1,592 @@
+{
+    "demolink": "https://github.com/umeng/React_Native_Compent", 
+    "notice": "展示内容待定", 
+    "description": "展示内容待定", 
+    "index": "2", 
+    "show": "1", 
+    "component": [
+        {
+            "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
+            "notice": "推送React Native版本桥接文件，平台库请点选Android或iOS下载", 
+            "required": 0, 
+            "description": "推送React Native版本桥接文件，平台库请点选Android或iOS下载", 
+            "index": 1, 
+            "show": 1, 
+            "component_name": "push", 
+            "chooseDescription": "", 
+            "platform_version": "1.0.0", 
+            "display_platform": "React Native", 
+            "log": {
+                "date": "2017-12-03", 
+                "content": "1.整体进行了重构，使其适配了组件化版本", 
+                "title": "v1.0.0"
+            }, 
+            "title": "消息推送 SDK", 
+            "defaultSelect": [
+                "androidpush_rn"
+            ], 
+            "packages": [
+                {
+                    "files": [
+                        "ReactNative/push/push_reactnative_1.0.0/push_android/", 
+                        "ReactNative/push/push_reactnative_1.0.0/push_ios/"
+                    ], 
+                    "docslink": "", 
+                    "required": 1, 
+                    "description": "", 
+                    "title": "", 
+                    "destination": "", 
+                    "key": "rnpush"
+                }, 
+                {
+                    "files": [
+                        "Android/push/push_android_4.2.0/push/"
+                    ], 
+                    "style": " single", 
+                    "required": 1, 
+                    "description": "SDK核心库文件，必须添加到工程中", 
+                    "title": "PushSDK标准版", 
+                    "destination": "", 
+                    "key": "androidpush_rn"
+                }, 
+                {
+                    "files": [
+                        "iOS/push/push_ios_3.2.2/UMPush.framework"
+                    ], 
+                    "required": 1, 
+                    "description": "SDK核心库文件，必须添加到工程中", 
+                    "title": "PushSDK核心库", 
+                    "destination": "", 
+                    "key": "iospush_rn"
+                }
+            ], 
+            "name": "pushrn"
+        }, 
+        {
+            "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
+            "notice": "社会化分享React Native版本桥接文件，平台库请点选Android或iOS下载", 
+            "required": 0, 
+            "description": "社会化分享React Native版本桥接文件，平台库请点选Android或iOS下载", 
+            "index": 2, 
+            "show": 1, 
+            "component_name": "share", 
+            "chooseDescription": "", 
+            "platform_version": "1.0.0", 
+            "display_platform": "React Native", 
+            "log": {
+                "date": "2017-12-03", 
+                "content": "1.整体进行了重构，使其适配了组件化版本", 
+                "title": "v1.0.0"
+            }, 
+            "title": "社会化分享 SDK", 
+            "defaultSelect": [
+                "shareandroidsinasimplify_rn", 
+                "shareandroidqqsimplify_rn", 
+                "shareiossinasimplify_rn", 
+                "shareiosqqsimplify_rn"
+            ], 
+            "packages": [
+                {
+                    "files": [
+                        "ReactNative/share/share_reactnative_1.0.0/share_android/", 
+                        "ReactNative/share/share_reactnative_1.0.0/share_ios/"
+                    ], 
+                    "docslink": "", 
+                    "required": 1, 
+                    "description": "", 
+                    "title": "", 
+                    "destination": "", 
+                    "key": "rnshare"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/main/libs/", 
+                        "Android/share/share_android_6.9.3/main/res/", 
+                        "Android/share/share_android_6.9.3/shareboard/libs/", 
+                        "iOS/share/share_ios_6.9.4/UMShare.framework", 
+                        "iOS/share/share_ios_6.9.4/UMSocialUI/"
+                    ], 
+                    "required": 1, 
+                    "description": "SDK核心库文件，必须添加到工程中", 
+                    "show": 0, 
+                    "destination": "", 
+                    "key": "shareandroidsharecore_rn", 
+                    "title": "分享核心库"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/新浪精简版/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Sina/libSocialSina.a", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Sina/UMSocialSinaHandler.h"
+                    ], 
+                    "destination": "", 
+                    "group": "androidsina", 
+                    "description": "精简版是在原生SDK基础上做了深度精简、优化，只包含分享和第三方登录（授权）功能，包大小仅为72k", 
+                    "title": "新浪微博(精简版)", 
+                    "required": 0, 
+                    "key": "shareandroidsinasimplify_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/新浪完整版/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Sina/"
+                    ], 
+                    "destination": "", 
+                    "group": "androidsina", 
+                    "description": "完整版功能完全与第三方平台提供的原生sdk相同，包大小为453k", 
+                    "title": "新浪微博(完整版)", 
+                    "required": 0, 
+                    "key": "shareandroidsinafull_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/QQ精简版/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/QQ/libSocialQQ.a", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/QQ/UMSocialQQHandler.h"
+                    ], 
+                    "destination": "", 
+                    "group": "androidqq", 
+                    "description": "精简版是在原生SDK基础上做了深度精简、优化，只包含分享和第三方登录（授权）功能，包大小仅为54k", 
+                    "title": "QQ(精简版)", 
+                    "required": 0, 
+                    "key": "shareandroidqqsimplify_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/QQ完整版/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/QQ/"
+                    ], 
+                    "destination": "", 
+                    "group": "androidqq", 
+                    "description": "完整版功能完全与第三方平台提供的原生sdk相同，包大小为566k", 
+                    "title": "QQ(完整版)", 
+                    "required": 0, 
+                    "key": "shareandroidqqfull_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/微信精简版/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/WeChat/libSocialWeChat.a", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/WeChat/UMSocialWechatHandler.h"
+                    ], 
+                    "required": 0, 
+                    "group": "androidweixin", 
+                    "description": "微信精简版是在原生SDK基础上做了深度精简、优化，不含微信支付功能，只支持分享和第三方登录（授权），包大小仅为31k", 
+                    "title": "微信(精简版)", 
+                    "destination": "", 
+                    "key": "shareandroidweixinsimplify_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/微信完整版/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/WeChat/"
+                    ], 
+                    "required": 0, 
+                    "group": "androidweixin", 
+                    "description": "完整版功能完全与第三方平台提供的原生sdk相同，包大小为245k", 
+                    "title": "微信(完整版)", 
+                    "destination": "", 
+                    "key": "shareandroidweixinfull_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/dingding/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/DingDing/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "钉钉", 
+                    "destination": "", 
+                    "key": "shareandroiddingtalk_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/alipay/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/AlipayShare/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "支付宝", 
+                    "destination": "", 
+                    "key": "shareandroidalipay_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/renren/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Renren/", 
+                        "iOS/share/share_ios_6.9.4/UMSocialSDKPlugin/libUMSocialCloudShare.a"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "人人网", 
+                    "destination": "", 
+                    "key": "shareandroidrenren_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/douban/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Douban/", 
+                        "iOS/share/share_ios_6.9.4/UMSocialSDKPlugin/libUMSocialCloudShare.a"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "豆瓣", 
+                    "destination": "", 
+                    "key": "shareandroiddouban_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/sms/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/SMS/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "短信", 
+                    "destination": "", 
+                    "key": "shareandroidsms_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/email/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Email/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "邮件", 
+                    "destination": "", 
+                    "key": "shareandroidemail_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/ynote/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/YouDao/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "有道云笔记", 
+                    "destination": "", 
+                    "key": "shareandroidynote_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/evernote/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/EverNote/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "印象笔记", 
+                    "destination": "", 
+                    "key": "shareandroidevernote_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/laiwang/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/LaiWang/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "点点虫/动态", 
+                    "destination": "", 
+                    "key": "shareandroidlaiwang_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/linkedin/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Linkedin/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "领英", 
+                    "destination": "", 
+                    "key": "shareandroidlinkedin_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/yixin/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/YiXin/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "易信/朋友圈", 
+                    "destination": "", 
+                    "key": "shareandroidyixin_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/tencentweibo/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/TencentWeibo/", 
+                        "iOS/share/share_ios_6.9.4/UMSocialSDKPlugin/libUMSocialCloudShare.a"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台库文件包含在分享核心库中", 
+                    "title": "腾讯微博", 
+                    "destination": "", 
+                    "key": "shareandroidtencentweibo_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/facebook/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Facebook/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Facebook", 
+                    "destination": "", 
+                    "key": "shareandroidfacebook_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/facebook/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Facebook/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "FBMessenger", 
+                    "destination": "", 
+                    "key": "shareandroidmessenger_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/vkontakte/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/VKontakte/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Vkontakte", 
+                    "destination": "", 
+                    "key": "shareandroidvkontakte_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/dropbox/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/DropBox/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Dropbox", 
+                    "destination": "", 
+                    "key": "shareandroiddropbox_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/twitter/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Twitter/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Twitter", 
+                    "destination": "", 
+                    "key": "shareandroidtwitter_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/whatsapp/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/WhatsApp/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "WhatsApp", 
+                    "destination": "", 
+                    "key": "shareandroidwhatsapp_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/gplus/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/GooglePlus/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Google+", 
+                    "destination": "", 
+                    "key": "shareandroidgoogleplus_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/line/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Line/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "LINE", 
+                    "destination": "", 
+                    "key": "shareandroidline_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/instagram/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Instagram/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Instagram", 
+                    "destination": "", 
+                    "key": "shareandroidinstagram_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/kakao/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Kakao/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "KakaoTalk", 
+                    "destination": "", 
+                    "key": "shareandroidkakao_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/pinterest/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Pinterest/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Pinterest", 
+                    "destination": "", 
+                    "key": "shareandroidpinterest_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/pocket/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Pocket/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Pocket", 
+                    "destination": "", 
+                    "key": "shareandroidpocket_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/tumblr/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Tumblr/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Tumblr", 
+                    "destination": "", 
+                    "key": "shareandroidtumblr_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/flickr/", 
+                        "iOS/share/share_ios_6.9.4/SocialLibraries/Flickr/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Flickr", 
+                    "destination": "", 
+                    "key": "shareandroidflickr_rn"
+                }, 
+                {
+                    "files": [
+                        "Android/share/share_android_6.9.3/platforms/foursquare/"
+                    ], 
+                    "required": 0, 
+                    "description": "该平台如需添加至分享面板中需手动设置，请参考文档【添加平台到分享列表部分】", 
+                    "title": "Foursquare", 
+                    "destination": "", 
+                    "key": "shareandroidfoursquare_rn"
+                }
+            ], 
+            "name": "sharern"
+        }, 
+        {
+            "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
+            "notice": "统计React Native版本桥接文件，平台库请点选Android或iOS下载", 
+            "required": 0, 
+            "description": "统计React Native版本桥接文件，平台库请点选Android或iOS下载", 
+            "index": 0, 
+            "show": 1, 
+            "component_name": "analytics", 
+            "chooseDescription": "", 
+            "platform_version": "1.0.0", 
+            "display_platform": "React Native", 
+            "log": {
+                "date": "2017-12-03", 
+                "content": "1.整体进行了重构，使其适配了组件化版本", 
+                "title": "v1.0.0"
+            }, 
+            "title": "移动统计 SDK", 
+            "packages": [
+                {
+                    "files": [
+                        "ReactNative/analytics/analytics_reactnative_1.0.0/analytics_android/", 
+                        "ReactNative/analytics/analytics_reactnative_1.0.0/analytics_ios/"
+                    ], 
+                    "docslink": "", 
+                    "required": 1, 
+                    "description": "", 
+                    "title": "", 
+                    "destination": "", 
+                    "key": "rnanalytics"
+                }, 
+                {
+                    "files": [
+                        "Android/analytics/analytics_android_7.5.3/umeng-analytics-7.5.3.jar", 
+                        "iOS/analytics/analytics_ios_5.5.0/UMAnalytics.framework"
+                    ], 
+                    "required": 1, 
+                    "description": "友盟+统计SDK", 
+                    "show": 1, 
+                    "destination": "", 
+                    "key": "androidanalytics_rn", 
+                    "title": "友盟+统计SDK"
+                }
+            ], 
+            "name": "analyticsrn"
+        }, 
+        {
+            "docslink": "https://developer.umeng.com/docs/66632/detail/67587", 
+            "description": "rn common", 
+            "show": 0, 
+            "required": 1, 
+            "component_name": "common", 
+            "platform_version": "1.0.0", 
+            "display_platform": "React Native", 
+            "log": {
+                "date": "2017-12-03", 
+                "content": "1.整体进行了重构，使其适配了组件化版本", 
+                "title": "v1.0.0"
+            }, 
+            "title": "", 
+            "packages": [
+                {
+                    "files": [
+                        "ReactNative/common/common_reactnative_1.0.0/common_android/", 
+                        "ReactNative/common/common_reactnative_1.0.0/js/", 
+                        "ReactNative/common/common_reactnative_1.0.0/common_ios/"
+                    ], 
+                    "docslink": "", 
+                    "required": 1, 
+                    "description": "", 
+                    "title": "", 
+                    "destination": "", 
+                    "key": "rncommon"
+                }, 
+                {
+                    "files": [
+                        "Android/common/common_android_1.5.3/umeng-common-1.5.3.jar"
+                    ], 
+                    "docslink": "", 
+                    "required": 1, 
+                    "description": "common组件库，必须添加到工程中", 
+                    "files_abroad": [
+                        "Android/common/common_android_1.5.3/internation/umeng-common-1.5.3.jar", 
+                        "iOS/common/common_ios_1.5.2/internation/000/UMCommon.framework"
+                    ], 
+                    "destination": "", 
+                    "key": "androidcommon_rn", 
+                    "title": "common组件库", 
+                    "files_internal": [
+                        "Android/common/common_android_1.5.3/normal/umeng-common-1.5.3.jar", 
+                        "iOS/common/common_ios_1.5.2/normal/UMCommon.framework"
+                    ]
+                }
+            ], 
+            "name": "commonrn"
+        }
+    ], 
+    "videolink": "", 
+    "title": "React Native", 
+    "name": "reactnative"
+}
