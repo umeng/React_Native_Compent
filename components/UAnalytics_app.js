@@ -9,7 +9,8 @@ import {
     Button,
     TouchableOpacity,
     AsyncStorage,
-    View
+    View,
+    Alert
 } from 'react-native';
 import ColorUtil from './ColorUtil'
 import AnalyticsUtil from './../native/AnalyticsUtil'
@@ -27,28 +28,41 @@ export default class UserCenter extends Component {
     profileSignOff(){
         AnalyticsUtil.profileSignOff()
     }
+
     onEvent(){
-        AnalyticsUtil.onEvent("eventname");
+        AnalyticsUtil.onEvent("event0");
     }
     onEventWithLable(){
-        AnalyticsUtil.onEventWithLable("eventname","label");
+        AnalyticsUtil.onEventWithLable("event1","label");
     }
     onEventWithMap(){
-        AnalyticsUtil.onEventWithMap("eventname",{name:"umeng",sex:"man"});
+        AnalyticsUtil.onEventWithMap("event2",{name:"umeng",sex:"man"});
     }
     onEventWithMapAndCount(){
-        AnalyticsUtil.onEventWithMapAndCount("eventname",{name:"umeng",sex:"man"},100);
+        AnalyticsUtil.onEventWithMapAndCount("event3",{name:"umeng",sex:"man"},100);
     }
   
+    onEventObject() {
+        AnalyticsUtil.onEventObject("event4",{name:"umeng",sex:"man"});
+    }
     registerPreProperties(){
         AnalyticsUtil.registerPreProperties({name:"umeng",sex:"man"});
     }
     unregisterPreProperty(){
         AnalyticsUtil.unregisterPreProperty("name");
     }
+
     getPreProperties(){
         AnalyticsUtil.getPreProperties((result) =>{
-           console.log(result)
+           console.log(result);
+           Alert.alert(
+            'getPreProperties返回值',
+            result,
+            [
+                {text: '确定', onPress: () => console.log('Ask me later pressed')},
+            ],
+            { cancelable: false }
+        );
         });
     }
     clearPreProperties(){
@@ -57,6 +71,9 @@ export default class UserCenter extends Component {
     setFirstLaunchEvent(){
         AnalyticsUtil.setFirstLaunchEvent(["111","222","333"]);
     }
+
+    
+   
     render() {
         const { navigate } = this.props.navigation;
         return (
@@ -66,13 +83,13 @@ export default class UserCenter extends Component {
                         style={styles.u_c_item}
                         onPress={this.profileSignInWithPUID.bind(this)}
                     >
-                        <Text style={styles.u_c_text}>{'用户登录1'}</Text>
+                        <Text style={styles.u_c_text}>{'用户登录'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
                         onPress={this.profileSignOff.bind(this)}
                     >
-                        <Text style={styles.u_c_text}>{'用户登出2'}</Text>
+                        <Text style={styles.u_c_text}>{'用户登出'}</Text>
                     </TouchableOpacity>
 
                 </View>
@@ -89,8 +106,15 @@ export default class UserCenter extends Component {
                     >
                         <Text style={styles.u_c_text}>{'多属性事件'}</Text>
                     </TouchableOpacity>
-
                 </View>
+                    
+                <TouchableOpacity
+                        style={styles.u_c_item}
+                        onPress={this.onEventObject.bind(this)}
+                    >
+                        <Text style={styles.u_c_text}>{'onEventObject'}</Text>
+                    </TouchableOpacity>
+                
                 <TouchableOpacity
                     style={styles.u_c_item}
                     onPress={this.onEventWithMapAndCount.bind(this)}

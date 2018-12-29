@@ -60442,22 +60442,27 @@ var UserCenter = function (_Component) {
     }, {
         key: 'onEvent',
         value: function onEvent() {
-            _AnalyticsUtil2.default.onEvent("eventname");
+            _AnalyticsUtil2.default.onEvent("event0");
         }
     }, {
         key: 'onEventWithLable',
         value: function onEventWithLable() {
-            _AnalyticsUtil2.default.onEventWithLable("eventname", "label");
+            _AnalyticsUtil2.default.onEventWithLable("event1", "label");
         }
     }, {
         key: 'onEventWithMap',
         value: function onEventWithMap() {
-            _AnalyticsUtil2.default.onEventWithMap("eventname", { name: "umeng", sex: "man" });
+            _AnalyticsUtil2.default.onEventWithMap("event2", { name: "umeng", sex: "man" });
         }
     }, {
         key: 'onEventWithMapAndCount',
         value: function onEventWithMapAndCount() {
-            _AnalyticsUtil2.default.onEventWithMapAndCount("eventname", { name: "umeng", sex: "man" }, 100);
+            _AnalyticsUtil2.default.onEventWithMapAndCount("event3", { name: "umeng", sex: "man" }, 100);
+        }
+    }, {
+        key: 'onEventObject',
+        value: function onEventObject() {
+            _AnalyticsUtil2.default.onEventObject("event4", { name: "umeng", sex: "man" });
         }
     }, {
         key: 'registerPreProperties',
@@ -60474,6 +60479,9 @@ var UserCenter = function (_Component) {
         value: function getPreProperties() {
             _AnalyticsUtil2.default.getPreProperties(function (result) {
                 console.log(result);
+                _reactNative.Alert.alert('getPreProperties返回值', result, [{ text: '确定', onPress: function onPress() {
+                        return console.log('Ask me later pressed');
+                    } }], { cancelable: false });
             });
         }
     }, {
@@ -60495,14 +60503,14 @@ var UserCenter = function (_Component) {
                 _reactNative.View,
                 { style: styles.u_c, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 63
+                        lineNumber: 80
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 64
+                            lineNumber: 81
                         }
                     },
                     _react2.default.createElement(
@@ -60512,17 +60520,17 @@ var UserCenter = function (_Component) {
                             onPress: this.profileSignInWithPUID.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 65
+                                lineNumber: 82
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 69
+                                    lineNumber: 86
                                 }
                             },
-                            '用户登录1'
+                            '用户登录'
                         )
                     ),
                     _react2.default.createElement(
@@ -60532,17 +60540,17 @@ var UserCenter = function (_Component) {
                             onPress: this.profileSignOff.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 71
+                                lineNumber: 88
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 75
+                                    lineNumber: 92
                                 }
                             },
-                            '用户登出2'
+                            '用户登出'
                         )
                     )
                 ),
@@ -60550,7 +60558,7 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 79
+                            lineNumber: 96
                         }
                     },
                     _react2.default.createElement(
@@ -60560,14 +60568,14 @@ var UserCenter = function (_Component) {
                             onPress: this.onEvent.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 80
+                                lineNumber: 97
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 84
+                                    lineNumber: 101
                                 }
                             },
                             '普通事件'
@@ -60580,14 +60588,14 @@ var UserCenter = function (_Component) {
                             onPress: this.onEventWithMap.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 86
+                                lineNumber: 103
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 90
+                                    lineNumber: 107
                                 }
                             },
                             '多属性事件'
@@ -60598,17 +60606,37 @@ var UserCenter = function (_Component) {
                     _reactNative.TouchableOpacity,
                     {
                         style: styles.u_c_item,
-                        onPress: this.onEventWithMapAndCount.bind(this),
+                        onPress: this.onEventObject.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 94
+                            lineNumber: 111
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 98
+                                lineNumber: 115
+                            }
+                        },
+                        'onEventObject'
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactNative.TouchableOpacity,
+                    {
+                        style: styles.u_c_item,
+                        onPress: this.onEventWithMapAndCount.bind(this),
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 118
+                        }
+                    },
+                    _react2.default.createElement(
+                        _reactNative.Text,
+                        { style: styles.u_c_text, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 122
                             }
                         },
                         '数值性统计'
@@ -60618,7 +60646,7 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 101
+                            lineNumber: 125
                         }
                     },
                     _react2.default.createElement(
@@ -60628,14 +60656,14 @@ var UserCenter = function (_Component) {
                             onPress: this.registerPreProperties.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 102
+                                lineNumber: 126
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 106
+                                    lineNumber: 130
                                 }
                             },
                             '设置超级属性'
@@ -60648,14 +60676,14 @@ var UserCenter = function (_Component) {
                             onPress: this.unregisterPreProperty.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 108
+                                lineNumber: 132
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 112
+                                    lineNumber: 136
                                 }
                             },
                             '删除超级属性'
@@ -60666,7 +60694,7 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 116
+                            lineNumber: 140
                         }
                     },
                     _react2.default.createElement(
@@ -60676,14 +60704,14 @@ var UserCenter = function (_Component) {
                             onPress: this.getPreProperties.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 117
+                                lineNumber: 141
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 121
+                                    lineNumber: 145
                                 }
                             },
                             '获取超级属性'
@@ -60696,14 +60724,14 @@ var UserCenter = function (_Component) {
                             onPress: this.clearPreProperties.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 124
+                                lineNumber: 148
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 128
+                                    lineNumber: 152
                                 }
                             },
                             '清除超级属性'
@@ -60717,14 +60745,14 @@ var UserCenter = function (_Component) {
                         onPress: this.setFirstLaunchEvent.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 133
+                            lineNumber: 157
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 137
+                                lineNumber: 161
                             }
                         },
                         '关注首次触发事件'
