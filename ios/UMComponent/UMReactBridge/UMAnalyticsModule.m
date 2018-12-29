@@ -48,6 +48,17 @@ RCT_EXPORT_METHOD(onEventWithMap:(NSString *)eventId parameters:(NSDictionary *)
   [MobClick event:eventId attributes:parameters];
 }
 
+RCT_EXPORT_METHOD(onEventObject:(NSString *)eventId parameters:(NSDictionary *)parameters)
+{
+  if (eventId == nil || [eventId isKindOfClass:[NSNull class]]) {
+    return;
+  }
+  if (parameters == nil && [parameters isKindOfClass:[NSNull class]]) {
+    parameters = nil;
+  }
+  [MobClick event:eventId attributes:parameters];
+}
+
 RCT_EXPORT_METHOD(onEventWithMapAndCount:(NSString *)eventId parameters:(NSDictionary *)parameters eventNum:(int)eventNum)
 {
   if (eventId == nil || [eventId isKindOfClass:[NSNull class]]) {
