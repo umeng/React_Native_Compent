@@ -20,12 +20,16 @@ import com.facebook.react.bridge.ReadableType;
 import com.umeng.analytics.MobclickAgent;
 
 /**
+ * 示例： SDK 接口桥接封装类，并未封装SDK所有API(仅封装常用API接口)，设置配置参数类API应在Android原生代码
+ * 调用，例如：SDK初始化函数，Log开关函数，子进程自定义事件埋点使能函数，异常捕获功能使能/关闭函数等等。
+ * 如果还需要封装其它SDK API，请参考本例自行封装
  * Created by wangfei on 17/8/28.
+ * -- 适配海棠版(common 2.0.0 + analytics 8.0.0) modify by yujie on 18/12/28
  */
 
 public class AnalyticsModule extends ReactContextBaseJavaModule {
     private ReactApplicationContext context;
-    private boolean isGameInited = false;
+
     public AnalyticsModule(ReactApplicationContext reactContext) {
         super(reactContext);
         context = reactContext;
@@ -35,26 +39,20 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
     public String getName() {
         return "UMAnalyticsModule";
     }
-    @ReactMethod
-    private void initGame() {
-        //UMGameAgent.init(context);
-        //UMGameAgent.setPlayerLevel(1);
 
-        isGameInited = true;
-    }
     /********************************U-App统计*********************************/
     @ReactMethod
-    public void onPageStart(String mPageName) {
-        android.util.Log.e("xxxxxx","onPageStart="+mPageName);
+    public void onPageStart(String pageName) {
+        //android.util.Log.e("xxxxxx","onPageStart="+mPageName);
 
-        MobclickAgent.onPageStart(mPageName);
+        MobclickAgent.onPageStart(pageName);
     }
 
     @ReactMethod
-    public void onPageEnd(String mPageName) {
-        android.util.Log.e("xxxxxx","onPageEnd="+mPageName);
+    public void onPageEnd(String pageName) {
+        //android.util.Log.e("xxxxxx","onPageEnd="+mPageName);
 
-        MobclickAgent.onPageEnd(mPageName);
+        MobclickAgent.onPageEnd(pageName);
 
     }
     @ReactMethod
@@ -62,11 +60,11 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         MobclickAgent.onEvent(context, eventId);
     }
     @ReactMethod
-    public void onEventWithLable(String eventId,String eventLabel) {
+    public void onEventWithLable(String eventId, String eventLabel) {
         MobclickAgent.onEvent(context, eventId, eventLabel);
     }
     @ReactMethod
-    public void onEventWithMap(String eventId,ReadableMap map) {
+    public void onEventWithMap(String eventId, ReadableMap map) {
         Map<String, String> rMap = new HashMap<String, String>();
         ReadableMapKeySetIterator iterator = map.keySetIterator();
         while (iterator.hasNextKey()) {
@@ -105,14 +103,9 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         }
         MobclickAgent.onEventValue(context, eventId, rMap, value);
     }
-    /********************************U-App(Game)统计*********************************/
-    //@ReactMethod
-    //public void track(String eventName) {
-    //    Log.e("xxxxxx dddddd="+context);
-    //    UMADplus.track(context,eventName);
-    //}
+
     @ReactMethod
-    public void onEventObject(String eventID,ReadableMap property) {
+    public void onEventObject(String eventID, ReadableMap property) {
         Map<String, Object> map = new HashMap();
         ReadableMapKeySetIterator iterator = property.keySetIterator();
         while (iterator.hasNextKey()) {
@@ -193,8 +186,8 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     @SuppressWarnings("unused")
-    public void profileSignInWithPUIDWithProvider(String puid, String provider) {
-        MobclickAgent.onProfileSignIn(puid, provider);
+    public void profileSignInWithPUIDWithProvider(String provider, String puid) {
+        MobclickAgent.onProfileSignIn(provider, puid);
     }
 
     @ReactMethod

@@ -14,7 +14,7 @@ import com.umeng.commonsdk.UMConfigure;
 
 public class RNUMConfigure {
     public static void init(Context context, String appkey, String channel, int type, String secret){
-        initRN("react-native","1.0");
+        initRN("react-native","2.0");
         UMConfigure.init(context,appkey,channel,type,secret);
     }
     @TargetApi(VERSION_CODES.KITKAT)

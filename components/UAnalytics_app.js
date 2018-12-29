@@ -44,7 +44,7 @@ export default class UserCenter extends Component {
         AnalyticsUtil.registerPreProperties({name:"umeng",sex:"man"});
     }
     unregisterPreProperty(){
-        AnalyticsUtil.unregisterPreProperty("umeng");
+        AnalyticsUtil.unregisterPreProperty("name");
     }
     getPreProperties(){
         AnalyticsUtil.getPreProperties((result) =>{
@@ -66,13 +66,13 @@ export default class UserCenter extends Component {
                         style={styles.u_c_item}
                         onPress={this.profileSignInWithPUID.bind(this)}
                     >
-                        <Text style={styles.u_c_text}>{'用户登录'}</Text>
+                        <Text style={styles.u_c_text}>{'用户登录1'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.u_c_item}
                         onPress={this.profileSignOff.bind(this)}
                     >
-                        <Text style={styles.u_c_text}>{'用户登出'}</Text>
+                        <Text style={styles.u_c_text}>{'用户登出2'}</Text>
                     </TouchableOpacity>
 
                 </View>
@@ -111,6 +111,7 @@ export default class UserCenter extends Component {
                     >
                         <Text style={styles.u_c_text}>{'删除超级属性'}</Text>
                     </TouchableOpacity>
+
                     </View>
                     <View style = {{flexDirection: 'row'}}>
                     <TouchableOpacity
@@ -119,16 +120,17 @@ export default class UserCenter extends Component {
                     >
                         <Text style={styles.u_c_text}>{'获取超级属性'}</Text>
                     </TouchableOpacity>
+                    
+                    <TouchableOpacity
+                    style={styles.u_c_item}
+                    onPress={this.clearPreProperties.bind(this)}
+                    >
+                    <Text style={styles.u_c_text}>{'清除超级属性'}</Text>
+                    </TouchableOpacity>
 
                     </View>
                 
-                <TouchableOpacity
-                    style={styles.u_c_item}
-                    onPress={this.clearPreProperties.bind(this)}
-                >
-                    <Text style={styles.u_c_text}>{'清除超级属性'}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
+                    <TouchableOpacity
                     style={styles.u_c_item}
                     onPress={this.setFirstLaunchEvent.bind(this)}
                 >
