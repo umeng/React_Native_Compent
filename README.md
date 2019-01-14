@@ -154,6 +154,18 @@ import AnalyticsUtil from './AnalyticsUtil'
 ```
 
 ## 接口说明
+
+### 手动页面统计接口
+
+AnalyticsUtil.onPageStart(pageName);
+
+* pageName 页面名称
+
+AnalyticsUtil.onPageEnd(pageName);
+
+* pageName 页面名称
+
+
 ### 自定义事件
 
 AnalyticsUtil.onEvent(eventId);
@@ -178,6 +190,9 @@ AnalyticsUtil.profileSignInWithPUID(puid);
 
 * puid 用户账号ID.长度小于64字节
 
+AnalyticsUtil.profileSignInWithPUIDWithProvider(provider,puid);
+
+* provider： 账号来源。 puid： 用户账号ID。长度小于64字节.
 
 AnalyticsUtil.profileSignOff()；
 

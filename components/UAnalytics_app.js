@@ -25,10 +25,19 @@ export default class UserCenter extends Component {
     profileSignInWithPUID(){
         AnalyticsUtil.profileSignInWithPUID("myname");
     }
+    profileSignInWithPUIDWithProvider() {
+        AnalyticsUtil.profileSignInWithPUIDWithProvider("weixin","18829283888")
+    }
     profileSignOff(){
         AnalyticsUtil.profileSignOff()
     }
 
+    onPageStart() {
+        AnalyticsUtil.onPageStart("MainPage");
+    }
+    onPageEnd() {
+        AnalyticsUtil.onPageEnd("MainPage");
+    }
     onEvent(){
         AnalyticsUtil.onEvent("event0");
     }

@@ -6399,7 +6399,7 @@ module.exports = logError;
 __d(/* ActivityIndicator */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -23645,7 +23645,7 @@ module.exports = ReactNativeStackEntry;
 __d(/* View */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/View/View.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/View/View.js';
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
 var PropTypes = require(19          ); // 19 = prop-types
@@ -25091,7 +25091,7 @@ module.exports = requireNativeComponent;
 __d(/* UnimplementedView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 
@@ -32624,7 +32624,7 @@ module.exports = ReactNativeStackEntry;
 __d(/* ReactNativeART */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/ART/ReactNativeART.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/ART/ReactNativeART.js';
 var Color = require(173             ); // 173 = art/core/color
 var Path = require(174                  ); // 174 = ARTSerializablePath
 var Transform = require(177                 ); // 177 = art/core/transform
@@ -33964,7 +33964,7 @@ module.exports = Class({
 __d(/* Button */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Button.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Button.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -34111,7 +34111,7 @@ module.exports = Button;
 __d(/* Text */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Text/Text.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Text/Text.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var EdgeInsetsPropType = require(145                 ); // 145 = EdgeInsetsPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
@@ -34347,7 +34347,7 @@ __d(/* Touchable */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/Touchable.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/Touchable.js';
 var BoundingDimensions = require(181                 ); // 181 = BoundingDimensions
 var Platform = require(37        ); // 37 = Platform
 var Position = require(183       ); // 183 = Position
@@ -35351,7 +35351,7 @@ module.exports = ensurePositiveDelayProps;
 __d(/* TouchableOpacity */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js';
 
 
 var Animated = require(192       ); // 192 = Animated
@@ -35531,7 +35531,7 @@ module.exports = Animated;
 __d(/* AnimatedImplementation */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Animated/src/AnimatedImplementation.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Animated/src/AnimatedImplementation.js';
 var InteractionManager = require(194                 ); // 194 = InteractionManager
 var Interpolation = require(196            ); // 196 = Interpolation
 var NativeAnimatedHelper = require(197                   ); // 197 = NativeAnimatedHelper
@@ -38886,7 +38886,7 @@ module.exports = function bezier(mX1, mY1, mX2, mY2) {
 __d(/* Image */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Image/Image.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Image/Image.android.js';
 var ImageResizeMode = require(131              ); // 131 = ImageResizeMode
 var ImageStylePropTypes = require(130                  ); // 130 = ImageStylePropTypes
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
@@ -39180,7 +39180,7 @@ module.exports = filterObject;
 __d(/* ScrollView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js';
 var Animated = require(192       ); // 192 = Animated
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var EdgeInsetsPropType = require(145                 ); // 145 = EdgeInsetsPropType
@@ -39992,7 +39992,7 @@ module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactNativeC
 __d(/* ScrollViewStickyHeader */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js';
 var Animated = require(192       ); // 192 = Animated
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -40113,7 +40113,7 @@ __d(/* DatePickerIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -40174,7 +40174,7 @@ module.exports = DummyDatePickerIOS;
 __d(/* DrawerLayoutAndroid */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -40620,7 +40620,7 @@ module.exports = StatusBar;
 __d(/* FlatList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Lists/FlatList.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Lists/FlatList.js';
 var MetroListView = require(218            ); // 218 = MetroListView
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
@@ -40869,7 +40869,7 @@ module.exports = FlatList;
 __d(/* MetroListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Lists/MetroListView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Lists/MetroListView.js';
 var ListView = require(219       ); // 219 = ListView
 var React = require(128    ); // 128 = React
 var RefreshControl = require(224             ); // 224 = RefreshControl
@@ -41059,7 +41059,7 @@ module.exports = MetroListView;
 __d(/* ListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Lists/ListView/ListView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Lists/ListView/ListView.js';
 var ListViewDataSource = require(220                 ); // 220 = ListViewDataSource
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -41853,7 +41853,7 @@ module.exports = cloneReferencedElement;
 __d(/* RefreshControl */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -41948,7 +41948,7 @@ module.exports = RefreshControl;
 __d(/* VirtualizedList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Lists/VirtualizedList.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Lists/VirtualizedList.js';
 var Batchinator = require(226          ); // 226 = Batchinator
 var FillRateHelper = require(227             ); // 227 = FillRateHelper
 var PropTypes = require(19          ); // 19 = prop-types
@@ -43504,7 +43504,7 @@ module.exports = VirtualizeUtils;
 __d(/* ImageBackground */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Image/ImageBackground.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Image/ImageBackground.js';
 var Image = require(203    ); // 203 = Image
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -43624,7 +43624,7 @@ module.exports = ImageStore;
 __d(/* KeyboardAvoidingView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js';
 var createReactClass = require(153                 ); // 153 = create-react-class
 var Keyboard = require(54        ); // 54 = Keyboard
 var LayoutAnimation = require(234              ); // 234 = LayoutAnimation
@@ -43905,7 +43905,7 @@ module.exports = LayoutAnimation;
 __d(/* Modal */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Modal/Modal.js',
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Modal/Modal.js',
     _container;
 
 var AppContainer = require(236           ); // 236 = AppContainer
@@ -44064,7 +44064,7 @@ __d(/* AppContainer */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/AppContainer.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/AppContainer.js';
 var EmitterSubscription = require(49                   ); // 49 = EmitterSubscription
 var PropTypes = require(19          ); // 19 = prop-types
 var RCTDeviceEventEmitter = require(47                     ); // 47 = RCTDeviceEventEmitter
@@ -44216,7 +44216,7 @@ __d(/* Inspector */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/Inspector.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/Inspector.js';
 var Dimensions = require(158         ); // 158 = Dimensions
 var InspectorOverlay = require(238               ); // 238 = InspectorOverlay
 var InspectorPanel = require(242             ); // 242 = InspectorPanel
@@ -44500,7 +44500,7 @@ module.exports = Inspector;
 __d(/* InspectorOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js';
 var Dimensions = require(158         ); // 158 = Dimensions
 var ElementBox = require(239         ); // 239 = ElementBox
 var PropTypes = require(19          ); // 19 = prop-types
@@ -44591,7 +44591,7 @@ module.exports = InspectorOverlay;
 __d(/* ElementBox */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/ElementBox.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/ElementBox.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -44687,7 +44687,7 @@ module.exports = ElementBox;
 __d(/* BorderBox */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/BorderBox.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/BorderBox.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 
@@ -44771,7 +44771,7 @@ module.exports = resolveBoxStyle;
 __d(/* InspectorPanel */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/InspectorPanel.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/InspectorPanel.js';
 var ElementProperties = require(243                ); // 243 = ElementProperties
 var NetworkOverlay = require(251             ); // 251 = NetworkOverlay
 var PerformanceOverlay = require(254                 ); // 254 = PerformanceOverlay
@@ -45011,7 +45011,7 @@ module.exports = InspectorPanel;
 __d(/* ElementProperties */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/ElementProperties.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/ElementProperties.js';
 var BoxInspector = require(244           ); // 244 = BoxInspector
 var PropTypes = require(19          ); // 19 = prop-types
 var React = require(128    ); // 128 = React
@@ -45231,7 +45231,7 @@ module.exports = ElementProperties;
 __d(/* BoxInspector */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/BoxInspector.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/BoxInspector.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -45448,7 +45448,7 @@ module.exports = BoxInspector;
 __d(/* StyleInspector */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/StyleInspector.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/StyleInspector.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -45563,7 +45563,7 @@ module.exports = StyleInspector;
 __d(/* TouchableHighlight */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js';
 
 
 var ColorPropType = require(62             ); // 62 = ColorPropType
@@ -45839,7 +45839,7 @@ module.exports = openFileInEditor;
 __d(/* NetworkOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js';
 var ListView = require(219       ); // 219 = ListView
 var React = require(128    ); // 128 = React
 var ScrollView = require(205         ); // 205 = ScrollView
@@ -46768,7 +46768,7 @@ module.exports = XHRInterceptor;
 __d(/* PerformanceOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js';
 var PerformanceLogger = require(109                ); // 109 = PerformanceLogger
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -46862,7 +46862,7 @@ __d(/* YellowBox */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/YellowBox.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/YellowBox.js';
 var EventEmitter = require(48            ); // 48 = EventEmitter
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -47516,7 +47516,7 @@ __d(/* Picker */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Picker/Picker.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Picker/Picker.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var PickerIOS = require(259        ); // 259 = PickerIOS
 var PickerAndroid = require(260            ); // 260 = PickerAndroid
@@ -47647,7 +47647,7 @@ __d(/* PickerAndroid */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var React = require(128    ); // 128 = React
 var ReactPropTypes = require(19          ); // 19 = prop-types
@@ -47798,7 +47798,7 @@ module.exports = PickerAndroid;
 __d(/* ProgressBarAndroid */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroid.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroid.android.js';
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var React = require(128    ); // 128 = React
 var PropTypes = require(19          ); // 19 = prop-types
@@ -47873,7 +47873,7 @@ __d(/* ProgressViewIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -47934,7 +47934,7 @@ module.exports = DummyProgressViewIOS;
 __d(/* SectionList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Lists/SectionList.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Lists/SectionList.js';
 var MetroListView = require(218            ); // 218 = MetroListView
 var Platform = require(37        ); // 37 = Platform
 var React = require(128    ); // 128 = React
@@ -48018,7 +48018,7 @@ module.exports = SectionList;
 __d(/* VirtualizedSectionList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 var VirtualizedList = require(225              ); // 225 = VirtualizedList
@@ -48393,7 +48393,7 @@ __d(/* SegmentedControlIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var Text = require(179   ); // 179 = Text
@@ -48454,7 +48454,7 @@ module.exports = DummySegmentedControlIOS;
 __d(/* Slider */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Slider/Slider.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Slider/Slider.js';
 var Image = require(203    ); // 203 = Image
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
@@ -48595,7 +48595,7 @@ module.exports = require(155                ); // 155 = UnimplementedView
 __d(/* Switch */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/Switch/Switch.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/Switch/Switch.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var Platform = require(37        ); // 37 = Platform
@@ -48706,7 +48706,7 @@ module.exports = Switch;
 __d(/* SwipeableListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js';
 var ListView = require(219       ); // 219 = ListView
 var PropTypes = require(19          ); // 19 = prop-types
 var React = require(128    ); // 128 = React
@@ -48960,7 +48960,7 @@ module.exports = SwipeableListViewDataSource;
 __d(/* SwipeableRow */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js';
 var Animated = require(192       ); // 192 = Animated
 var I18nManager = require(256          ); // 256 = I18nManager
 var PanResponder = require(272           ); // 272 = PanResponder
@@ -49410,7 +49410,7 @@ __d(/* TabBarIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.android.js';
 var React = require(128    ); // 128 = React
 var StyleSheet = require(156         ); // 156 = StyleSheet
 var TabBarItemIOS = require(275            ); // 275 = TabBarItemIOS
@@ -49456,7 +49456,7 @@ __d(/* TabBarItemIOS */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.android.js';
 var React = require(128    ); // 128 = React
 var View = require(127   ); // 127 = View
 var StyleSheet = require(156         ); // 156 = StyleSheet
@@ -49510,7 +49510,7 @@ module.exports = DummyTab;
 __d(/* TextInput */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/TextInput/TextInput.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/TextInput/TextInput.js';
 var ColorPropType = require(62             ); // 62 = ColorPropType
 var DocumentSelectionState = require(277                     ); // 277 = DocumentSelectionState
 var EventEmitter = require(48            ); // 48 = EventEmitter
@@ -50439,7 +50439,7 @@ __d(/* ToolbarAndroid */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/ToolbarAndroid/ToolbarAndroid.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/ToolbarAndroid/ToolbarAndroid.android.js';
 var Image = require(203    ); // 203 = Image
 var NativeMethodsMixin = require(64                  ); // 64 = NativeMethodsMixin
 var React = require(128    ); // 128 = React
@@ -50549,7 +50549,7 @@ module.exports = ToolbarAndroid;
 __d(/* ViewPagerAndroid */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/ViewPager/ViewPagerAndroid.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/ViewPager/ViewPagerAndroid.android.js';
 var React = require(128    ); // 128 = React
 var PropTypes = require(19          ); // 19 = prop-types
 var ReactNative = require(65           ); // 65 = ReactNative
@@ -50674,7 +50674,7 @@ module.exports = ViewPagerAndroid;
 __d(/* WebView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/Components/WebView/WebView.android.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/Components/WebView/WebView.android.js';
 var EdgeInsetsPropType = require(145                 ); // 145 = EdgeInsetsPropType
 var ActivityIndicator = require(61                 ); // 61 = ActivityIndicator
 var React = require(128    ); // 128 = React
@@ -51280,7 +51280,7 @@ __d(/* renderApplication */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/renderApplication.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native/Libraries/ReactNative/renderApplication.js';
 var AppContainer = require(236           ); // 236 = AppContainer
 var React = require(128    ); // 128 = React
 var ReactNative = require(65           ); // 65 = ReactNative
@@ -52460,7 +52460,7 @@ module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.takeSnapshot
 __d(/* UMComponent/components/Home.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/components/Home.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/components/Home.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -52646,7 +52646,7 @@ module.exports = {
 __d(/* react-navigation/src/createNavigationContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/createNavigationContainer.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/createNavigationContainer.js';
 exports.default = createNavigationContainer;
 
 var _react = require(12     ); // 12 = react
@@ -53069,7 +53069,7 @@ exports.default = StateUtils;
 __d(/* react-navigation/src/navigators/createNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/navigators/createNavigator.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/navigators/createNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53113,7 +53113,7 @@ exports.default = createNavigator;
 __d(/* react-navigation/src/navigators/StackNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/navigators/StackNavigator.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/navigators/StackNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53182,7 +53182,7 @@ exports.default = function (routeConfigMap) {
 __d(/* react-navigation/src/views/CardStackTransitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/CardStackTransitioner.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/CardStackTransitioner.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53285,7 +53285,7 @@ exports.default = CardStackTransitioner;
 __d(/* react-navigation/src/views/CardStack.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/CardStack.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/CardStack.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53703,7 +53703,7 @@ function clamp(value, min, max) {
 __d(/* react-navigation/src/views/Card.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/Card.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/Card.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -53771,7 +53771,7 @@ exports.default = Card;
 __d(/* react-navigation/src/views/PointerEventsContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/PointerEventsContainer.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/PointerEventsContainer.js';
 exports.default = create;
 
 var _react = require(12     ); // 12 = react
@@ -53919,7 +53919,7 @@ __d(/* react-navigation/src/views/Header.js */function(global, require, module, 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/Header.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/Header.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54263,7 +54263,7 @@ exports.default = Header;
 __d(/* react-navigation/src/views/HeaderTitle.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/HeaderTitle.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/HeaderTitle.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54301,7 +54301,7 @@ exports.default = HeaderTitle;
 __d(/* react-navigation/src/views/HeaderBackButton.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/HeaderBackButton.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/HeaderBackButton.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54452,7 +54452,7 @@ exports.default = HeaderBackButton;
 __d(/* react-navigation/src/views/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/TouchableItem.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/TouchableItem.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54583,7 +54583,7 @@ exports.default = {
 __d(/* react-navigation/src/views/SceneView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/SceneView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/SceneView.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -54838,7 +54838,7 @@ exports.default = {
 __d(/* react-navigation/src/views/Transitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/Transitioner.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/Transitioner.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -56120,7 +56120,7 @@ exports.default = {
 __d(/* react-navigation/src/navigators/TabNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/navigators/TabNavigator.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/navigators/TabNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -56484,7 +56484,7 @@ exports.default = function (routeConfigs) {
 __d(/* react-navigation/src/views/TabView/TabView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabView.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -56698,7 +56698,7 @@ module.exports = {
 __d(/* react-native-tab-view/src/TabViewAnimated.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewAnimated.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewAnimated.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57039,7 +57039,7 @@ var SceneRendererPropType = exports.SceneRendererPropType = {
 __d(/* react-native-tab-view/src/TabViewPagerAndroid.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerAndroid.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerAndroid.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57215,7 +57215,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TabViewPagerScroll.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerScroll.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerScroll.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57381,7 +57381,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TabViewPagerPan.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerPan.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native-tab-view/src/TabViewPagerPan.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -57639,7 +57639,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TabBar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native-tab-view/src/TabBar.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native-tab-view/src/TabBar.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58182,7 +58182,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-native-tab-view/src/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native-tab-view/src/TouchableItem.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native-tab-view/src/TouchableItem.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58283,7 +58283,7 @@ exports.default = TouchableItem;
 __d(/* react-native-tab-view/src/SceneMap.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-native-tab-view/src/SceneMap.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-native-tab-view/src/SceneMap.js';
 exports.default = SceneMap;
 
 var _react = require(12     ); // 12 = react
@@ -58321,7 +58321,7 @@ function SceneMap(scenes) {
 __d(/* react-navigation/src/withCachedChildNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/withCachedChildNavigation.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/withCachedChildNavigation.js';
 exports.default = withCachedChildNavigation;
 
 var _react = require(12     ); // 12 = react
@@ -58394,7 +58394,7 @@ function withCachedChildNavigation(Comp) {
 __d(/* react-navigation/src/views/TabView/TabBarTop.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarTop.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarTop.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58540,7 +58540,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/views/TabView/TabBarIcon.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarIcon.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarIcon.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58645,7 +58645,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/views/TabView/TabBarBottom.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarBottom.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/TabView/TabBarBottom.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58848,7 +58848,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/navigators/DrawerNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/navigators/DrawerNavigator.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/navigators/DrawerNavigator.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58943,7 +58943,7 @@ exports.default = DrawerNavigator;
 __d(/* react-navigation/src/views/Drawer/DrawerScreen.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerScreen.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerScreen.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -58998,7 +58998,7 @@ exports.default = (0, _withCachedChildNavigation2.default)(DrawerScreen);
 __d(/* react-navigation/src/views/Drawer/DrawerView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerView.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerView.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59143,7 +59143,7 @@ __d(/* react-native-drawer-layout-polyfill/dist/index.android.js */function(glob
 __d(/* react-navigation/src/views/Drawer/DrawerSidebar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerSidebar.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerSidebar.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59256,7 +59256,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* react-navigation/src/views/Drawer/DrawerNavigatorItems.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerNavigatorItems.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/Drawer/DrawerNavigatorItems.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59378,7 +59378,7 @@ exports.default = DrawerNavigatorItems;
 __d(/* react-navigation/src/views/withNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/node_modules/react-navigation/src/views/withNavigation.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/node_modules/react-navigation/src/views/withNavigation.js';
 exports.default = withNavigation;
 
 var _react = require(12     ); // 12 = react
@@ -59460,7 +59460,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 __d(/* UMComponent/components/UShare.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/components/UShare.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/components/UShare.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59639,7 +59639,7 @@ exports.default = {
 __d(/* UMComponent/components/UShare_share.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/components/UShare_share.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/components/UShare_share.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59852,7 +59852,7 @@ module.exports = NativeModules.UMShareModule;
 __d(/* UMComponent/components/UShare_auth.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/components/UShare_auth.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/components/UShare_auth.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -60039,7 +60039,7 @@ var styles = _reactNative.StyleSheet.create({
 __d(/* UMComponent/components/UPush.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/components/UPush.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/components/UPush.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -60395,7 +60395,7 @@ module.exports = NativeModules.UMPushModule;
 __d(/* UMComponent/components/UAnalytics_app.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/Users/umeng/umeng_work/React_Native_Compent/components/UAnalytics_app.js';
+var _jsxFileName = '/Users/umeng/Desktop/React_Native_Compent/components/UAnalytics_app.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -60435,9 +60435,24 @@ var UserCenter = function (_Component) {
             _AnalyticsUtil2.default.profileSignInWithPUID("myname");
         }
     }, {
+        key: 'profileSignInWithPUIDWithProvider',
+        value: function profileSignInWithPUIDWithProvider() {
+            _AnalyticsUtil2.default.profileSignInWithPUIDWithProvider("weixin", "18829283888");
+        }
+    }, {
         key: 'profileSignOff',
         value: function profileSignOff() {
             _AnalyticsUtil2.default.profileSignOff();
+        }
+    }, {
+        key: 'onPageStart',
+        value: function onPageStart() {
+            _AnalyticsUtil2.default.onPageStart("MainPage");
+        }
+    }, {
+        key: 'onPageEnd',
+        value: function onPageEnd() {
+            _AnalyticsUtil2.default.onPageEnd("MainPage");
         }
     }, {
         key: 'onEvent',
@@ -60479,6 +60494,7 @@ var UserCenter = function (_Component) {
         value: function getPreProperties() {
             _AnalyticsUtil2.default.getPreProperties(function (result) {
                 console.log(result);
+
                 _reactNative.Alert.alert('getPreProperties返回值', result, [{ text: '确定', onPress: function onPress() {
                         return console.log('Ask me later pressed');
                     } }], { cancelable: false });
@@ -60503,14 +60519,14 @@ var UserCenter = function (_Component) {
                 _reactNative.View,
                 { style: styles.u_c, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 80
+                        lineNumber: 90
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 81
+                            lineNumber: 91
                         }
                     },
                     _react2.default.createElement(
@@ -60520,14 +60536,14 @@ var UserCenter = function (_Component) {
                             onPress: this.profileSignInWithPUID.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 82
+                                lineNumber: 92
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 86
+                                    lineNumber: 96
                                 }
                             },
                             '用户登录'
@@ -60540,14 +60556,14 @@ var UserCenter = function (_Component) {
                             onPress: this.profileSignOff.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 88
+                                lineNumber: 98
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 92
+                                    lineNumber: 102
                                 }
                             },
                             '用户登出'
@@ -60558,7 +60574,7 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 96
+                            lineNumber: 106
                         }
                     },
                     _react2.default.createElement(
@@ -60568,14 +60584,14 @@ var UserCenter = function (_Component) {
                             onPress: this.onEvent.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 97
+                                lineNumber: 107
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 101
+                                    lineNumber: 111
                                 }
                             },
                             '普通事件'
@@ -60588,14 +60604,14 @@ var UserCenter = function (_Component) {
                             onPress: this.onEventWithMap.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 103
+                                lineNumber: 113
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 107
+                                    lineNumber: 117
                                 }
                             },
                             '多属性事件'
@@ -60609,14 +60625,14 @@ var UserCenter = function (_Component) {
                         onPress: this.onEventObject.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 111
+                            lineNumber: 121
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 115
+                                lineNumber: 125
                             }
                         },
                         'onEventObject'
@@ -60629,14 +60645,14 @@ var UserCenter = function (_Component) {
                         onPress: this.onEventWithMapAndCount.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 118
+                            lineNumber: 128
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 122
+                                lineNumber: 132
                             }
                         },
                         '数值性统计'
@@ -60646,7 +60662,7 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 125
+                            lineNumber: 135
                         }
                     },
                     _react2.default.createElement(
@@ -60656,14 +60672,14 @@ var UserCenter = function (_Component) {
                             onPress: this.registerPreProperties.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 126
+                                lineNumber: 136
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 130
+                                    lineNumber: 140
                                 }
                             },
                             '设置超级属性'
@@ -60676,14 +60692,14 @@ var UserCenter = function (_Component) {
                             onPress: this.unregisterPreProperty.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 132
+                                lineNumber: 142
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 136
+                                    lineNumber: 146
                                 }
                             },
                             '删除超级属性'
@@ -60694,7 +60710,7 @@ var UserCenter = function (_Component) {
                     _reactNative.View,
                     { style: { flexDirection: 'row' }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 140
+                            lineNumber: 150
                         }
                     },
                     _react2.default.createElement(
@@ -60704,14 +60720,14 @@ var UserCenter = function (_Component) {
                             onPress: this.getPreProperties.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 141
+                                lineNumber: 151
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 145
+                                    lineNumber: 155
                                 }
                             },
                             '获取超级属性'
@@ -60724,14 +60740,14 @@ var UserCenter = function (_Component) {
                             onPress: this.clearPreProperties.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 148
+                                lineNumber: 158
                             }
                         },
                         _react2.default.createElement(
                             _reactNative.Text,
                             { style: styles.u_c_text, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 152
+                                    lineNumber: 162
                                 }
                             },
                             '清除超级属性'
@@ -60745,14 +60761,14 @@ var UserCenter = function (_Component) {
                         onPress: this.setFirstLaunchEvent.bind(this),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 157
+                            lineNumber: 167
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.u_c_text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 161
+                                lineNumber: 171
                             }
                         },
                         '关注首次触发事件'
