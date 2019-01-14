@@ -1,4 +1,7 @@
 # 工程配置
+
+* 注意：集成基础组件库 2.0.0以下及统计SDK 8.0.0以下版本的用户，请参考release1.0.0分支中样例代码集成。
+
 首先需要说明，React Native下载的只是桥接文件，不含最新版本的jar，对应组件的jar请去[下载中心](http://mobile.umeng.com/custom_sdk)下载。
 如果对于文档仍有疑问的，请参照我们在github上的[demo](https://github.com/umeng/React_Native_Compent)
 
@@ -7,7 +10,10 @@
 
 将下载的jar放入app下的libs中：
 
+
 ![](http://upload-images.jianshu.io/upload_images/1483670-67f20ad5d09b48c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 首先需要拷贝common_android文件夹中的文件拷贝到你的工程中：
 
 ![](http://upload-images.jianshu.io/upload_images/1483670-5708bd30e3576ee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -15,12 +21,17 @@
 然后再将对应平台的桥接文件拷入你的工程：
 
 ![](http://upload-images.jianshu.io/upload_images/1483670-dbc0763494fc54e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 需要注意如果你拷入的路径不是`com.umeng.soexample.invokenative`请将桥接文件中的路径修改为你工程的路径：
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1483670-88bae62879ffced7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 打开Application文件，添加`DplusReactPackage`：
 
-```
+``` java
+
  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
         @Override
         public boolean getUseDeveloperSupport() {
@@ -35,11 +46,13 @@
             );
         }
     };
+    
 ```
 
 并在`onCreate()`中进行初始化：
 
-```
+``` java
+
  @Override
     public void onCreate() {
         super.onCreate();
@@ -47,6 +60,7 @@
         RNUMConfigure.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
             "669c30a9584623e70e8cd01b0381dcb4");
     }
+    
 ```
  
  >`RNUMConfture.init`接口一共五个参数，其中第一个参数为Context，第二个参数为友盟Appkey，第三个参数为channel，第四个参数为应用类型（手机或平板），第五个参数为push的secret（如果没有使用push，可以为空）。
@@ -54,19 +68,26 @@
 至此，所有的工程配置已经完成，接下来请按照各个组件的文档进行初始化。
 
 ## iOS
+
 ### 初始化
+
 + 将已下载的友盟SDK添加到项目
+
+
 ![](http://upload-images.jianshu.io/upload_images/7304622-781e761f6f7092c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 + 添加需要的组件桥接文件
+
  ![](http://upload-images.jianshu.io/upload_images/7304622-62d16ae4a9e99442.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
 + 添加友盟初始化配置文件
+
 ![](http://upload-images.jianshu.io/upload_images/7304622-3d241fcca2d977a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
 + 在 Appdelegate.m 中设置初始化代码
 
 ```
+
 #import "RNUMConfigure.h"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -75,11 +96,15 @@
   [RNUMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
   ...
 }
+
 ```
 
-## 接口说明
+# 接口说明
+
 # 统计
+
 ## Android
+
 ### 初始化
 首先需要找到Activity的生命周期，添加如下代码：
 
@@ -100,12 +125,15 @@
 并在`onCreat`中设置统计的场景，以及发送间隔：
 
 ```
-MobclickAgent.setSessionContinueMillis(1000);
-MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
+
+MobclickAgent.setSessionContinueMillis(1000*40);
+
 ```
 
 ## iOS
+
 ### 初始化
+
 在工程的 AppDelegate.m 文件中引入相关组件头文件 ，且在 application:didFinishLaunchingWithOptions: 方法中添加如下代码：
 
 ```
@@ -127,6 +155,7 @@ import AnalyticsUtil from './AnalyticsUtil'
 
 ## 接口说明
 ### 自定义事件
+
 AnalyticsUtil.onEvent(eventId);
 
 AnalyticsUtil.onEventWithLable(eventId,eventLabel);
@@ -135,106 +164,51 @@ AnalyticsUtil.onEventWithMap(eventId,eventData);
 
 AnalyticsUtil.onEventWithMapAndCount(eventId,eventData,eventNum);
 
+AnalyticsUtil.onEventObject(eventId,eventData);
+
 * eventId 为当前统计的事件ID
 * eventLabel 为分类标签
 * eventData 为当前事件的属性和取值（键值对），不能为空，如：{name:"umeng",sex:"man"}
 * eventNum 用户每次触发的数值的分布情况，如事件持续时间、每次付款金额等
 
 ### 账号的统计
+
 AnalyticsUtil.profileSignInWithPUID(puid);
 
 * puid 用户账号ID.长度小于64字节
+
+AnalyticsUtil.profileSignInWithPUIDWithProvider(provider,puid);
+
+* provider, 账号来源。puid 用户账号ID.长度小于64字节
 
 AnalyticsUtil.profileSignOff()；
 
  * 账号登出时需调用此接口，调用之后不再发送账号相关内容
 
-### Dplus 统计
-#### track事件
-AnalyticsUtil.track(eventName);
+### 预置事件属性接口
 
-AnalyticsUtil.trackWithMap(eventName, property);
+AnalyticsUtil.registerPreProperties(property);
 
-* eventName 事件名称
-* property 事件的自定义属性（可以包含多对“属性名-属性值”）,如：{name:"umeng",sex:"man"}
+* 注册预置事件属性。property 事件的超级属性（可以包含多对“属性名-属性值”）,如：{name:"umeng",sex:"man"}
 
-#### 超级属性
+AnalyticsUtil.unregisterPreProperty(propertyName);
 
-AnalyticsUtil.registerSuperProperty(property);
+* 注销预置事件属性。propertyName，要注销的预置事件属性名。
 
-* property 事件的超级属性（可以包含多对“属性名-属性值”）,如：{name:"umeng",sex:"man"}
+AnalyticsUtil.getPreProperties(context);
 
-AnalyticsUtil.clearSuperProperties();
+* 获取预置事件属性, 返回包含所有预置事件属性的JSONObject。
 
-* 清空所有超级属性
+AnalyticsUtil.clearPreProperties();
 
-#### 设置关注事件是否首次触发
+* 清空全部预置事件属性。
+
+### 设置关注事件是否首次触发
 
 AnalyticsUtil.setFirstLaunchEvent(eventList);
 
 * eventList 只关注eventList前五个合法eventID.只要已经保存五个,此接口无效,如：["list1","list2","list3"]
 
-### 游戏统计
-
-#### 关卡
-AnalyticsUtil.startLevel(level); //进入关卡
-
-AnalyticsUtil.failLevel(level); //通过关卡
-
-AnalyticsUtil.finishLevel(level); //完成关卡
-
-* level 关卡ID
-
-#### 充值
-
-AnalyticsUtil.pay(cash, source, price);
-
-AnalyticsUtil.payWithItem(cash, source, item, amount, price);
-
-* cash 真实币数量，>=0的数,最多只保存小数点后2位
-* source 支付渠道，1 ~ 99的整数, 其中1..20 是预定义含义,其余21-99需要在网站设置。
-* coin 虚拟币数量，大于等于0的整数, 最多只保存小数点后2位
-* item 道具ID
-* amount 道具数量，大于0的整数
-* price 虚拟币数量
-
-#### 购买
-
-AnalyticsUtil.buy(item, amount, price);
-
-* item 道具ID
-* amount 道具数量,大于0的整数
-* price 道具单价
-
-#### 消耗
-
-AnalyticsUtil.use(item, amount, price);
-
-* item 道具ID
-* amount 道具数量,大于0的整数
-* price 道具单价
-
-#### 额外奖励
-
-AnalyticsUtil.bonus(coin, source); //赠送金币
-
-AnalyticsUtil.bonusWithItem(item, amount, price, source); //赠送道具
-
- * coin 虚拟币数量，大于0的整数, 最多只保存小数点后2位
- * source 奖励渠道，取值在 1~10 之间。“1”已经被预先定义为“系统奖励”，2~10 需要在网站设置含义
- * item 道具ID，非空字符串
- * amount 道具数量，大于0的整数
- * price 道具单价
-
-#### 交易兑换货币
-
-AnalyticsUtil.exchange(orderId, currencyAmount, currencyType, virtualAmount, channel);
-
-* currencyAmount 现金或等价物总额
-* currencyType 为ISO4217定义的3位字母代码，如CNY,USD等（如使用其它自定义等价物作为现金，可使用ISO4217中未定义的3位字母组合传入货币类型）
-* virtualAmount 虚拟币数量
-* channel 支付渠道
-* orderId 交易订单ID
 
 
 # 推送
