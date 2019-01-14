@@ -55,6 +55,7 @@ export default class UserCenter extends Component {
     getPreProperties(){
         AnalyticsUtil.getPreProperties((result) =>{
            console.log(result);
+           //Alert窗口仅测试用，可删除
            Alert.alert(
             'getPreProperties返回值',
             result,
