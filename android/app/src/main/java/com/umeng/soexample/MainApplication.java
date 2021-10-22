@@ -7,6 +7,7 @@ import android.app.Application;
 import android.app.Notification;
 import android.content.Context;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 import com.facebook.react.ReactApplication;
@@ -15,13 +16,12 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.umeng.commonsdk.UMConfigure;
-import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.MsgConstant;
 import com.umeng.message.PushAgent;
 import com.umeng.message.UTrack;
 import com.umeng.message.UmengMessageHandler;
 import com.umeng.message.UmengNotificationClickHandler;
-import com.umeng.message.common.UmLog;
+import com.umeng.message.api.UPushRegisterCallback;
 import com.umeng.message.entity.UMessage;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.soexample.invokenative.DplusReactPackage;
@@ -149,15 +149,15 @@ public class MainApplication extends Application implements ReactApplication {
 
 
         //注册推送服务 每次调用register都会回调该接口
-        mPushAgent.register(new IUmengRegisterCallback() {
+        mPushAgent.register(new UPushRegisterCallback() {
             @Override
             public void onSuccess(String deviceToken) {
-                UmLog.i(TAG, "device token: " + deviceToken);
+                Log.i(TAG, "device token: " + deviceToken);
             }
 
             @Override
             public void onFailure(String s, String s1) {
-                UmLog.i(TAG, "register failed: " + s + " " + s1);
+                Log.i(TAG, "register failed: " + s + " " + s1);
             }
         });
     }
