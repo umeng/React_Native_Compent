@@ -5,10 +5,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TWTRVideoPlaybackState.h"
 
 @class TWTRSession;
 @class TWTRTweet;
-@class TWTRTweetDetailViewController;
 @class TWTRTweetView;
 @class TWTRUser;
 @protocol TWTRSessionStore;
@@ -19,7 +19,7 @@ typedef void (^TWTRAuthenticationCompletionHandler)(id<TWTRSessionStore> session
 
 /**
  Delegate for `TWTRTweetView` to receive updates on the user interacting with this particular Tweet view.
- 
+
     // Create the tweet view
     TWTRTweetView *tweetView = [[TWTRTweetView alloc] initWithTweet:tweet];
     // Set the delegate
@@ -57,7 +57,7 @@ typedef void (^TWTRAuthenticationCompletionHandler)(id<TWTRSessionStore> session
 
 /**
  *  Called when the user's profile image is tapped.
- *  If this method is not implemented and the device is running on iOS 9+ we will deep link into the Twitter application.
+ *  If this method is not implemented, the default behavior is to deep link into Twitter application or twitter.com in a webview.
  *
  *  @param tweetView The Tweet view that was tapped.
  *  @param user The Twitter user.
@@ -65,19 +65,21 @@ typedef void (^TWTRAuthenticationCompletionHandler)(id<TWTRSessionStore> session
 - (void)tweetView:(TWTRTweetView *)tweetView didTapProfileImageForUser:(TWTRUser *)user;
 
 /**
- *  Called when the Tweet is tapped and will present a detail view controller.
- *  If this method is not implemented the detail view controller will be presented modally with the inherited themes
- *  of the tweetView. 
+ *  Called when the Tweet is tapped.
+ *  If this method is not implemented, the default behavior is to deep link into Twitter application or twitter.com in a webview.
  *
- *  If this method is implemented the return value will be used to determine how to proceed. If YES is returned the controller
- *  will be presented as if this method was not implemented. If NO is returned the controller will not be presented and it
- *  it is the developer's responsibility to show it. This allows the developer to push the detail view controller onto their 
- *  own navigation stack, or present in a way that is appropriate for their particular use-case.
- *
- *  @param tweetView  The Tweet view showing this Tweet object.
- *  @param controller The Tweet detail view controller that should be displayed.
+ *  @param tweetView The Tweet view that was tapped.
+ *  @param tweet The Tweet that user tapped.
  */
-- (BOOL)tweetView:(TWTRTweetView *)tweetView shouldDisplayDetailViewController:(TWTRTweetDetailViewController *)controller;
+- (void)tweetView:(TWTRTweetView *)tweetView didTapTweet:(TWTRTweet *)tweet;
+
+/**
+ *  Called when video in the Tweet changes its state.
+ *
+ *  @param tweetView The Tweet view that was tapped.
+ *  @param newState The state of the video. (TWTRVideoPlaybackStatePaused, TWTRVideoPlaybackStatePlaying, TWTRVideoPlaybackStateCompleted)
+ */
+- (void)tweetView:(TWTRTweetView *)tweetView didChangePlaybackState:(TWTRVideoPlaybackState)newState;
 
 @end
 

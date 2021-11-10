@@ -81,7 +81,7 @@ RCT_EXPORT_MODULE();
     case 27:
       return UMSocialPlatformType_Tumblr;
     case 28:
-      return UMSocialPlatformType_AlipaySession;
+      return UMSocialPlatformType_APSession;
     case 29:
       return UMSocialPlatformType_KakaoTalk;
     case 30:

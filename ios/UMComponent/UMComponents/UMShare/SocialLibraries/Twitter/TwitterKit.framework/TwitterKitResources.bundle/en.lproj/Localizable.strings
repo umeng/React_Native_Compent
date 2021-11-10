@@ -54,6 +54,8 @@
 "tw__tweet_profile_accessibility" = "Profile";
 /* Text spoken out with VoiceOver for selecting the attached image on a regular tweet view */
 "tw__tweet_image_accessibility" = "Attachment";
+/* Text spoken out with VoiceOver for the close button in the image viewer */
+"tw__close_button" = "Close";
 /* Text spoken out with VoiceOver for the content image of the card composer preview */
 "tw__user_content_image" = "App Preview";
 /* Text spoken out with VoiceOver for the Install button preview in card composer previews */
@@ -64,8 +66,7 @@
 "tw__card_compose_character_count" = "%td characters remaining";
 /* Text spoken out with VoiceOver for the profile image in the composer top bar */
 "tw__card_compose_profile_image" = "%@'s profile";
-/* Text spoken out with VoiceOver for the close button in the card composer top bar */
-"tw__card_compose_close_button" = "Close";
+
 /* Text spoken out as VoiceOver hint for the close button in the card composer top bar */
 "tw__card_compose_close_hint" = "Double-tap to dismiss the composer.";
 /* VoiceOver label for Done button on image viewer */
@@ -80,6 +81,46 @@
 "tw__tweet_share_button" = "Share";
 /* VoiceOver for privacy button to bring up the privacy page URL for ads */
 "tw__privacy_information_button" = "Privacy information";
+
+
+/* Shared composer */
+
+/* "Cancel" */
+"CANCEL_ACTION_LABEL" = "Cancel";
+/* "Tweet not sent" */
+"COMPOSITION_SEND_TWEET_ERROR_LABEL" = "Tweet not sent";
+/* Please go to iOS Settings > Privacy > Location Services to allow Twitter to access your location. */
+"LOCATION_SERVICES_ACCESS_DENIED_ALERT_MESSAGE" = "Please go to iOS Settings > Privacy > Location Services to allow Twitter to access your location.";
+/* Allow Twitter to access your location */
+"LOCATION_SERVICES_ACCESS_DENIED_ALERT_TITLE" = "Allow Twitter to access your location";
+/* Couldn’t find your location. Please try again later. */
+"LOCATION_SERVICES_ERROR_ALERT_MESSAGE" = "Couldn’t find your location. Please try again later.";
+/* "Failed to access location" */
+"LOCATION_SERVICES_ERROR_ALERT_TITLE" = "Failed to access location";
+/* "OK" */
+"OK_ACTION_LABEL" = "OK";
+/* "Retry" */
+"RETRY_ACTION_LABEL" = "Retry";
+/* "Tweet" */
+"SEND_TWEET_ACTION_LABEL" = "Tweet";
+/* "Account" */
+"SHARE_EXT_ACCOUNT" = "Account";
+/* "Location" */
+"SHARE_EXT_LOCATION" = "Location";
+/* "There are no Twitter accounts configured. You can add or create a Twitter account in Settings." */
+"SHARE_EXT_NO_ACCOUNTS_MESSAGE" = "There are no Twitter accounts configured. You can add or create a Twitter account in Settings.";
+/* "No Twitter Account" */
+"SHARE_EXT_NO_ACCOUNTS_TITLE" = "No Twitter Account";
+/* "None" */
+"SHARE_EXT_NONE_VALUE" = "None";
+/* "Tweet failed to send" */
+"SHARE_EXT_TWEET_FAILED_TITLE" = "Tweet failed to send.";
+/* "Twitter" */
+"SHARE_EXT_TWITTER_TITLE" = "Twitter";
+/* "What's Happening?" - Placeholder */
+"COMPOSE_TEXT_VIEW_PLACEHOLDER" = "What's Happening?";
+/* There are no Twitter accounts configured. You can create or log in to an account in the Twitter app. */
+"SHARE_EXT_NO_ACCOUNTS_SIGN_IN_MESSAGE" = "There are no Twitter accounts configured. You can create or log in to an account in the Twitter app.";
 
 /* Test String (just for unit tests) */
 "tw__test_string" = "Test";

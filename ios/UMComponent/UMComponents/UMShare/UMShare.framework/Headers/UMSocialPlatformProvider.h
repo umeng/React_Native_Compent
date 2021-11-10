@@ -37,6 +37,18 @@
             withAppSecret:(NSString *)appSecret
           withRedirectURL:(NSString *)redirectURL;
 
+
+/**
+ *  初始化注册的三方平台主动拉起App的回调场景
+ *
+ *  @param platformType      对应的平台
+ *  @param completionHandler 对应的平台拉起app的回调
+ *  @discuss 必须在umSocial_setAppKey初始化后设置
+ */
+-(void)umSocial_setLauchFromPlatform:(UMSocialPlatformType)platformType
+            withCompletionHandler:(UMSocialLaunchFromPlatformCompletionHandler)completionHandler;
+
+
 /**
  *  授权
  *
@@ -121,6 +133,16 @@
 -(BOOL)umSocial_handleOpenURL:(NSURL *)url;
 -(BOOL)umSocial_handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 -(BOOL)umSocial_handleOpenURL:(NSURL *)url options:(NSDictionary*)options;
+
+
+/**
+ *  UniversalLink回调到本app的回调
+ *
+ *  @param userActivity @see NSUserActivity
+ *
+ *  @return 是否处理  YES代表处理成功，NO代表不处理
+ */
+-(BOOL)umSocial_handleUniversalLink:(id)userActivity options:(NSDictionary*)options;
 
 
 #pragma mark - 平台的特性

@@ -50,3 +50,8 @@ FOUNDATION_EXPORT const unsigned char UMSocialCoreVersionString[];
 #import <UMShare/UMSocialWarterMarkConfig.h>
 
 
+//UMShareLink
+#import <UMShare/UMShareLink.h>
+
+
+

@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param refreshedSession The refreshed session
  *  @param error            Error that will be non nil if the refresh request failed
  */
-typedef void (^TWTRSessionStoreRefreshCompletion)(id _Nullable refreshedSession, NSError * _Nullable error);
+typedef void (^TWTRSessionStoreRefreshCompletion)(id _Nullable refreshedSession, NSError *_Nullable error);
 
 /**
  *  Protocol for session stores that can refresh expired sessions.
@@ -68,7 +68,7 @@ typedef void (^TWTRSessionStoreRefreshCompletion)(id _Nullable refreshedSession,
  *  @param session The saved session
  *  @param error   Error that will be non nil if the save request fails.
  */
-typedef void (^TWTRSessionStoreSaveCompletion)(id<TWTRAuthSession> _Nullable session, NSError * _Nullable error);
+typedef void (^TWTRSessionStoreSaveCompletion)(id<TWTRAuthSession> _Nullable session, NSError *_Nullable error);
 
 /**
  *  Completion block called when fetching all stored user sessions completes or fails.
@@ -120,6 +120,8 @@ typedef void (^TWTRSessionStoreDeleteCompletion)(id<TWTRAuthSession> _Nullable s
  */
 - (NSArray *)existingUserSessions;
 
+- (BOOL)hasLoggedInUsers;
+
 /**
  *  Retrieves the last logged in user session.
  *
@@ -144,7 +146,7 @@ typedef void (^TWTRSessionStoreDeleteCompletion)(id<TWTRAuthSession> _Nullable s
  *  @param guestSession The retrieved guest session
  *  @param error        Error that will be non nil if the save request fails.
  */
-typedef void (^TWTRSessionGuestLogInCompletion)(TWTRGuestSession * _Nullable guestSession, NSError * _Nullable error);
+typedef void (^TWTRSessionGuestLogInCompletion)(TWTRGuestSession *_Nullable guestSession, NSError *_Nullable error);
 
 /**
  *  Protocol for session stores that can manage guest sessions.
@@ -176,7 +178,6 @@ typedef void (^TWTRSessionGuestLogInCompletion)(TWTRGuestSession * _Nullable gue
 
 @end
 
-
 #pragma mark - Concrete Session Store Class
 
 /**
@@ -192,18 +193,18 @@ typedef void (^TWTRSessionGuestLogInCompletion)(TWTRGuestSession * _Nullable gue
 
 /**
  * Provides a mechanism for reloading the session store. This method will force the session store
- * to find any sessions that may have been saved by another session store or application that is 
+ * to find any sessions that may have been saved by another session store or application that is
  * using the same keychain access groups.
  *
  * Most applications will not need to call this method. You may need to call this method if you are
  * using multiple stores within your application and you need to synchronize when one writes to the
  * store. The more likely case for needing to call this method is if you are sharing credentials
  * between applications. In this situation you will want to call this method when the application
- * comes back to the foreground. 
- * 
+ * comes back to the foreground.
+ *
  * This method does not need to be called when the store is created because this process happens
  * by default at time of instantiation.
- * 
+ *
  * You should avoid calling this method if you do not have a specific reason to do so, like the reasons
  * mentioned above as this method does cause disk I/O and multiple calls can cause performance problems.
  */

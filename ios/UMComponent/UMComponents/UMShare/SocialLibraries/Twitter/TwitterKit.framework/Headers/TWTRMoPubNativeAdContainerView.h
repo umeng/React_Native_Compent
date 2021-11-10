@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, TWTRNativeAdTheme) {
  *
  *  You may use UIAppearance proxy objects to style certain aspects of the
  *  the ad view to match your application's design.
- 
+
  *  // Setting a theme
  *  [TWTRMoPubNativeAdContainerView appearance].theme = TWTRNativeAdThemeDark;
  *
@@ -70,7 +70,6 @@ typedef NS_ENUM(NSUInteger, TWTRNativeAdTheme) {
  *  Background color of buttons. Defaults to #174791.
  */
 @property (nonatomic) UIColor *buttonBackgroundColor UI_APPEARANCE_SELECTOR;
-
 
 @end
 

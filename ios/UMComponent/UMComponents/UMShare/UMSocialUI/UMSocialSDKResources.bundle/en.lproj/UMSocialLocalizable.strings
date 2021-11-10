@@ -68,12 +68,12 @@
 "share_facebook_no_osSupport" = "iOS doesn't support";
 "share_facebook_no_osSupport_message" = "The version of your iOS device doesn't support share the that media";
 
-"share_alipay" = "Share to AlipayShare";
-"share_alipay_friend" = "Share to AlipayShare friends";
-"share_alipay_moments" = "Share to AlipayShare Timeline";
-"share_alipay_no_title" = "No Alipay";
-"share_alipay_no_message" = "Alipay not installed in device";
-"share_alipay_version_not_supported" = "The version of Alipay not supported.";
+"share_ap" = "Share to APShare";
+"share_ap_friend" = "Share to APShare friends";
+"share_ap_moments" = "Share to APShare Timeline";
+"share_ap_no_title" = "No AP";
+"share_ap_no_message" = "AP not installed in device";
+"share_ap_version_not_supported" = "The version of AP not supported.";
 
 "share_sms_no_osSupport" = "No SMS";
 "share_sms_no_osSupport_message" = "The device doesn't support SMS";
@@ -133,9 +133,9 @@
 "umsocial_qzone" = "Qzone";
 "umsocial_tencentWB" = "tencentWB";
 
-"umsocial_alipay" = "alipay";
-"umsocial_alipay_session" = "Alipay";
-"umsocial_aliay_circle" = "LifeCircle";
+"umsocial_ap" = "alip";
+"umsocial_ap_session" = "Alip";
+"umsocial_ap_circle" = "LifeCircle";
 
 "umsocial_lw_session" = "LaiWang";
 "umsocial_lw_timeline" = "LW News";
@@ -168,6 +168,8 @@
 "umsocial_dropbox" = "Dropbox";
 "umsocial_vkontakte" = "VKontakte";
 "umsocial_facebookmessenger" = "Messenger";
+
+"umsocial_douyin" = "DouYin";
 
 "umsocial_default" = "template";
 

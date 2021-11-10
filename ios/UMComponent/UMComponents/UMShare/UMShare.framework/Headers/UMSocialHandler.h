@@ -61,6 +61,8 @@ extern NSString *const  UMSocialShareDataTypeIllegalMessage;
 
 @property (nonatomic, copy) UMSocialRequestCompletionHandler userinfoCompletionBlock;
 
+@property (nonatomic, copy) UMSocialRequestCompletionHandler launchFromPlatformCompletionBlock;
+
 
 -(BOOL)searchForURLSchemeWithPrefix:(NSString *)prefix;
 -(void)setAppId:(NSString *)appID appSecret:(NSString *)secret url:(NSString *)url;

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param guestSession A `TWTRGuestSession` containing the OAuth tokens or nil.
  *  @param error Error that will be non nil if the authentication request failed.
  */
-typedef void (^TWTRGuestLogInCompletion)(TWTRGuestSession * _Nullable guestSession, NSError * _Nullable error);
+typedef void (^TWTRGuestLogInCompletion)(TWTRGuestSession *_Nullable guestSession, NSError *_Nullable error);
 
 /**
  *  `TWTRGuestSession` represents a guest session authenticated with the Twitter API. See `TWTRSession` for user sessions.

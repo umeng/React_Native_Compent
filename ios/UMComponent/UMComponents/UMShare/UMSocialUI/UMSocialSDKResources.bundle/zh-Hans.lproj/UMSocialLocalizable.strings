@@ -67,12 +67,12 @@
 "share_facebook_no_osSupport" = "系统不支持";
 "share_facebook_no_osSupport_message" = "您的iOS系统版本过低，不支持分享到该平台";
 
-"share_alipay" = "分享至支付宝";
-"share_alipay_friend" = "分享至支付宝好友";
-"share_alipay_moments" = "分享至支付宝生活圈";
-"share_alipay_no_title" = "温馨提示";
-"share_alipay_no_message" = "您的设备没有安装支付宝";
-"share_alipay_version_not_supported" = "您的支付宝版本不支持分享";
+"share_ap" = "分享至支付宝";
+"share_ap_friend" = "分享至支付宝好友";
+"share_ap_moments" = "分享至支付宝生活圈";
+"share_ap_no_title" = "温馨提示";
+"share_ap_no_message" = "您的设备没有安装支付宝";
+"share_ap_version_not_supported" = "您的支付宝版本不支持分享";
 
 "share_sms_no_osSupport" = "不支持短信";
 "share_sms_no_osSupport_message" = "您的设备不支持短信功能";
@@ -131,9 +131,9 @@
 "umsocial_qzone" = "QQ空间";
 "umsocial_tencentWB" = "腾讯微博";
 
-"umsocial_alipay" = "支付宝";
-"umsocial_alipay_session" = "支付宝好友";
-"umsocial_aliay_circle" = "生活圈";
+"umsocial_ap" = "支付宝";
+"umsocial_ap_session" = "支付宝好友";
+"umsocial_ap_circle" = "生活圈";
 
 "umsocial_lw_session" = "点点虫";
 "umsocial_lw_timeline" = "点点虫动态";
@@ -166,6 +166,8 @@
 "umsocial_dropbox" = "Dropbox";
 "umsocial_vkontakte" = "VKontakte";
 "umsocial_facebookmessenger" = "Messenger";
+
+"umsocial_douyin" = "抖音";
 
 "umsocial_default" = "自定义模板";
 

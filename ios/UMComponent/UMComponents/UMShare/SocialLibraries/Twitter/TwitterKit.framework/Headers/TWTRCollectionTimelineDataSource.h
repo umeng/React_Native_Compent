@@ -42,11 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  Designated initializer setting all supported values for Collection Timeline Data Source.
- *  
+ *
  *  @param collectionID           (required) The Collection ID value. e.g. @"393773266801659904"
- *  @param apiClient              (required) The API client to use for all network requests.
+ *  @param client                 (required) The API client to use for all network requests.
  *  @param maxTweetsPerRequest    (optional) Number of Tweets to request per batch. A value of 0 uses the server default.
- *  
+ *
  *  @return An instance of TWTRCollectionTimelineDataSource or nil if any of the required parameters are missing.
  */
 - (instancetype)initWithCollectionID:(NSString *)collectionID APIClient:(TWTRAPIClient *)client maxTweetsPerRequest:(NSUInteger)maxTweetsPerRequest NS_DESIGNATED_INITIALIZER;

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param session Contains the OAuth tokens and minimal information associated with the logged in user or nil.
  *  @param error   Error that will be non nil if the authentication request failed.
  */
-typedef void (^TWTRLogInCompletion)(TWTRSession * _Nullable session,  NSError * _Nullable error);
+typedef void (^TWTRLogInCompletion)(TWTRSession *_Nullable session, NSError *_Nullable error);
 
 /**
  *  TWTRSession represents a user's session authenticated with the Twitter API.
@@ -48,6 +48,15 @@ typedef void (^TWTRLogInCompletion)(TWTRSession * _Nullable session,  NSError * 
  *  @param sessionDictionary (required) The dictionary received after successfull authentication from Twitter OAuth.
  */
 - (instancetype)initWithSessionDictionary:(NSDictionary *)sessionDictionary;
+
+/**
+ *  Returns a `TWTRSession` object initialized by copying the values
+ *  from the dictionary returned from a Mobile SSO redirect URL.
+ *
+ *  @param authDictionary (required) The dictionary received after successful
+ *                                  authentication from Twitter Mobile SSO.
+ */
+- (instancetype)initWithSSOResponse:(NSDictionary *)authDictionary;
 
 /**
  *  Returns an `TWTRSession` object initialized by copying the given tokens and user info.

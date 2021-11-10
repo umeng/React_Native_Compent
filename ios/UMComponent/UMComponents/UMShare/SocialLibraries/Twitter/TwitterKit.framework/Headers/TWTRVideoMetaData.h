@@ -5,13 +5,13 @@
 //  Copyright © 2016 Twitter. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <TwitterKit/TWTRJSONConvertible.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXTERN NSString * const TWTRMediaTypeMP4;
-FOUNDATION_EXTERN NSString * const TWTRMediaTypeM3u8;
+FOUNDATION_EXTERN NSString *const TWTRMediaTypeMP4;
+FOUNDATION_EXTERN NSString *const TWTRMediaTypeM3u8;
 
 @interface TWTRVideoMetaDataVariant : NSObject <NSCoding, NSCopying, TWTRJSONConvertible>
 
@@ -31,8 +31,6 @@ FOUNDATION_EXTERN NSString * const TWTRMediaTypeM3u8;
 @property (nonatomic, readonly) NSURL *URL;
 
 @end
-
-
 
 @interface TWTRVideoMetaData : NSObject <NSCoding, NSCopying, TWTRJSONConvertible>
 

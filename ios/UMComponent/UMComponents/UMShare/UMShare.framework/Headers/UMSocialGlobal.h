@@ -44,6 +44,27 @@
  */
 @property(atomic,readwrite, copy)NSString* type;
 
+/**
+ *  Universal Links设置
+ *  @note  universalLinkDic 的key是由UMSocialPlatformType来确定
+ *         universalLinkDic 的value是由对应平台申请的universalLink来设置
+ *
+ *  @exapmle 比如微信平台的universalLink为:@"https://developer.umeng.com/"
+ *  在初始化每个平台之前调用
+ *  [UMSocialGlobal shareInstance].universalLinkDic = @{@(UMSocialPlatformType_WechatSession):@"https://developer.umeng.com/"};
+ */
+@property(atomic,readwrite, copy)NSDictionary* universalLinkDic;
+
+/**
+ *  设置额外的初始化平台的参数
+ *  @note 目前用于企业微信的配置 corpId为第三方App所属企业的ID agentId 第三方App在企业内部的ID
+ *  @exapmle 比如微信企业平台的额外初始化配置如下
+    [UMSocialGlobal shareInstance].extraInitDic = @{
+        @(UMSocialPlatformType_WechatWork):@{@"corpId":@"ww813cd5c1f46dc9ab",@"agentId":@"1000002"}
+            };
+ */
+@property(atomic,readwrite, copy)NSDictionary* extraInitDic;
+
 
 /**
  *  UMSocial的版本号
@@ -51,13 +72,6 @@
  *  @return 返回当前的版本号
  */
 +(NSString*)umSocialSDKVersion;
-
-
-/**
- *  thumblr平台需要作为标示的字段 tag
- *  @discuss 默认的tag是UMSocial_ThumblrTag，用户可以自己设置自己的tag
- */
-@property(atomic,readwrite,copy)NSString* thumblr_Tag;
 
 
 /**
@@ -98,6 +112,12 @@
  *  @discuss 设置isUsingWaterMark此函数为YES后，必须要设置warterMarkConfig,来配置图片水印和字符串水印
  */
 @property(nonatomic,readwrite,strong)UMSocialWarterMarkConfig* warterMarkConfig;
+
+
+/**
+ *  废弃 API
+ */
+@property(atomic,readwrite,copy)NSString* thumblr_Tag;
 
 @end
 

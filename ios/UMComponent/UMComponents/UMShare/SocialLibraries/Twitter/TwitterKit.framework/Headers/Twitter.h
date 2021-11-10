@@ -5,52 +5,11 @@
 //
 
 #import <TwitterCore/TWTRSession.h>
-#import "TWTRAPIClient.h"
+#import <TwitterCore/TWTRSessionStore.h>
 #import <UIKit/UIKit.h>
-
-@class TWTRSessionStore;
+#import "TWTRAPIClient.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef NS_OPTIONS(NSInteger, TWTRLoginMethod) {
-    
-    /**
-     * Attempts to log the user in with the system accounts.
-     * This log in method will only grant limited application permissions to
-     * the returned oauth token. If you would like to have more
-     * application permissions granted you must use the TWTRLoginMethodWebBased
-     * and configure your application correctly.
-     */
-    TWTRLoginMethodSystemAccounts = 1 << 0,
-    
-    /**
-     * Presents a web view that allows the user to log in. Will use
-     * either UIWebView or SFSafariViewController depending on iOS
-     * version and the presence of a custom URL scheme for auth
-     * redirects.
-     *
-     * This method will allow the developer to request more application
-     * permissions. To learn more about configuring your application to 
-     * have higher levels of permissions. 
-     * Visit https://dev.twitter.com/oauth/overview/application-permission-model for
-     * more information about Twitter's application permission model.
-     */
-    TWTRLoginMethodWebBased       = 1 << 1,
-
-    /**
-     *  Presents a web view that doesn't use any cached sessions
-     *  from Safari. Allows the developer to provide multi-user
-     *  functionality with several Twitter accounts.
-     */
-    TWTRLoginMethodWebBasedForceLogin = 1 << 2,
-    
-    /**
-     * Picks the first available log in method. The order in which 
-     * methods are checked is TWTRLoginMethodSystemAccounts -> TWTRLoginMethodWebBased.
-     */
-    TWTRLoginMethodAll            = TWTRLoginMethodSystemAccounts | TWTRLoginMethodWebBased
-};
-
 
 /**
  *  The central class of the Twitter Kit.
@@ -118,17 +77,6 @@ typedef NS_OPTIONS(NSInteger, TWTRLoginMethod) {
 - (void)logInWithCompletion:(TWTRLogInCompletion)completion;
 
 /**
- *  Triggers user authentication with Twitter.
- *
- *  This method will attempt to log the user in based on the specified log in methods. If multiple methods
- *  are specified the system account method will be attempted first.
- *
- *  @param completion The completion block will be called after authentication is successful or if there is an error.
- *  @warning This method requires that you have set up your `consumerKey` and `consumerSecret`.
- */
-- (void)logInWithMethods:(TWTRLoginMethod)methods completion:(TWTRLogInCompletion)completion;
-
-/**
  *  Triggers user authentication with Twitter. Allows the developer to specify the presenting view controller.
  *
  *  This method will present UI to allow the user to log in if there are no saved Twitter login credentials.
@@ -140,22 +88,10 @@ typedef NS_OPTIONS(NSInteger, TWTRLoginMethod) {
 - (void)logInWithViewController:(nullable UIViewController *)viewController completion:(TWTRLogInCompletion)completion;
 
 /**
- *  Triggers user authentication with Twitter. Allows the developer to specify the presenting view controller.
- *
- *  This method will attempt to log the user in based on the specified log in methods. If multiple methods
- *  are specified the system account method will be attempted first.
- *
- *  @param viewController The view controller that will be used to present the authentication view.
- *  @param completion The completion block will be called after authentication is successful or if there is an error.
- *  @warning This method requires that you have set up your `consumerKey` and `consumerSecret`.
- */
-- (void)logInWithViewController:(nullable UIViewController *)viewController methods:(TWTRLoginMethod)methods completion:(TWTRLogInCompletion)completion;
-
-/**
- *  Finish the `SFSafariViewController` authentication loop. This method should 
+ *  Finish the `SFSafariViewController` authentication loop. This method should
  *  be called from application:openURL:options inside the application delegate.
  *
- *  This method will verify an authentication token sent by the Twitter API to 
+ *  This method will verify an authentication token sent by the Twitter API to
  *  finish the web-based authentication flow.
  *
  *  @param application  The `UIApplication` instance received as a parameter.

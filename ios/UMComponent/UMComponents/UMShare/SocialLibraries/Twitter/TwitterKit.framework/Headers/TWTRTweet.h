@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface TWTRTweet : NSObject <NSCoding, TWTRJSONConvertible>
 
-# pragma mark - Properties
+#pragma mark - Properties
 
 /**
  *  The ID of the Twitter Tweet.
@@ -145,7 +145,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (TWTRTweet *)tweetWithLikeToggled;
 
-/** 
+/**
  *  Tweet objects should be hyrdrated from a valid JSON object. See TWTRJSONConvertible for more information.
  */
 - (instancetype)init NS_UNAVAILABLE;
@@ -153,4 +153,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-

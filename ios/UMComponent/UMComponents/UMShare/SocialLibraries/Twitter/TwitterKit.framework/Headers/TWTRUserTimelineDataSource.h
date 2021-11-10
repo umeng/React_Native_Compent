@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param userID              The user ID of the Twitter User
  *  @param screenName          The screen name of the Twitter User
- *  @param APIClient           The API client to use for making network requests.
+ *  @param client              The API client to use for making network requests.
  *  @param maxTweetsPerRequest The number of Tweets per batch to request. A value of 0 will use the server default.
  *  @param includeReplies      Whether replies should be requested
  *  @param includeRetweets     Whether retweets should be requested

@@ -33,6 +33,13 @@
  */
 + (NSString*)deviceIDForIntegration;
 
+/** 是否开启统计，默认为YES(开启状态)
+ @param value 设置为NO,可关闭友盟统计功能.
+ @return void.
+*/
++ (void)setAnalyticsEnabled:(BOOL)value;
 
+//获取zid
++ (NSString *)getUmengZID;
 
 @end

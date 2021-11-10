@@ -22,12 +22,10 @@
 
 + (UIImage *)imageNamed:(NSString *)name;
 
-+(NSString*)localizedString:(NSString*)localizedString withDefaultString:(NSString*)defaultString;
++ (NSString *)localizedString:(NSString *)key defaultString:(NSString *)defaultString;
 
 @end
 
 #define UMSocialRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
 
 #define UMSocialColorWithHexString(colorValueString) [UMSocialUIUtility colorWithHexString:colorValueString]
-
-#define UMSocialUILocalizedString(localString,defaultString) [UMSocialUIUtility localizedString:localString withDefaultString:defaultString]

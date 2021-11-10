@@ -19,6 +19,13 @@
 
 @property (nonatomic, copy) NSString  *unionId;
 
+
+/**
+ usid 兼容U-Share 4.x/5.x 版本，与4/5版本数值相同
+ 即，对应微信平台：openId，QQ平台openId，其他平台不变
+ */
+@property (nonatomic, copy) NSString  *usid;
+
 @property (nonatomic, assign) UMSocialPlatformType  platformType;
 /**
  * 第三方原始数据

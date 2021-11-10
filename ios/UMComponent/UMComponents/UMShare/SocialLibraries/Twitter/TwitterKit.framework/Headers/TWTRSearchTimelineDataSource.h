@@ -35,7 +35,6 @@ Data source representing a Search Timeline. Provides TWTRTweet objects to a TWTR
  * `ftw until:2010-12-27`   containing “ftw” and sent before the date “2010-12-27”.
 
   @see https://dev.twitter.com/rest/public/search
-  Not implemented: `result_type`
  */
 @interface TWTRSearchTimelineDataSource : NSObject <TWTRTimelineDataSource>
 
@@ -64,15 +63,7 @@ Data source representing a Search Timeline. Provides TWTRTweet objects to a TWTR
 @property (nonatomic, copy, nullable) NSString *geocodeSpecifier;
 
 /**
- *  Only search top-ranked Tweets. When debugging, you may want to turn this off in order to 
- *  show new and unfiltered Tweets.
- *
- *  Default to YES.
- */
-@property (nonatomic) BOOL topTweetsOnly;
-
-/**
- *  Filter out sensitive (containing nudity or violence) tweets. 
+ *  Filter out sensitive (containing nudity or violence) tweets.
  *
  *  Defaults to YES.
  */
@@ -82,6 +73,13 @@ Data source representing a Search Timeline. Provides TWTRTweet objects to a TWTR
  *  A filtering object that hides certain tweets.
  */
 @property (nonatomic, copy, nullable) TWTRTimelineFilter *timelineFilter;
+
+/*
+ *  Specifies search result type to be recent or popular Tweets, or a mix of both.
+ *
+ *  @param resultType possible options are recent, popular, or mixed.
+ */
+@property (nonatomic, copy, nullable) NSString *resultType;
 
 /**
  *  Convenience initializer. Uses default values for `languageCode` and `maxTweetsPerRequest`.
@@ -100,10 +98,11 @@ Data source representing a Search Timeline. Provides TWTRTweet objects to a TWTR
  *  @param  client               (required) An instance of `TWTRAPIClient` with which API calls will be made.
  *  @param  languageCode         (optional) The ISO 639-1 language code to restrict Tweets to. A `nil` value will not add the parameter to the server request and so use the server default.
  *  @param  maxTweetsPerRequest  (optional) The number of tweets to request in each query to the Twitter API. A value of 0 will not add to the parameters and thus use the server default.
+ *  @param  resultType           (optional) The result type for timeline. It is default to 'mixed' if not assigned.
  *
  *  @return A fully initialized search timeline datasource or `nil` if any of the required parameters are missing.
  */
-- (instancetype)initWithSearchQuery:(NSString *)searchQuery APIClient:(TWTRAPIClient *)client languageCode:(nullable NSString *)languageCode maxTweetsPerRequest:(NSUInteger)maxTweetsPerRequest NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSearchQuery:(NSString *)searchQuery APIClient:(TWTRAPIClient *)client languageCode:(nullable NSString *)languageCode maxTweetsPerRequest:(NSUInteger)maxTweetsPerRequest resultType:(nullable NSString *)resultType NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;
 

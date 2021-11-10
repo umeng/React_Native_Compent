@@ -6,49 +6,64 @@
 //
 
 #import <UIKit/UIKit.h>
-@class TWTRCardConfiguration;
-@class TWTRComposerTheme;
 @class TWTRTweet;
 @protocol TWTRComposerViewControllerDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ *  Composer interface to allow users to compose & send Tweets from
+ *  inside an app.
+ *
+ *  It is the developers' responsibility to ensure that there exists a
+ *  logged in Twitter user before creating a `TWTRComposerViewController`.
+ *
+ *  See: https://dev.twitter.com/twitterkit/ios/compose-tweets#presenting-a-basic-composer
+ *
+ *  Initial Text
+ *  If you wish to add default mentions to the Tweet, add them to the
+ *  beginning of `initialText`.
+ *
+ *  If you wish to add default hashtags or links to the Tweet,
+ *  add them at the end of `initialText`.
+ */
 @interface TWTRComposerViewController : UIViewController
 
-@property (nonatomic, weak, nullable) id<TWTRComposerViewControllerDelegate> delegate;
+/**
+ * The delegate for this composer view controller.
+ */
+@property (nonatomic, weak) id<TWTRComposerViewControllerDelegate> delegate;
 
 /**
- * A theme to use for the composer. If nil will default to the light theme.
+ *  Create an empty composer view controller. The developer must handle ensuring
+ *  that a logged in Twitter user exists before creating this controller.
  */
-@property (nonatomic, null_resettable) TWTRComposerTheme *theme;
++ (instancetype)emptyComposer;
 
 /**
- * An array of hashtags that will be added to the composer. This property must be
- * set before the composer's view is loaded. If any hashtags are not valid they will
- * be ignored.
- * Hashtags must come in the form @[@"#fabric", @"#twitter"].
+ *  Initialize a composer with pre-filled text and an image or video attachment.
+ *  Requires a logged in Twitter user.
+ *
+ *  @param initialText (optional) Text with which to pre-fill the composer text.
+ *  @param image (optional) Image to add as an attachment.
+ *  @param videoURL (optional) Video URL to add as an attachment. Of the form of `assets-library`.
+ *
+ *  Note: Only one type of attachment (image or video) may be added.
  */
-@property (nonatomic, copy, nullable) NSArray *hashtags;
+- (instancetype)initWithInitialText:(nullable NSString *)initialText image:(nullable UIImage *)image videoURL:(nullable NSURL *)videoURL;
 
 /**
- * Use initWithUserID: instead.
+ *  Initialize a composer with pre-filled text and an image or video attachment.
+ *
+ *  @param initialText (optional) Text with which to pre-fill the composer text.
+ *  @param image (required) Image (or preview image) to add as an attachment.
+ *  @param videoData (optional) NSData for video asset to add as an attachment.
+ *
+ *  Note: Preview image is required if videoData parameter is passed.
  */
+- (instancetype)initWithInitialText:(nullable NSString *)initialText image:(nullable UIImage *)image videoData:(nullable NSData *)videoData;
+
 - (instancetype)init NS_UNAVAILABLE;
-
-/**
- * Returns a fully initialized version of the composer.
- *
- * @param userID The ID of the user that is tweeting
- */
-- (instancetype)initWithUserID:(NSString *)userID;
-
-/**
- * Returns a fully initialized version of the composer which will tweet with a card.
- *
- * @param userID     The ID of the user that is tweeting the card
- * @param cardConfig The card configuration that will be associated with this Tweet
- */
-- (instancetype)initWithUserID:(NSString *)userID cardConfiguration:(nullable TWTRCardConfiguration *)cardConfig;
 
 @end
 
@@ -62,12 +77,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Called when the user successfully sends a Tweet. The resulting Tweet object is returned.
- * This method is called after the view controller is dimsissed.
+ * This method is called after the view controller is dimsissed and the API response is
+ * received.
  */
 - (void)composerDidSucceed:(TWTRComposerViewController *)controller withTweet:(TWTRTweet *)tweet;
 
 /**
- * This method is called if the composer is not able to send the Tweet. 
+ * This method is called if the composer is not able to send the Tweet.
  * The view controller will not be dismissed automatically if this method is called.
  */
 - (void)composerDidFail:(TWTRComposerViewController *)controller withError:(NSError *)error;

@@ -11,30 +11,25 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
-#import "RNUMConfigure.h"
-#import <UMAnalytics/MobClick.h>
+#import <UMCommon/MobClick.h>
 #import <UMShare/UMShare.h>
 #import <UMPush/UMessage.h>
-
-@interface AppDelegate ()
-<UNUserNotificationCenterDelegate>
-
-@end
-
+#import "RNUMConfigure.h"
+#import <UMCommon/UMConfigure.h>
+#import <UMCommonLog/UMCommonLogManager.h>
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   [UMConfigure setLogEnabled:YES];
-  
-  /* Umeng init */
-  [MobClick setScenarioType:E_UM_NORMAL];
+  [UMCommonLogManager setUpUMCommonLogManager];
+  /* Umeng init */  
   [RNUMConfigure initWithAppkey:@"599d6d81c62dca07c5001db6" channel:@"App Store"];
 
   /* Share init */
   [self setupUSharePlatforms];   // required: setting platforms on demand
   [self setupUShareSettings];
-  
+//  
   
   // Push's basic setting
   UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
@@ -88,6 +83,19 @@
 
 - (void)setupUSharePlatforms
 {
+  // 微信、QQ、微博完整版会校验合法的universalLink，不设置会在初始化平台失败
+     //配置微信Universal Link需注意 universalLinkDic的key是rawInt类型，不是枚举类型 ，即为 UMSocialPlatformType.wechatSession.rawInt
+  [UMSocialGlobal shareInstance].universalLinkDic =@{@(UMSocialPlatformType_WechatSession):@"https://umplus-sdk-download.oss-cn-shanghai.aliyuncs.com/",
+  @(UMSocialPlatformType_QQ):@"https://umplus-sdk-download.oss-cn-shanghai.aliyuncs.com/qq_conn/101830139",
+   @(UMSocialPlatformType_Sina):@"https://umplus-sdk-download.oss-cn-shanghai.aliyuncs.com/"};
+
+  //extraInitDic，企业微信增加了corpid和agentid，故在UMSocialGlobal的全局配置里面增加extraInitDic来存储额外的初始化参数。extraInitDic的key:corpId和agentId为固定值
+  [UMSocialGlobal shareInstance].extraInitDic =@{
+  @(UMSocialPlatformType_WechatWork):@{@"corpId":@"wwac6ffb259ff6f66a",@"agentId":@"1000002"}
+  };
+
+
+  
   /*
    设置微信的appKey和appSecret
    [微信平台从U-Share 4/5升级说明]http://dev.umeng.com/social/ios/%E8%BF%9B%E9%98%B6%E6%96%87%E6%A1%A3#1_1
@@ -112,8 +120,8 @@
   [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"3921700954"  appSecret:@"04b48b094faeb16683c32669824ebdad" redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
   
   /* 设置Twitter的appKey和appSecret */
-  [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Twitter appKey:@"fB5tvRpna1CKK97xZUslbxiet"  appSecret:@"YcbSvseLIwZ4hZg9YmgJPP5uWzd4zr6BpBKGZhf07zzh3oj62K" redirectURL:nil];
-  
+//  [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Twitter appKey:@"fB5tvRpna1CKK97xZUslbxiet"  appSecret:@"YcbSvseLIwZ4hZg9YmgJPP5uWzd4zr6BpBKGZhf07zzh3oj62K" redirectURL:nil];
+//  
   /* 设置Facebook的appKey和UrlString */
   [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Facebook appKey:@"506027402887373"  appSecret:nil redirectURL:@"http://www.umeng.com/social"];
 }
@@ -208,3 +216,4 @@
 
 
 @end
+

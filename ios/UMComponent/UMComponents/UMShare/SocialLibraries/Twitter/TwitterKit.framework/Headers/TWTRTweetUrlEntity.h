@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TWTRTweetUrlEntity : TWTRTweetEntity <NSCoding, TWTRJSONConvertible>
 
 /**
- * The URL to display. This property may be truncated and may 
+ * The URL to display. This property may be truncated and may
  * not be a valid URL.
  */
 @property (nonatomic, copy, readonly) NSString *displayUrl;
@@ -33,4 +33,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-

@@ -18,37 +18,37 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Notification indicating a Tweet was selected.
  */
-FOUNDATION_EXPORT NSString * const TWTRDidSelectTweetNotification;
+FOUNDATION_EXPORT NSString *const TWTRDidSelectTweetNotification;
 
 /**
  *  Notification indicating the Tweet detail view was shown for a given Tweet.
  */
-FOUNDATION_EXPORT NSString * const TWTRDidShowTweetDetailNotification;
+FOUNDATION_EXPORT NSString *const TWTRDidShowTweetDetailNotification;
 
 /**
  *  Notification indicating the user has selected to share Tweet.
  */
-FOUNDATION_EXPORT NSString * const TWTRWillShareTweetNotification;
+FOUNDATION_EXPORT NSString *const TWTRWillShareTweetNotification;
 
 /**
  *  Notification indicating the Tweet was shared.
  */
-FOUNDATION_EXPORT NSString * const TWTRDidShareTweetNotification;
+FOUNDATION_EXPORT NSString *const TWTRDidShareTweetNotification;
 
 /**
  *  Notification indicating the user has cancelled sharing of the Tweet.
  */
-FOUNDATION_EXPORT NSString * const TWTRCancelledShareTweetNotification;
+FOUNDATION_EXPORT NSString *const TWTRCancelledShareTweetNotification;
 
 /**
  *  Notification indicating the user has liked a Tweet.
  */
-FOUNDATION_EXPORT NSString * const TWTRDidLikeTweetNotification;
+FOUNDATION_EXPORT NSString *const TWTRDidLikeTweetNotification;
 
 /**
  *  Notification indicating the user has unliked a Tweet.
  */
-FOUNDATION_EXPORT NSString * const TWTRDidUnlikeTweetNotification;
+FOUNDATION_EXPORT NSString *const TWTRDidUnlikeTweetNotification;
 
 #pragma mark - Media Notifications
 
@@ -61,19 +61,19 @@ FOUNDATION_EXPORT NSString * const TWTRDidUnlikeTweetNotification;
  *            {TWTRVideoPlaybackStateKey: TWTRVideoStateValuePaused}
  *            {TWTRVideoPlaybackStateKey: TWTRVideoStateValueCompleted}
  */
-FOUNDATION_EXPORT NSString * const TWTRVideoPlaybackStateChangedNotification;
+FOUNDATION_EXPORT NSString *const TWTRVideoPlaybackStateChangedNotification;
 
 /**
  *  User info key for the state of video playback.
  */
-FOUNDATION_EXPORT NSString * const TWTRVideoPlaybackStateKey;
+FOUNDATION_EXPORT NSString *const TWTRVideoPlaybackStateKey;
 
 /**
  *  User info values for the state of video playback.
  */
-FOUNDATION_EXPORT NSString * const TWTRVideoStateValuePlaying;
-FOUNDATION_EXPORT NSString * const TWTRVideoStateValuePaused;
-FOUNDATION_EXPORT NSString * const TWTRVideoStateValueCompleted;
+FOUNDATION_EXPORT NSString *const TWTRVideoStateValuePlaying;
+FOUNDATION_EXPORT NSString *const TWTRVideoStateValuePaused;
+FOUNDATION_EXPORT NSString *const TWTRVideoStateValueCompleted;
 
 #pragma mark - Presentation Notifications
 
@@ -86,7 +86,7 @@ FOUNDATION_EXPORT NSString * const TWTRVideoStateValueCompleted;
  *            {TWTRVideoTypeKey: TWTRVideoTypeStandard}
  *            {TWTRVideoTypeKey: TWTRVideoTypeVine}
  */
-FOUNDATION_EXPORT NSString * const TWTRWillPresentVideoNotification;
+FOUNDATION_EXPORT NSString *const TWTRWillPresentVideoNotification;
 
 /**
  *  Notification indicating that the video view controller has
@@ -94,29 +94,28 @@ FOUNDATION_EXPORT NSString * const TWTRWillPresentVideoNotification;
  *
  *  object: The UIViewController hosting the video view
  */
-FOUNDATION_EXPORT NSString * const TWTRDidDismissVideoNotification;
+FOUNDATION_EXPORT NSString *const TWTRDidDismissVideoNotification;
 
 /**
- *  The key to fetch the type of video being displayed in a 
+ *  The key to fetch the type of video being displayed in a
  *  TWTRVideoViewController.
  */
-FOUNDATION_EXPORT NSString * const TWTRVideoTypeKey;
+FOUNDATION_EXPORT NSString *const TWTRVideoTypeKey;
 
 /**
  *  User info values for the type of video being displayed
  *  in a TWTRVideoViewController.
  */
-FOUNDATION_EXPORT NSString * const TWTRVideoTypeGIF;
-FOUNDATION_EXPORT NSString * const TWTRVideoTypeStandard;
-FOUNDATION_EXPORT NSString * const TWTRVideoTypeVine;
+FOUNDATION_EXPORT NSString *const TWTRVideoTypeGIF;
+FOUNDATION_EXPORT NSString *const TWTRVideoTypeStandard;
+FOUNDATION_EXPORT NSString *const TWTRVideoTypeVine;
 
 #pragma mark - Notification User Info
 
 /**
  *  User info key to fetch the associated Tweet in the notification.
  */
-FOUNDATION_EXPORT NSString * const TWTRNotificationInfoTweet;
-
+FOUNDATION_EXPORT NSString *const TWTRNotificationInfoTweet;
 
 /**
  * A notification which is posted when a user logs out of Twitter.
@@ -124,8 +123,8 @@ FOUNDATION_EXPORT NSString * const TWTRNotificationInfoTweet;
  * the user id which is being logged out. Note, this notification may
  * be posted as a result of starting the Twitter object.
  */
-FOUNDATION_EXPORT NSString * const TWTRUserDidLogOutNotification;
-FOUNDATION_EXPORT NSString * const TWTRLoggedOutUserIDKey;
+FOUNDATION_EXPORT NSString *const TWTRUserDidLogOutNotification;
+FOUNDATION_EXPORT NSString *const TWTRLoggedOutUserIDKey;
 
 /**
  * A notification which is posted when a user logs in to Twitter.
@@ -133,7 +132,7 @@ FOUNDATION_EXPORT NSString * const TWTRLoggedOutUserIDKey;
  * the user id which is being logged in. Note, this notification may
  * be posted as a result of starting the Twitter object.
  */
-FOUNDATION_EXPORT NSString * const TWTRUserDidLogInNotification;
-FOUNDATION_EXPORT NSString * const TWTRLoggedInUserIDKey;
+FOUNDATION_EXPORT NSString *const TWTRUserDidLogInNotification;
+FOUNDATION_EXPORT NSString *const TWTRLoggedInUserIDKey;
 
 NS_ASSUME_NONNULL_END

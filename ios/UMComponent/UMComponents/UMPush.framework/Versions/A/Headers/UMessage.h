@@ -58,14 +58,13 @@ typedef NS_OPTIONS(NSUInteger, UMessageAuthorizationOptions) {
     UMessageAuthorizationOptionAlert   = (1 << 2),
 };
 
-@class CLLocation;
 typedef void (^UMPlaunchFinishBlock)();
 
 @interface UMessageRegisterEntity : NSObject
 //需要注册的类型
 @property (nonatomic, assign) NSInteger types;
 
-@property (nonatomic, strong) NSSet * categories;
+@property (nonatomic, strong) NSSet * __nullable categories;
 @end
 
 /** UMessage：开发者使用主类（API）
@@ -86,7 +85,7 @@ typedef void (^UMPlaunchFinishBlock)();
  @param entity 友盟推送的注册类如果使用默认的注册，Entity设置为nil即可。如需其他的可选择其他参数，具体的参考demo或者文档。
  @param completionHandler iOS10授权后的回调。
  */
-+ (void)registerForRemoteNotificationsWithLaunchOptions:(NSDictionary *_Nullable)launchOptions Entity:(UMessageRegisterEntity *)entity completionHandler:(void (^_Nullable)(BOOL granted, NSError *__nullable error))completionHandler;
++ (void)registerForRemoteNotificationsWithLaunchOptions:(NSDictionary * __nullable)launchOptions Entity:(UMessageRegisterEntity * __nullable)entity completionHandler:(void (^ __nullable)(BOOL granted, NSError *_Nullable error))completionHandler;
 
 
 /** 解除RemoteNotification的注册（关闭消息推送，实际调用：[[UIApplication sharedApplication] unregisterForRemoteNotifications]）
@@ -98,12 +97,12 @@ typedef void (^UMPlaunchFinishBlock)();
 /** 向友盟注册该设备的deviceToken，便于发送Push消息
  @param deviceToken APNs返回的deviceToken
  */
-+ (void)registerDeviceToken:(nullable NSData *)deviceToken;
++ (void)registerDeviceToken:( NSData * __nullable)deviceToken;
 
-/** 应用处于运行时（前台、后台）的消息处理
+/** 应用处于运行时（前台、后台）的消息处理，回传点击数据
  @param userInfo 消息参数
  */
-+ (void)didReceiveRemoteNotification:(nullable NSDictionary *)userInfo;
++ (void)didReceiveRemoteNotification:( NSDictionary * __nullable)userInfo;
 
 /** 设置是否允许SDK自动清空角标（默认开启）
  @param value 是否开启角标清空
@@ -111,17 +110,13 @@ typedef void (^UMPlaunchFinishBlock)();
 + (void)setBadgeClear:(BOOL)value;
 
 /** 设置是否允许SDK当应用在前台运行收到Push时弹出Alert框（默认开启）
- @warning 建议不要关闭，否则会丢失程序在前台收到的Push的点击统计,如果定制了 Alert，可以使用`sendClickReportForRemoteNotification`补发 log
  @param value 是否开启弹出框
  */
 + (void)setAutoAlert:(BOOL)value;
 
 /** 为某个消息发送点击事件
- @warning 请注意不要对同一个消息重复调用此方法，可能导致你的消息打开率飚升，此方法只在需要定制 Alert 框时调用
- @param userInfo 消息体的NSDictionary，此Dictionary是
-        (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo中的userInfo
  */
-+ (void)sendClickReportForRemoteNotification:(nullable NSDictionary *)userInfo;
++ (void)sendClickReportForRemoteNotification:(NSDictionary * __nullable)userInfo;
 
 
 ///---------------------------------------------------------------------------------------
@@ -129,26 +124,55 @@ typedef void (^UMPlaunchFinishBlock)();
 ///---------------------------------------------------------------------------------------
 
 
-/** 获取当前绑定设备上的所有tag(每台设备最多绑定64个tag)
+/** 获取当前绑定设备上的所有tag(每台设备最多绑定1024个tag)
  @warning 获取列表的先决条件是已经成功获取到device_token，否则失败(kUMessageErrorDependsErr)
  @param handle responseTags为绑定的tag
  集合,remain剩余可用的tag数,为-1时表示异常,error为获取失败时的信息(ErrCode:kUMessageError)
  */
-+ (void)getTags:(nullable void (^)(NSSet *__nonnull responseTags,NSInteger remain,NSError *__nonnull error))handle;
++ (void)getTags:(void (^__nonnull)(NSSet * __nonnull responseTags,NSInteger remain,NSError * __nullable error))handle;
 
-/** 绑定一个或多个tag至设备，每台设备最多绑定64个tag，超过64个，绑定tag不再成功，可`removeTag`或者`removeAllTags`来精简空间
+/** 绑定一个或多个tag至设备，每台设备最多绑定1024个tag，超过1024个，绑定tag不再成功，可`removeTag`来精简空间
  @warning 添加tag的先决条件是已经成功获取到device_token，否则直接添加失败(kUMessageErrorDependsErr)
- @param tag tag标记,可以为单个tag（NSString）也可以为tag集合（NSArray、NSSet），单个tag最大允许长度50字节，编码UTF-8，超过长度自动截取
+ @param tag tag标记,可以为单个tag（NSString）也可以为tag集合（NSArray、NSSet），单个tag最大允许长度128字节，编码UTF-8，超过长度绑定失败
  @param handle responseTags为绑定的tag集合,remain剩余可用的tag数,为-1时表示异常,error为获取失败时的信息(ErrCode:kUMessageError)
  */
-+ (void)addTags:(nullable id)tag response:(nullable void (^)(id __nonnull responseObject ,NSInteger remain,NSError *__nonnull error))handle;
++ (void)addTags:(__nonnull id)tag response:( void (^ __nonnull)(id __nullable responseObject ,NSInteger remain,NSError * __nullable error))handle;
 
 /** 删除设备中绑定的一个或多个tag
  @warning 添加tag的先决条件是已经成功获取到device_token，否则失败(kUMessageErrorDependsErr)
- @param tag tag标记,可以为单个tag（NSString）也可以为tag集合（NSArray、NSSet），单个tag最大允许长度50字节，编码UTF-8，超过长度自动截取
+ @param tag tag标记,可以为单个tag（NSString）也可以为tag集合（NSArray、NSSet），单个tag最大允许长度128字节，编码UTF-8，超过长度删除失败
  @param handle responseTags为绑定的tag集合,remain剩余可用的tag数,为-1时表示异常,error为获取失败时的信息(ErrCode:kUMessageError)
  */
-+ (void)deleteTags:(id __nonnull)tag response:(nullable void (^)(id __nonnull responseObject,NSInteger remain,NSError *__nonnull error))handle;
++ (void)deleteTags:(__nonnull id)tag response:(void (^__nonnull)(id __nullable responseObject,NSInteger remain,NSError * __nullable error))handle;
+
+
+///---------------------------------------------------------------------------------------
+/// @name WeightedTag (optional)
+///---------------------------------------------------------------------------------------
+
+/**
+ 绑定一个或多个weightedtag以及权值至设备
+
+ @warning 添加tag的先决条件是已经成功获取到device_token，否则直接添加失败(kUMessageErrorDependsErr)
+ @param weightedTag tag标记,为NSDictionary类型，key为weightedtag名称，value为权值。
+ @param handle responseTags为绑定的tag集合,remain剩余可用的tag数,为-1时表示异常,error为获取失败时的信息(ErrCode:kUMessageError)
+ */
++ (void)addWeightedTags:(NSDictionary * __nonnull)weightedTag response:(void (^__nonnull)(id __nullable responseObject ,NSInteger remain,NSError * __nullable error))handle;
+
+/** 获取当前绑定设备上的所有Weightedtag
+ @warning 获取列表的先决条件是已经成功获取到device_token，否则失败(kUMessageErrorDependsErr)
+ @param handle responseWeightedTags为绑定的WeightedTags字典，key为weightedtag名称，value为权值,remain剩余可用的weightedtag数,为-1时表示异常,error为获取失败时的信息(ErrCode:kUMessageError)
+ */
++ (void)getWeightedTags:(void (^__nonnull)(NSDictionary * __nullable responseWeightedTags,NSInteger remain,NSError * __nullable error))handle;
+
+/**
+ 删除一个设备中绑定的一个或多个weightedtag
+ 
+ @warning 添加tag的先决条件是已经成功获取到device_token，否则直接添加失败(kUMessageErrorDependsErr)
+ @param weightedTags tag标记,为NSDictionary类型，key为tag名称，value为权值。
+ @param handle responseTags为绑定的tag集合,remain剩余可用的tag数,为-1时表示异常,error为获取失败时的信息(ErrCode:kUMessageError)
+ */
++ (void)deleteWeightedTags:(id __nonnull)weightedTags response:(void (^__nonnull)(id __nullable responseObject,NSInteger remain,NSError * __nullable error))handle;
 
 /// @name alias (optional)
 ///---------------------------------------------------------------------------------------
@@ -160,7 +184,7 @@ typedef void (^UMPlaunchFinishBlock)();
  @param type 平台类型，参见本文件头部的`kUMessageAliasType...`，例如：kUMessageAliasTypeSina
  @param handle block返回数据，error为获取失败时的信息，responseObject为成功返回的数据
  */
-+ (void)addAlias:(NSString * __nonnull)name type:(NSString * __nonnull)type response:(nullable void (^)(id __nonnull responseObject,NSError *__nonnull error))handle;
++ (void)addAlias:(NSString * __nonnull)name type:(NSString * __nonnull)type response:(void (^__nonnull)(id __nullable responseObject,NSError * __nullable error))handle;
 
 /** 绑定一个别名至设备（含账户，和平台类型）,并解绑这个别名曾今绑定过的设备。
  @warning 添加Alias的先决条件是已经成功获取到device_token，否则失败(kUMessageErrorDependsErr)
@@ -168,7 +192,7 @@ typedef void (^UMPlaunchFinishBlock)();
  @param type 平台类型，参见本文件头部的`kUMessageAliasType...`，例如：kUMessageAliasTypeSina
  @param handle block返回数据，error为获取失败时的信息，responseObject为成功返回的数据
  */
-+ (void)setAlias:(NSString *__nonnull )name type:(NSString * __nonnull)type response:(nullable void (^)(id __nonnull responseObject,NSError *__nonnull error))handle;
++ (void)setAlias:(NSString * __nonnull )name type:(NSString * __nonnull)type response:(void (^__nonnull)(id __nullable responseObject,NSError * __nullable error))handle;
 
 /** 删除一个设备的别名绑定
  @warning 删除Alias的先决条件是已经成功获取到device_token，否则失败(kUMessageErrorDependsErr)
@@ -176,7 +200,7 @@ typedef void (^UMPlaunchFinishBlock)();
  @param type 平台类型，参见本文件头部的`kUMessageAliasType...`，例如：kUMessageAliasTypeSina
  @param handle block返回数据，error为获取失败时的信息，responseObject为成功返回的数据
  */
-+ (void)removeAlias:(NSString * __nonnull)name type:(NSString * __nonnull)type response:(nullable void (^)(id __nonnull responseObject, NSError *__nonnull error))handle;
++ (void)removeAlias:(NSString * __nonnull)name type:(NSString * __nonnull)type response:(void (^__nonnull)(id __nullable responseObject, NSError * __nullable error))handle;
 
 
 /** 添加一个启动页的开屏消息
@@ -184,11 +208,13 @@ typedef void (^UMPlaunchFinishBlock)();
 +(void)addLaunchMessage;
 
 /** 添加一个插屏消息
+ @warning 需先在触发一次才可以在后台配置中找到该标识
  @param label 当前位置的标识
  */
 +(void)addCardMessageWithLabel:(NSString* __nonnull)label;
 
 /**
+ @warning 需先在触发一次才可以在后台配置中找到该标识
  添加一个自定义插屏消息
 
  @param portraitsize portrait时显示的size
@@ -196,15 +222,16 @@ typedef void (^UMPlaunchFinishBlock)();
  @param button button 可以自定义的button
  @param label 标识
  */
-+(void)addCustomCardMessageWithPortraitSize:(CGSize )portraitsize LandscapeSize:(CGSize )landscapesize CloseBtn:(UIButton *_Nullable)button  Label:(NSString *_Nonnull)label umCustomCloseButtonDisplayMode:(BOOL )displaymode;
++(void)addCustomCardMessageWithPortraitSize:(CGSize )portraitsize LandscapeSize:(CGSize )landscapesize CloseBtn:(UIButton * __nullable )button  Label:(NSString * __nonnull)label umCustomCloseButtonDisplayMode:(BOOL )displaymode;
 
 
 /**
+ @warning 需先在触发一次才可以在后台配置中找到该标识
  增加一个文本插屏消息
 
  @param label 当前位置的标识
  */
-+(void)addPlainTextCardMessageWithTitleFont:(UIFont *_Nullable)titlefont ContentFont:(UIFont *_Nullable)contentfont buttonFont:(UIFont *_Nullable)buttonfont Label:(NSString*_Nonnull)label;;
++(void)addPlainTextCardMessageWithTitleFont:(UIFont * __nullable)titlefont ContentFont:(UIFont * __nullable)contentfont buttonFont:(UIFont * __nullable)buttonfont Label:(NSString * __nonnull)label;;
 
 /**
  设置应用内通知的模式
@@ -214,9 +241,9 @@ typedef void (^UMPlaunchFinishBlock)();
 +(void)openDebugMode:(BOOL)debugmode;
 
 /**
+ @warning 注意此方法使用场景必须有Navigation 
  设置webViewController在.h文件中声明一个叫url的参数，SDK内部会去调用
- 
- @param webViewController webViewController
+ @param webViewClassString webViewController的Class String
  */
-+(void)setWebViewController:(UIViewController *_Nonnull)webViewController;
++(void)setWebViewClassString:(NSString * __nonnull)webViewClassString;
 @end

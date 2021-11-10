@@ -22,7 +22,7 @@
 @property (nonatomic, copy, nullable) NSSet *urls;
 
 - (nullable instancetype)initWithJSONDictionary:(nonnull NSDictionary *)dictionary;
-- (nonnull instancetype)new NS_UNAVAILABLE;
+- (nonnull instancetype) new NS_UNAVAILABLE;
 
 /*
  * Returns count of all filters

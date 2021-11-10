@@ -21,33 +21,9 @@ typedef enum {
 } TCOLogLevel;
 
 /**
- * \brief 手机qq的当前版本
- */
-typedef enum QQVersion
-{
-    kQQUninstall,
-    kQQVersion3_0,
-    kQQVersion4_0,      //支持sso登陆
-    kQQVersion4_2_1,    //ios7兼容
-    kQQVersion4_5,      //4.5版本，wpa会话
-    kQQVersion4_6,      //4.6版本，sso登陆信令通道切换
-    kQQVersion4_7,      //4.7版本 不确定新支持了什么样的属性
-} QQVersion;
-
-
-/**
- * \breif TIM的当前版本
- */
-typedef enum TIMVersion {
-    kTIMUinstall,
-    kTIMVersion1_1,
-}TIMVersion;
-
-/**
  * \breif 授权/分享 方式
  */
 typedef enum TencentAuthShareType {
-    AuthShareType_Unknow,
     AuthShareType_QQ,
     AuthShareType_TIM,
 }TencentAuthShareType;
@@ -81,7 +57,7 @@ typedef enum
  *
  * APIResponse用于封装所有请求的返回结果，包括错误码、错误信息、原始返回数据以及返回数据的json格式字典
  */
-@interface APIResponse : NSObject<NSCoding> {
+@interface APIResponse : NSObject<NSSecureCoding> {
     int      _detailRetCode;
 	int		 _retCode;
 	int		 _seq;
@@ -334,9 +310,6 @@ typedef enum
 /** 发表一条说说到QQ空间(<b>需要申请权限</b>) */
 FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_ADD_TOPIC;
 
-/** 发表一篇日志到QQ空间(<b>需要申请权限</b>) */
-FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_ADD_ONE_BLOG;
-
 /** 创建一个QQ空间相册(<b>需要申请权限</b>) */
 FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_ADD_ALBUM;
 
@@ -345,9 +318,6 @@ FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_UPLOAD_PIC;
 
 /** 获取用户QQ空间相册列表(<b>需要申请权限</b>) */
 FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_LIST_ALBUM;
-
-/** 同步分享到QQ空间、腾讯微博 */
-FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_ADD_SHARE;
 
 /** 验证是否认证空间粉丝 */
 FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_CHECK_PAGE_FANS;
@@ -375,7 +345,6 @@ FOUNDATION_EXTERN NSString *const kOPEN_PERMISSION_GET_SIMPLE_USER_INFO;
 /**
  * \name CGI接口相关参数类型定义
  */
-///@{
 
 /** 必填的字符串类型参数 */
 typedef NSString *TCRequiredStr;

@@ -68,12 +68,17 @@ extern NSString *const  UMSPlatformNameWechatFavorite;
 /**
  支付宝好友
  */
-extern NSString *const  UMSPlatformNameAlipaySession;
+extern NSString *const  UMSPlatformNameAPSession;
 
 /**
  手机QQ
  */
 extern NSString *const  UMSPlatformNameQQ;
+
+/**
+ Tencent Tim
+ */
+extern NSString *const  UMSPlatformNameTim;
 
 /**
  Facebook
@@ -182,6 +187,16 @@ extern NSString *const  UMSPlatformNameVKontakte;
  */
 extern NSString *const  UMSPlatformNameFaceBookMessenger;
 
+/**
+*  WechatWork
+*/
+extern NSString *const  UMSPlatformNameWechatWork;
+
+/**
+*  DouYin
+*/
+extern NSString *const  UMSPlatformNameDouYin;
+
 
 /**
  *  授权，分享，UserProfile等操作的回调
@@ -216,6 +231,15 @@ typedef void (^UMSocialAuthCompletionHandler)(id authResponse,NSError *error);
 typedef void (^UMSocialGetUserInfoCompletionHandler)(id userInfoResponse,NSError *error);
 
 
+/**
+ *  三方平台主动拉起app的回调
+ *
+ *  @param userInfoResponse 表示回调的结果
+ *  @param error  表示回调的错误码
+ */
+typedef void (^UMSocialLaunchFromPlatformCompletionHandler)(id userInfoResponse,NSError *error);
+
+
 /////////////////////////////////////////////////////////////////////////////
 //平台的失败错误码--start
 /////////////////////////////////////////////////////////////////////////////
@@ -224,7 +248,7 @@ typedef void (^UMSocialGetUserInfoCompletionHandler)(id userInfoResponse,NSError
  */
 typedef NS_ENUM(NSInteger, UMSocialPlatformErrorType) {
     UMSocialPlatformErrorType_Unknow            = 2000,            // 未知错误
-    UMSocialPlatformErrorType_NotSupport        = 2001,            // 不支持（url scheme 没配置，或者没有配置-ObjC， 或则SDK版本不支持或则客户端版本不支持）
+    UMSocialPlatformErrorType_NotSupport        = 2001,            // 没有配置-ObjC， 或则SDK版本不支持或则客户端版本不支持
     UMSocialPlatformErrorType_AuthorizeFailed   = 2002,            // 授权失败
     UMSocialPlatformErrorType_ShareFailed       = 2003,            // 分享失败
     UMSocialPlatformErrorType_RequestForUserProfileFailed = 2004,  // 请求用户信息失败
@@ -302,7 +326,7 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
     UMSocialPlatformType_QQ                 = 4,//QQ聊天页面
     UMSocialPlatformType_Qzone              = 5,//qq空间
     UMSocialPlatformType_TencentWb          = 6,//腾讯微博
-    UMSocialPlatformType_AlipaySession      = 7,//支付宝聊天页面
+    UMSocialPlatformType_APSession      = 7,//支付宝聊天页面
     UMSocialPlatformType_YixinSession       = 8,//易信聊天页面
     UMSocialPlatformType_YixinTimeLine      = 9,//易信朋友圈
     UMSocialPlatformType_YixinFavorite      = 10,//易信收藏
@@ -334,6 +358,10 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
     UMSocialPlatformType_DropBox            = 32,//dropbox
     UMSocialPlatformType_VKontakte          = 33,//vkontakte
     UMSocialPlatformType_FaceBookMessenger  = 34,//FaceBookMessenger
+    UMSocialPlatformType_Tim                = 35,// Tencent TIM
+    
+    UMSocialPlatformType_WechatWork         = 36,//企业微信
+    UMSocialPlatformType_DouYin             = 37,//抖音
     
     UMSocialPlatformType_Predefine_end      = 999,
     

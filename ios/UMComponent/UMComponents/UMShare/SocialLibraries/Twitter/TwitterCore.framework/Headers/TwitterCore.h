@@ -20,9 +20,9 @@
 #import <Cocoa/Cocoa.h>
 #endif
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+//#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
 //#error "TwitterCore doesn't support iOS 7.x and lower. Please, change your minimum deployment target to iOS 8.0"
-#endif
+//#endif
 
 #import "TWTRAPIErrorCode.h"
 #import "TWTRAuthConfig.h"

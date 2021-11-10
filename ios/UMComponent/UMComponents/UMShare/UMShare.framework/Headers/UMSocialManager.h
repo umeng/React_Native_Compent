@@ -15,12 +15,6 @@
 +(instancetype)defaultManager;
 
 /**
- 友盟appkey
- */
-@property(nonatomic,strong)NSString* umSocialAppkey;
-@property(nonatomic,strong)NSString* umSocialAppSecret;
-
-/**
  返回当前有效(安装并是可用的)平台列表
  */
 @property(nonatomic,readonly,strong) NSArray * platformTypeArray;
@@ -45,6 +39,16 @@
             appKey:(NSString *)appKey
          appSecret:(NSString *)appSecret
        redirectURL:(NSString *)redirectURL;
+
+/**
+ *  设置三方平台主动拉起app的行为
+ *
+ *  @param platformType 平台类型 @see UMSocialPlatformType
+ *  @param completion   回调
+ *  @note SDK FORM 6.9.7.目前针对微信小程序主动唤醒app的场景
+ */
+-(void)setLauchFromPlatform:(UMSocialPlatformType)platformType
+                 completion:(UMSocialLaunchFromPlatformCompletionHandler)completion;
 
 
 /**
@@ -113,6 +117,18 @@
  *  @note 此函数在6.3版本加入
  */
 -(BOOL)handleOpenURL:(NSURL *)url options:(NSDictionary*)options;
+
+/**
+ *  UniversalLink回调到本app的回调
+ *
+ *  @param userActivity  NSUserActivity的入参
+ *  @param  options       可选的信息，目前传入nil
+ *
+ *  @return 是否处理  YES代表处理成功，NO代表不处理
+ *  @note 6.9.7版本加入
+ */
+-(BOOL)handleUniversalLink:(id)userActivity options:(NSDictionary*)options;
+-(BOOL)handleUniversalLink:(id)userActivity options:(NSDictionary*)options platform:(UMSocialPlatformType)platformType;
 
 
 /**

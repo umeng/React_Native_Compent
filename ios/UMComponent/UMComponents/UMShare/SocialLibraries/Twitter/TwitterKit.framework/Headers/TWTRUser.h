@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface TWTRUser : NSObject <NSCoding, NSCopying, TWTRJSONConvertible>
 
-# pragma mark - Properties
+#pragma mark - Properties
 
 /**
  *  The ID of the Twitter User.

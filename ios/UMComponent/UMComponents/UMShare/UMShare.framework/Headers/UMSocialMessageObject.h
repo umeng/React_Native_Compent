@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface UMSocialMessageObject : NSObject
@@ -84,10 +85,24 @@
 
 @interface UMShareImageObject : UMShareObject
 
-/** 图片内容 （可以是UIImage类对象，也可以是NSdata类对象，也可以是图片链接imageUrl NSString类对象）
+/** 分享单个图片（支持UIImage，NSdata以及图片链接Url NSString类对象集合）
  * @note 图片大小根据各个平台限制而定
  */
 @property (nonatomic, retain) id shareImage;
+
+/** 分享图片数组，支持 UIImage、NSData 类型
+ * @note 仅支持分享到：
+ *      微博平台，最多可分享9张图片
+ *      QZone平台，最多可分享20张图片
+ */
+@property (nonatomic, copy) NSArray *shareImageArray;
+
+/**
+ *    用户可以传入包含PHAsset的array
+ *    @note 目前仅支持抖音(抖音现在强制用photos里面的localIdentifier来做分享)
+ *    @note 增加抖音平台6.9.9(不含6.9.9)以上版本新增字段
+ */
+@property (nonatomic, copy) NSArray *shareAssetsArray;
 
 /**
  * @param title 标题
@@ -164,6 +179,21 @@
  */
 @property (nonatomic, strong) NSString *videoLowBandStreamUrl;
 
+/**
+ 视频数据
+ @note 企业微信使用
+ @note 6.9.9(不含6.9.9)抖音使用
+ */
+@property (nonatomic, strong) NSData *videoData;
+@property (nonatomic, strong) NSString *videoName;
+
+/**
+ *    用户可以传入包含从Photo里面获取的PHAsset的array
+ *    @note 目前仅支持抖音(抖音现在强制用photos里面的localIdentifier来做分享)
+ *    @note 增加抖音平台6.9.9(不含6.9.9)以上版本新增字段
+ */
+@property (nonatomic, copy) NSArray *shareAssetsArray;
+
 
 /**
  * @param title 标题
@@ -172,8 +202,8 @@
  *
  */
 + (UMShareVideoObject *)shareObjectWithTitle:(NSString *)title
-                     descr:(NSString *)descr
-                 thumImage:(id)thumImage;
+                                       descr:(NSString *)descr
+                                   thumImage:(id)thumImage;
 
 @end
 
@@ -192,8 +222,8 @@
  *
  */
 + (UMShareWebpageObject *)shareObjectWithTitle:(NSString *)title
-                     descr:(NSString *)descr
-                 thumImage:(id)thumImage;
+                                         descr:(NSString *)descr
+                                     thumImage:(id)thumImage;
 
 @end
 
@@ -393,11 +423,22 @@
  */
 @property (nonatomic, retain) NSData    *fileData;
 
+/** 文件的名字(不包含后缀)
+ * @note 长度不超过64字节
+ */
+@property (nonatomic, retain) NSString  *fileName;
+
 
 @end
 
 
 #pragma mark - UMMiniProgramObject
+
+typedef NS_ENUM(NSUInteger, UShareWXMiniProgramType){
+    UShareWXMiniProgramTypeRelease = 0,       //**< 正式版  */
+    UShareWXMiniProgramTypeTest = 1,        //**< 开发版  */
+    UShareWXMiniProgramTypePreview = 2,         //**< 体验版  */
+};
 
 /*! @brief 多媒体消息中包含 分享微信小程序的数据对象
  *
@@ -420,6 +461,90 @@
  */
 @property (nonatomic, strong) NSString *path;
 
+/**
+ 小程序新版本的预览图 128k
+ */
+@property (nonatomic, strong) NSData *hdImageData;
+
+/**
+ 分享小程序的版本（正式，开发，体验）
+ 正式版 尾巴正常显示
+ 开发版 尾巴显示“未发布的小程序·开发版”
+ 体验版 尾巴显示“未发布的小程序·体验版”
+ */
+@property (nonatomic, assign) UShareWXMiniProgramType miniProgramType;
+
+/**
+ 是否使用带 shareTicket 的转发
+ */
+@property (nonatomic, assign) BOOL withShareTicket;
+
+@end
+
+/*! @brief 移动应用直接跳转到小程序
+ *
+ * @see UMShareObject
+ */
+@interface UMShareLaunchMiniProgramObject : UMShareObject
+
+/** 小程序username */
+@property (nonatomic, copy) NSString *userName;
+
+/** 小程序页面的路径
+ * @attention 不填默认拉起小程序首页
+ */
+@property (nonatomic, copy, nullable) NSString *path;
+
+/**
+ 分享小程序的版本（正式，开发，体验）
+ */
+@property (nonatomic, assign) UShareWXMiniProgramType miniProgramType;
+
+/** ext信息
+ * @attention json格式
+ */
+@property (nonatomic, copy, nullable) NSString *extMsg;
+
+/** extDic
+ * @attention 字典，可存放图片等比较大的数据
+ */
+@property (nonatomic, copy, nullable) NSDictionary *extDic;
+@end
+
+
+/*! @brief UMShareObject的包装类
+ *
+ * @see 目前用于企业微信的分享
+ */
+@interface UMShareObjectWrapper:NSObject
+/**
+ * name 名字
+ */
+@property (nonatomic, copy) NSString *name;
+/**
+ * date 时间
+ */
+@property (nonatomic, copy) NSDate *date;
+/**
+ * avatarUrl  头像url
+ * avatarData 头像的NSData数据
+ */
+@property (nonatomic, copy, nullable) NSString *avatarUrl;
+@property (nonatomic, copy, nullable) NSData *avatarData;
+/**
+ * avatarUrl  头像url
+ * avatarData 头像的NSData数据
+ */
+@property (nonatomic, retain) UMShareObject *shareObject;
+/**
+ * 其他相关参数
+ */
+@property (nonatomic, strong) NSDictionary *moreInfo;
+@end
+@interface UMShareTextObjectForGroup : UMShareObject
+@property(nonatomic,copy,nullable) NSString* text;
+@end
+@interface UMSocialMessageObjectGroup : UMSocialMessageObject
 @end
 
 

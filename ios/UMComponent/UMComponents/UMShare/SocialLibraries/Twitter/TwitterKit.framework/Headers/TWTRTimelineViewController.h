@@ -10,6 +10,7 @@
 @protocol TWTRTweetViewDelegate;
 @protocol TWTRTimelineDelegate;
 @class TWTRMoPubAdConfiguration;
+@class TWTRTweet;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -66,11 +67,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Initializes a timeline view controller. Does not start loading tweets until
  `viewWillAppear:` is called.
- 
+
  This method must be used to initialize this class. The `init` method is unavailable.
- 
+
  @param dataSource   A timeline data source object that conforms to the `TWTRTimelineDataSource` protocol.
- 
+
  @return A fully initialized `TWTRTimelineViewController` or nil if the data source is missing.
  */
 - (instancetype)initWithDataSource:(nullable id<TWTRTimelineDataSource>)dataSource;
@@ -100,14 +101,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Returns the Tweet at the given index.
- * 
+ *
  * @warning This method will throw an exception if the index is out of range of the count of Tweets.
  */
 - (TWTRTweet *)tweetAtIndex:(NSInteger)index;
 
 /**
  * Returns a copy of the Tweets at the time of calling this method.
- 
+
  * This method returns the copy of the current Tweets. The Tweets may change
  * after this method is called.
  */
@@ -116,4 +117,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-

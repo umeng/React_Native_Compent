@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT NSString * const TWTRMoPubSampleAdUnitID;
+FOUNDATION_EXPORT NSString *const TWTRMoPubSampleAdUnitID;
 
 /**
  *  Bridging class for configuring how to load your MoPub ad unit.

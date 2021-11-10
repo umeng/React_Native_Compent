@@ -12,5 +12,6 @@
 @interface UMSocialWechatHandler : UMSocialHandler
 
 + (instancetype)defaultManager;
+- (void)getReceivedCommandWithCommand:(NSInteger *)command andCode:(NSInteger *)code;
 
 @end

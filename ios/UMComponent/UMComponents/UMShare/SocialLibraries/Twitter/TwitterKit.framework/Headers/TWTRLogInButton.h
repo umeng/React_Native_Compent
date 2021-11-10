@@ -23,12 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) TWTRLogInCompletion logInCompletion;
 
 /**
- *  The login methods to attempt when the button is pressed.
- *  Defaults to TWTRLoginMethodAll. See -[Twitter logInWithMethods:completion:] for more info.
- */
-@property (nonatomic) TWTRLoginMethod loginMethods;
-
-/**
  *  Returns a new log in button which launches Twitter log in when tapped and
  *  calls `completion` when logging in succeeds or fails.
  *

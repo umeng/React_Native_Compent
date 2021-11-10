@@ -8,8 +8,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT NSString * const TWTROAuthEchoRequestURLStringKey;
-FOUNDATION_EXPORT NSString * const TWTROAuthEchoAuthorizationHeaderKey;
+FOUNDATION_EXPORT NSString *const TWTROAuthEchoRequestURLStringKey;
+FOUNDATION_EXPORT NSString *const TWTROAuthEchoAuthorizationHeaderKey;
 
 @protocol TWTRCoreOAuthSigning <NSObject>
 

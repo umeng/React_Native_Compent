@@ -11,28 +11,28 @@
 /**
  This Model object is a generic type of `Cursor` to represent the range of Tweets
  which have already been loaded from the Twitter API. A dataset that supports
- "cursoring" splits of a set of results (or Tweets in our case) in pages. One 
+ "cursoring" splits of a set of results (or Tweets in our case) in pages. One
  page is loaded at a time, and the cursor from the previous request is used to
  calculated which set of Tweets should be requested.
- 
- 
+
+
  ## Positions
  For User, Search, and List Timelines generally corresponds to a real Tweet ID.
- 
+
            newer Tweets
          (not yet loaded)
- 
+
      -- newest/highest Tweet --      maxPosition
- 
+
            loaded Tweets
- 
+
      -- oldest/lowest Tweet --      minPosition
                                     minPosition - 1
-           older Tweets      
+           older Tweets
          (not yet loaded)
- 
+
    More: https://dev.twitter.com/overview/api/cursoring
- 
+
  */
 @interface TWTRTimelineCursor : NSObject
 
