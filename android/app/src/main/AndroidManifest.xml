@@ -1,13 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.umeng.soexample"
     android:versionCode="1"
     android:versionName="1.0">
+
     <queries>
         <package android:name="com.tencent.mm" />
         <package android:name="com.tencent.mobileqq" />
         <package android:name="com.qzone" />
         <package android:name="com.sina.weibo" />
     </queries>
+
+    <uses-sdk tools:overrideLibrary="com.facebook.react" />
 
     <application
         android:name=".MainApplication"
@@ -30,7 +34,6 @@
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <meta-data

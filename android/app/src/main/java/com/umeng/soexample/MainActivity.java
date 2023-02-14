@@ -17,7 +17,7 @@ public class MainActivity extends ReactActivity {
         ShareModule.initSocialSDK(this);
         PushModule.initPushSDK(this);
         MobclickAgent.setSessionContinueMillis(1000);
-        PushAgent.getInstance(this).onAppStart();PushAgent.getInstance(this).onAppStart();
+        PushAgent.getInstance(this).onAppStart();
     }
 
 

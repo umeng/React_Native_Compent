@@ -4,6 +4,8 @@ import android.app.Activity;
 
 import java.util.List;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -20,7 +22,7 @@ import com.umeng.message.MsgConstant;
 import com.umeng.message.PushAgent;
 import com.umeng.message.api.UPushAliasCallback;
 import com.umeng.message.api.UPushTagCallback;
-import com.umeng.message.common.UmengMessageDeviceConfig;
+//import com.umeng.message.common.UmengMessageDeviceConfig;
 import com.umeng.message.common.inter.ITagManager;
 
 public class PushModule extends ReactContextBaseJavaModule {
@@ -165,10 +167,15 @@ public class PushModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void appInfo(final Callback successCallback) {
         String pkgName = context.getPackageName();
-        String info = String.format("DeviceToken:%s\n" + "SdkVersion:%s\nAppVersionCode:%s\nAppVersionName:%s",
-                mPushAgent.getRegistrationId(), MsgConstant.SDK_VERSION,
-                UmengMessageDeviceConfig.getAppVersionCode(context), UmengMessageDeviceConfig.getAppVersionName(context));
-        successCallback.invoke("应用包名:" + pkgName + "\n" + info);
+        try {
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(pkgName, 0);
+            String info = String.format("DeviceToken:%s\n" + "SdkVersion:%s\nAppVersionCode:%s\nAppVersionName:%s",
+                    mPushAgent.getRegistrationId(), MsgConstant.SDK_VERSION,
+                    packageInfo.versionCode, packageInfo.versionName);
+            successCallback.invoke("应用包名:" + pkgName + "\n" + info);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private WritableMap resultToMap(ITagManager.Result result) {
@@ -178,7 +185,6 @@ public class PushModule extends ReactContextBaseJavaModule {
             map.putInt("remain", result.remain);
             map.putString("interval", result.interval + "");
             map.putString("errors", result.errors);
-            map.putString("last_requestTime", result.last_requestTime + "");
             map.putString("jsonString", result.jsonString);
         }
         return map;

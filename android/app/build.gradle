@@ -3,7 +3,7 @@ apply plugin: "com.android.application"
 apply from: "../../node_modules/react-native/react.gradle"
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.umeng.soexample"
@@ -37,23 +37,28 @@ android {
             proguardFiles 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/*'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
+//    noinspection GradleCompatible
     api 'com.android.support:appcompat-v7:28.0.0'
-    api 'com.facebook.react:react-native:+'
+    api 'com.facebook.react:react-native:0.47.2'
     // From node_modules
     //友盟基础库（必须）
-    api 'com.umeng.umsdk:common:9.4.4'
-    api 'com.umeng.umsdk:asms:1.4.1'
+    api 'com.umeng.umsdk:common:9.5.6'
+    api 'com.umeng.umsdk:asms:1.6.3'
 
     //友盟推送库
-    api 'com.umeng.umsdk:push:6.4.4'
-    //如果和支付宝sdk utdid冲突，可以集成支付宝无utdid版本，或者通过以下方式解决
-//    api('com.umeng.umsdk:push:6.4.4') {
-//        exclude group: 'com.umeng.umsdk', module: 'utdid'
-//    }
+    api 'com.umeng.umsdk:push:6.5.7'
 
     //分享，登录
     implementation 'com.umeng.umsdk:share-core:7.1.6'
@@ -68,7 +73,6 @@ dependencies {
     implementation 'com.tencent.tauth:qqopensdk:3.53.0'
     //微信官方依赖库
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.9'
-
 }
 
 task copyDownloadableDepsToLibs(type: Copy) {
