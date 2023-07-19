@@ -9,7 +9,6 @@ import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
@@ -21,8 +20,8 @@ import com.facebook.react.bridge.WritableMap;
 import com.umeng.message.MsgConstant;
 import com.umeng.message.PushAgent;
 import com.umeng.message.api.UPushAliasCallback;
+import com.umeng.message.api.UPushRegisterCallback;
 import com.umeng.message.api.UPushTagCallback;
-//import com.umeng.message.common.UmengMessageDeviceConfig;
 import com.umeng.message.common.inter.ITagManager;
 
 public class PushModule extends ReactContextBaseJavaModule {
@@ -32,10 +31,7 @@ public class PushModule extends ReactContextBaseJavaModule {
     private static final String TAG = PushModule.class.getSimpleName();
     private static Handler mSDKHandler = new Handler(Looper.getMainLooper());
     private ReactApplicationContext context;
-    private boolean isGameInited = false;
-    private static Activity ma;
     private PushAgent mPushAgent;
-    private Handler handler;
 
     public PushModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -44,7 +40,6 @@ public class PushModule extends ReactContextBaseJavaModule {
     }
 
     public static void initPushSDK(Activity activity) {
-        ma = activity;
     }
 
     @Override
@@ -75,7 +70,7 @@ public class PushModule extends ReactContextBaseJavaModule {
         mPushAgent.getTagManager().deleteTags(new UPushTagCallback<ITagManager.Result>() {
             @Override
             public void onMessage(boolean isSuccess, final ITagManager.Result result) {
-                Log.i(TAG, "isSuccess:" + isSuccess);
+                Log.d(TAG, "isSuccess:" + isSuccess);
                 if (isSuccess) {
                     successCallback.invoke(SUCCESS, result.remain);
                 } else {
@@ -116,9 +111,7 @@ public class PushModule extends ReactContextBaseJavaModule {
         mPushAgent.addAlias(alias, aliasType, new UPushAliasCallback() {
             @Override
             public void onMessage(final boolean isSuccess, final String message) {
-                Log.i(TAG, "isSuccess:" + isSuccess + "," + message);
-
-                Log.e("xxxxxx", "isuccess" + isSuccess);
+                Log.d(TAG, "isSuccess:" + isSuccess + "," + message);
                 if (isSuccess) {
                     successCallback.invoke(SUCCESS);
                 } else {
@@ -132,7 +125,6 @@ public class PushModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void addAliasType() {
-        Toast.makeText(ma, "function will come soon", Toast.LENGTH_LONG);
     }
 
     @ReactMethod
@@ -166,13 +158,26 @@ public class PushModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void appInfo(final Callback successCallback) {
-        String pkgName = context.getPackageName();
         try {
-            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(pkgName, 0);
-            String info = String.format("DeviceToken:%s\n" + "SdkVersion:%s\nAppVersionCode:%s\nAppVersionName:%s",
-                    mPushAgent.getRegistrationId(), MsgConstant.SDK_VERSION,
-                    packageInfo.versionCode, packageInfo.versionName);
-            successCallback.invoke("应用包名:" + pkgName + "\n" + info);
+            final String pkgName = context.getPackageName();
+            final PackageInfo packageInfo = context.getPackageManager().getPackageInfo(pkgName, 0);
+            mPushAgent.register(new UPushRegisterCallback() {
+                @Override
+                public void onSuccess(String deviceToken) {
+                    String info = String.format("DeviceToken:%s\n" + "SdkVersion:%s\nAppVersionCode:%s\nAppVersionName:%s",
+                            deviceToken, MsgConstant.SDK_VERSION,
+                            packageInfo.versionCode, packageInfo.versionName);
+                    successCallback.invoke("应用包名:" + pkgName + "\n" + info);
+                }
+
+                @Override
+                public void onFailure(String code, String msg) {
+                    String info = String.format("DeviceToken:%s\n" + "SdkVersion:%s\nAppVersionCode:%s\nAppVersionName:%s",
+                            mPushAgent.getRegistrationId(), MsgConstant.SDK_VERSION,
+                            packageInfo.versionCode, packageInfo.versionName);
+                    successCallback.invoke("应用包名:" + pkgName + "\n" + info + "\n" + "code:" + code + "msg:" + msg);
+                }
+            });
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -197,7 +202,7 @@ public class PushModule extends ReactContextBaseJavaModule {
                 list.pushString(key);
             }
         }
-        Log.e("xxxxxx", "list=" + list);
+        Log.d(TAG, "list=" + list);
         return list;
     }
 }

@@ -54,11 +54,10 @@ dependencies {
     api 'com.facebook.react:react-native:0.47.2'
     // From node_modules
     //友盟基础库（必须）
-    api 'com.umeng.umsdk:common:9.5.6'
-    api 'com.umeng.umsdk:asms:1.6.3'
-
+    api 'com.umeng.umsdk:common:9.6.3'
+    api 'com.umeng.umsdk:asms:1.8.0'
     //友盟推送库
-    api 'com.umeng.umsdk:push:6.5.7'
+    api 'com.umeng.umsdk:push:6.6.0'
 
     //分享，登录
     implementation 'com.umeng.umsdk:share-core:7.1.6'
