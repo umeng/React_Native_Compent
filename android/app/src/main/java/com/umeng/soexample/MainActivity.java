@@ -2,6 +2,7 @@ package com.umeng.soexample;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
@@ -24,13 +25,14 @@ public class MainActivity extends ReactActivity {
     @Override
     public void onResume() {
         super.onResume();
-        android.util.Log.e("xxxxxx","onResume=");
+        android.util.Log.e("xxxxxx", "onResume=");
         MobclickAgent.onResume(this);
     }
+
     @Override
     protected void onPause() {
         super.onPause();
-        android.util.Log.e("xxxxxx","onPause=");
+        android.util.Log.e("xxxxxx", "onPause=");
 
         MobclickAgent.onPause(this);
     }
@@ -50,6 +52,7 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "UMComponent";
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

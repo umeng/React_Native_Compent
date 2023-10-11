@@ -28,10 +28,10 @@ public class PushModule extends ReactContextBaseJavaModule {
     private final int SUCCESS = 200;
     private final int ERROR = 0;
     private final int CANCEL = -1;
-    private static final String TAG = PushModule.class.getSimpleName();
-    private static Handler mSDKHandler = new Handler(Looper.getMainLooper());
-    private ReactApplicationContext context;
-    private PushAgent mPushAgent;
+    private static final String TAG = "PushModule";
+    private static final Handler mSDKHandler = new Handler(Looper.getMainLooper());
+    private final ReactApplicationContext context;
+    private final PushAgent mPushAgent;
 
     public PushModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -48,8 +48,31 @@ public class PushModule extends ReactContextBaseJavaModule {
     }
 
     private static void runOnMainThread(Runnable runnable) {
-        mSDKHandler.postDelayed(runnable, 0);
+        mSDKHandler.post(runnable);
     }
+
+    @ReactMethod
+    public void register(final Callback callback) {
+        mPushAgent.setDisplayNotificationNumber(0);
+        mPushAgent.register(new UPushRegisterCallback() {
+            @Override
+            public void onSuccess(String deviceToken) {
+                callback.invoke(SUCCESS, deviceToken);
+            }
+
+            @Override
+            public void onFailure(String code, String msg) {
+                callback.invoke(ERROR, code, msg);
+            }
+        });
+    }
+
+    @ReactMethod
+    public void getDeviceToken(Callback callback) {
+        String deviceToken = mPushAgent.getRegistrationId();
+        callback.invoke(deviceToken);
+    }
+
 
     @ReactMethod
     public void addTag(String tag, final Callback successCallback) {
@@ -70,7 +93,6 @@ public class PushModule extends ReactContextBaseJavaModule {
         mPushAgent.getTagManager().deleteTags(new UPushTagCallback<ITagManager.Result>() {
             @Override
             public void onMessage(boolean isSuccess, final ITagManager.Result result) {
-                Log.d(TAG, "isSuccess:" + isSuccess);
                 if (isSuccess) {
                     successCallback.invoke(SUCCESS, result.remain);
                 } else {
@@ -90,10 +112,9 @@ public class PushModule extends ReactContextBaseJavaModule {
                     public void run() {
                         if (isSuccess) {
                             if (result != null) {
-
                                 successCallback.invoke(SUCCESS, resultToList(result));
                             } else {
-                                successCallback.invoke(ERROR, resultToList(result));
+                                successCallback.invoke(ERROR, resultToList(null));
                             }
                         } else {
                             successCallback.invoke(ERROR, resultToList(result));
@@ -121,10 +142,6 @@ public class PushModule extends ReactContextBaseJavaModule {
 
             }
         });
-    }
-
-    @ReactMethod
-    public void addAliasType() {
     }
 
     @ReactMethod
