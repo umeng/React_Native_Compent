@@ -1,3 +1,15 @@
+# Umeng+ React Native Component
+
+友盟+ React Native官方集成示例，覆盖U-App、U-Push、U-Share以及Android/iOS原生桥接。
+
+> 为保持历史链接、Clone地址和开发流程稳定，本仓库继续保留历史名称 `React_Native_Compent`；对外文案统一使用正确拼写 `React Native Component`。
+
+## Quick Links｜快速入口
+
+- [SDK开发者中心](https://devs.umeng.com/)
+- [提交接入问题](https://github.com/umeng/React_Native_Compent/issues)
+
+---
 # 工程配置
 
 * 注意：集成基础组件库 2.0.0以下及统计SDK 8.0.0以下版本的用户，请参考release1.0.0分支中样例代码集成。
