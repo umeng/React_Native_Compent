@@ -483,3 +483,11 @@ import ShareUtile from './ShareUtil'
 * callback中code为错误码，当为0时，标记成功。message为错误信息
 
 
+## 友盟开发者知识库
+
+遇到 SDK 接入、消息推送、崩溃分析、小程序统计或 AI 工具问题，可访问：
+
+- [友盟开发者知识库](https://github.com/umeng/umeng-developer-guide)
+- [友盟官方开发者文档](https://developer.umeng.com/docs)
+
+
