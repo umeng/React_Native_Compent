@@ -1,10 +1,49 @@
-# OSX
-#
-.DS_Store
+# =========================
+# IDE & Editors
+# =========================
+.idea/
+.vscode/
+*.iml
 
-# Xcode
-#
-build/
+# =========================
+# Node.js / JavaScript
+# =========================
+node_modules/
+npm-debug.log
+yarn-error.log
+lib/
+*.tgz
+
+# =========================
+# Android Build
+# =========================
+.gradle/
+android/build/
+android/app/build/
+example/android/build/
+example/android/app/build/
+example/android/.gradle/
+example/android/app/.cxx/
+local.properties
+
+# =========================
+# Android Signing
+# =========================
+*.keystore
+!example/android/app/debug.keystore
+*.keystore.properties
+
+# =========================
+# iOS
+# =========================
+Pods/
+DerivedData/
+*.xcworkspace
+xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+example/ios/build/
+example/ios/.xcode.env.local
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -13,41 +52,49 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
 *.xccheckout
 *.moved-aside
-DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
 
-# Android/IntelliJ
-#
-build/
-.idea
-.gradle
-local.properties
-*.iml
+# =========================
+# JS Bundle (build artifacts)
+# =========================
+*.bundle
+*.jsbundle
+*.jsbundle.meta
+*.bundle.meta
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
+# =========================
+# 验证截图（临时文件）
+# =========================
+screenshot_*.png
 
+# =========================
+# System & Temp Files
+# =========================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# =========================
+# Environment & Secrets
+# =========================
+.env
+.env.*
+
+# =========================
 # BUCK
+# =========================
 buck-out/
 \.buckd/
-*.keystore
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
-
+# =========================
+# Fastlane
+# =========================
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+.qoder

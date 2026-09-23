@@ -1,0 +1,28 @@
+{
+  "name": "umeng-react-native-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.21.0",
+    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/native": "^6.1.18",
+    "react": "18.2.0",
+    "react-native": "0.73.11",
+    "react-native-safe-area-context": "~4.8.2",
+    "react-native-screens": "~3.29.0",
+    "umeng-react-native": "file:../"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-export-namespace-from": "^7.24.7",
+    "@react-native-community/cli": "^12.3.6",
+    "@react-native/babel-preset": "^0.73.21",
+    "@react-native/metro-config": "^0.73.5",
+    "@react-native/typescript-config": "^0.73.1",
+    "typescript": "^5.4.5"
+  }
+}
