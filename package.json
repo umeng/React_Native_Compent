@@ -1,23 +1,100 @@
 {
-	"name": "UMComponent",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
-	},
-	"dependencies": {
-		"react": "16.0.0-alpha.12",
-		"react-native": "0.47.2",
-		"react-navigation": "^1.0.0-beta.11"
-	},
-	"devDependencies": {
-		"babel-jest": "20.0.3",
-		"babel-preset-react-native": "2.0.1",
-		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.12"
-	},
-	"jest": {
-		"preset": "react-native"
-	}
+  "name": "umeng-react-native",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Umeng+ React Native Bridge - Analytics, Push, Share, APM",
+  "main": "lib/module/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "source": "src/index.ts",
+  "react-native": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/typescript/src/index.d.ts",
+      "default": "./lib/module/index.js"
+    },
+    "./analytics": {
+      "types": "./lib/typescript/src/analytics/index.d.ts",
+      "default": "./lib/module/analytics/index.js"
+    },
+    "./push": {
+      "types": "./lib/typescript/src/push/index.d.ts",
+      "default": "./lib/module/push/index.js"
+    },
+    "./share": {
+      "types": "./lib/typescript/src/share/index.d.ts",
+      "default": "./lib/module/share/index.js"
+    },
+    "./apm": {
+      "types": "./lib/typescript/src/apm/index.d.ts",
+      "default": "./lib/module/apm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "lib",
+    "android/src",
+    "android/build.gradle",
+    "ios/*.h",
+    "ios/*.m",
+    "umeng-react-native.podspec"
+  ],
+  "scripts": {
+    "build": "bob build",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "clean": "del-cli lib",
+    "prepare": "bob build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umeng/React_Native_Compent.git"
+  },
+  "keywords": [
+    "react-native",
+    "umeng",
+    "analytics",
+    "push",
+    "share",
+    "apm"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">= 18.0.0",
+    "react-native": ">= 0.73.0"
+  },
+  "devDependencies": {
+    "@react-native/babel-preset": "^0.73.21",
+    "@react-native/eslint-config": "^0.73.2",
+    "@types/react": "^18.2.79",
+    "del-cli": "^5.1.0",
+    "eslint": "^8.57.1",
+    "prettier": "^3.3.3",
+    "react": "18.2.0",
+    "react-native": "0.73.11",
+    "react-native-builder-bob": "^0.30.2",
+    "typescript": "^5.4.5"
+  },
+  "workspaces": {
+    "packages": [
+      "example"
+    ],
+    "nohoist": [
+      "**"
+    ]
+  },
+  "codegenConfig": {
+    "name": "UmengReactNativeSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "module",
+      "typescript"
+    ]
+  }
 }

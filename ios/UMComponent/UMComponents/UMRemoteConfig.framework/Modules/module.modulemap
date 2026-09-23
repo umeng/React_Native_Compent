@@ -1,6 +1,0 @@
-framework module UMRemoteConfig {
-  umbrella header "UMRemoteConfig.h"
-
-  export *
-  module * { export * }
-}

@@ -1,0 +1,236 @@
+apply plugin: "com.android.application"
+apply plugin: "com.facebook.react"
+
+/**
+ * This is the configuration block to customize your React Native Android app.
+ * By default you don't need to apply any configuration, just uncomment the lines you need.
+ */
+react {
+    /* Folders */
+    //   The root of your project, i.e. where "package.json" lives. Default is '..'
+    // root = file("../")
+    //   The folder where the react-native NPM package is. Default is ../node_modules/react-native
+    // reactNativeDir = file("../node_modules/react-native")
+    //   The folder where the react-native Codegen package is. Default is ../node_modules/@react-native/codegen
+    // codegenDir = file("../node_modules/@react-native/codegen")
+    //   The cli.js file which is the React Native CLI entrypoint. Default is ../node_modules/react-native/cli.js
+    // cliFile = file("../node_modules/react-native/cli.js")
+
+    /* Bundling */
+    //   A list containing the node command and its flags. Default is just 'node'.
+    // nodeExecutableAndArgs = ["node"]
+    //
+    //   The command to run when bundling. By default is 'bundle'
+    // bundleCommand = "ram-bundle"
+    //
+    //   The name of the generated asset file containing your JS bundle
+    // bundleAssetName = "MyApplication.android.bundle"
+    //
+    //   The entry file for bundle generation. Default is 'index.android.js' or 'index.js'
+    // entryFile = file("../js/MyApplication.android.js")
+
+    /* Hermes Commands */
+    //   The hermes compiler command to run. By default it is 'hermesc'
+    // hermesCommand = "$rootDir/my-custom-hermesc/bin/hermesc"
+    //
+    //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
+    // hermesFlags = ["-O", "-output-source-map"]
+}
+
+/**
+ * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
+ */
+def enableProguardInReleaseBuilds = false
+
+/**
+ * The preferred build flavor of JavaScriptCore (JSC)
+ */
+def jscFlavor = 'org.webkit:android-jsc:+'
+
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
+
+    namespace "com.umeng.soexample"
+    defaultConfig {
+        // applicationId 与友盟官方多功能 Demo（MultiFunctionAndroidMavenDemo）保持一致，
+        // 下方 manifestPlaceholders 的 AppKey / Push Secret 亦为该 Demo 在服务端注册的凭证；
+        // 包名与凭证必须成对匹配，否则推送注册报 er_param_app_package，
+        // 厂商通道也无法命中服务端配置。
+        // Java 包名（namespace）已统一为 com.umeng.soexample。
+        applicationId "com.umeng.soexample"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        // 只打包 ARM ABI，与 gradle.properties 的 reactNativeArchitectures 保持一致。
+        // 三方 SDK（fresco / 友盟 / 微博等）会额外带入 x86、x86_64 的 .so：实测产物里
+        // lib/x86 65 个、lib/x86_64 61 个、lib/armeabi 2 个，其中 x86_64 的 61 个 ELF
+        // LOAD 段是 4 KB 对齐，会被 16 KB 兼容性检查逐条列出。真机为 arm64-v8a，这些
+        // 库永远不会被加载，过滤掉可同时减小 APK 体积并减少被点名的库数量。
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+        // qqappid：share-qq 库的 AndroidManifest.xml 中声明了 scheme="tencent${qqappid}"，
+        // 必须在此提供占位符值，否则 manifest 合并会失败；
+        // 其余占位符为友盟 AppKey / Push Secret 与厂商通道参数
+        manifestPlaceholders = [
+                qqappid: "101830139",
+
+                UMENG_APPKEY: '59892f08310c9307b60023d0',
+                UMENG_MESSAGE_SECRET: '669c30a9584623e70e8cd01b0381dcb4',
+                UMENG_CHANNEL: 'Umeng',
+
+                HUAWEI_APP_ID: '100429257',
+
+                HONOR_APP_ID: '220671410',
+
+                XIAOMI_APP_ID: '2882303761517875511',
+                XIAOMI_APP_KEY: '5961787531511',
+
+                OPPO_APP_KEY: 'c39dd561327e484bb1228b5459063022',
+                OPPO_APP_SECRET: 'a915f817673a45f08065a2236dfe85a7',
+
+                VIVO_APP_ID: '17979',
+                VIVO_APP_KEY: '1b5ce9f6-8304-4afc-b739-0e07fb22775e',
+
+                MEIZU_APP_ID: '116090',
+                MEIZU_APP_KEY: '9413f9968d654df092afecf4d3782391',
+        ]
+    }
+    signingConfigs {
+        debug {
+            // 与官方 Demo 一致，直接用 AGP 默认的 debug 签名（仓库内已随工程提供 debug.keystore）。
+            // push.jks 为厂商通道验证期间的备用签名，保留但不再引用。
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    // ===================== Android 16 / 16 KB page size 兼容处置 =====================
+    // 实测事实（llvm-readelf -l 解析 ELF 程序头）：
+    //   · RN 0.73.11 预编译的 57 个 arm64-v8a .so（libhermes.so、libreactnativejni.so、
+    //     libfolly_runtime.so 等）LOAD 段 p_align 全为 0x1000；
+    //   · 这些段的 (p_vaddr - p_offset) 全部不满足 16 KB 同余，因此不能把 p_align 直接
+    //     patch 成 0x4000——内核/Android linker 要求 vaddr ≡ offset (mod p_align)，改了必崩；
+    //   · 本仓库桥接层是纯 Java + ObjC，无 CMakeLists.txt / Android.mk，没有可加
+    //     -Wl,-z,max-page-size=16384 的自有 native 产物；
+    //   · 对照实测 RN 0.77.3 的 libhermes.so p_align = 0x4000，故彻底消除告警的唯一途径是
+    //     升级 React Native 到 >= 0.76.3（属跨版本升级，需单独立项，不在此处擅自改动）。
+    //
+    // 因此这里采用可控范围内的最优处置：让 .so 以压缩方式存入 APK，安装时由 PackageManager
+    // 解压到 /data/app/.../lib/<abi>/ 后再 dlopen，从而绕开「APK 内 .so 需 16 KB zip 对齐」
+    // 这条要求（需与 AndroidManifest.xml 的 android:extractNativeLibs="true" 同时生效）。
+    // 校验结果（最终产物）：APK 内 134 个 ELF 条目全部为 DEFLATED，
+    //           zipalign -c -P 16 -v 4 app-debug.apk → Verification successful，1081 OK / 0 BAD，
+    //           adb install -r 在 Android 16（SM-S9280，PAGE_SIZE=4096）真机上 Success 且启动无崩溃。
+    //
+    // 已排除的方案（均有实测依据，勿再重复尝试）：
+    //   × zipalign -P 16 后处理任务：zipalign 只调整 zip 条目在归档内的偏移，改不了 ELF 程序头
+    //     的 p_align；且当前产物无一个 STORED 的 .so，该任务纯属空转，随后的 apksigner 重签
+    //     反而有破坏签名的风险。buildToolsVersion 34.0.0 的 zipalign 也不支持 -P（需 35.0.0+）。
+    //   × AGP 8.3+ 内置 16 KB 打包开关：本工程 AGP 由 @react-native/gradle-plugin 锁定为 8.1.1。
+    //   × android.bundle.enableUncompressedNativeLibs：已在 AGP 8.1 移除，设置会直接报错。
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+        // 微博 SDK 把反作弊库以 jar 条目形式（路径为 assets/libwbsafeedit*）打进来，
+        // 走的是 mergeJavaRes 而非 mergeAssets，所以 abiFilters 与 androidResources.ignoreAssetsPattern
+        // 都管不到（两者均已实测无效），只能用 packaging.resources.excludes。
+        // 实测：assets/libwbsafeedit_64（arm64）LOAD 段已是 0x10000（64 KB）对齐，保留；
+        //       assets/libwbsafeedit_x86_64 为 0x1000 且不满足 16 KB 同余，会被检查单独点名；
+        //       assets/libwbsafeedit 与 _x86 是 32 位 ELF，16 KB 检查不涉及，但本工程已
+        //       不出 x86 ABI，x86 变体属死重，一并剔除。
+        resources {
+            excludes += ['assets/libwbsafeedit_x86', 'assets/libwbsafeedit_x86_64']
+        }
+    }
+}
+
+dependencies {
+    // The version of react-native is set by the React Native Gradle Plugin
+    implementation("com.facebook.react:react-android")
+
+    // QQ 开放平台本地 SDK（友盟官方 Demo 同款 jar，share-qq 依赖其中的 com.tencent.connect 等类）
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    if (hermesEnabled.toBoolean()) {
+        implementation("com.facebook.react:hermes-android")
+    } else {
+        implementation jscFlavor
+    }
+
+    // ===== 友盟分享子模块（按平台拆分引入） =====
+
+    // 友盟核心 SDK（MainApplication 中直接引用 UMConfigure / PlatformConfig / PushAgent / UMCrash，
+    // 需在 app 模块显式声明，否则会报 "找不到符号"）
+    implementation 'com.umeng.umsdk:common:+'
+    implementation 'com.umeng.umsdk:asms:+'
+    implementation 'com.umeng.umsdk:push:+'
+    implementation 'com.umeng.umsdk:share-core:+'
+    implementation 'com.umeng.umsdk:apm:+'
+
+    // ===== 厂商推送通道（与 umeng_push_sdk-2.4.0 官方 example 一致） =====
+
+    // 华为推送
+    implementation 'com.umeng.umsdk:huawei-umengaccs:+'
+    implementation 'com.huawei.hms:push:6.13.0.300'
+
+    // 小米推送
+    implementation 'com.umeng.umsdk:xiaomi-umengaccs:+'
+    implementation 'com.umeng.umsdk:xiaomi-push:+'
+
+    // vivo 推送
+    implementation 'com.umeng.umsdk:vivo-umengaccs:+'
+    implementation 'com.umeng.umsdk:vivo-push:+'
+
+    // OPPO 推送
+    implementation 'com.umeng.umsdk:oppo-umengaccs:+'
+    implementation 'com.umeng.umsdk:oppo-push:+'
+
+    // 魅族推送
+    implementation 'com.umeng.umsdk:meizu-umengaccs:+'
+    implementation 'com.umeng.umsdk:meizu-push:+'
+
+    // 荣耀推送
+    implementation 'com.umeng.umsdk:honor-umengaccs:+'
+    implementation 'com.umeng.umsdk:honor-push:+'
+
+    // QQ 分享
+    implementation 'com.umeng.umsdk:share-qq:+'
+
+    // 微信分享
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.24'
+    implementation 'com.umeng.umsdk:share-wx:+'
+
+    // 新浪微博
+    implementation('io.github.sinaweibosdk:core:13.10.1') {
+        exclude module: 'unspecified'
+    }
+    implementation 'com.umeng.umsdk:share-sina:+'
+
+    // 钉钉
+    implementation 'com.alibaba.android:ddsharesdk:1.2.2'
+    implementation 'com.umeng.umsdk:share-dingding:+'
+}
+
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
