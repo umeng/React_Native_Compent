@@ -1,0 +1,156 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Android 11+ 包可见性声明：用于检测分享目标 App 是否安装 -->
+    <queries>
+        <package android:name="com.tencent.mm" />
+        <package android:name="com.tencent.mobileqq" />
+        <package android:name="com.tencent.wework" />
+        <package android:name="com.qzone" />
+        <package android:name="com.sina.weibo" />
+        <package android:name="com.alibaba.android.rimet" />
+        <package android:name="com.eg.android.AlipayGphone" />
+        <package android:name="com.douban.frodo" />
+        <package android:name="com.ss.android.ugc.aweme" />
+    </queries>
+
+    <application
+        android:name="com.umeng.soexample.MainApplication"
+        android:allowBackup="false"
+        android:extractNativeLibs="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ===== 友盟分享回调 Activity / Provider ===== -->
+
+        <!-- 微信回调 Activity（路径必须为 ${applicationId}.wxapi.WXEntryActivity，
+             applicationId 已改为 com.umeng.soexample，故用完整类名声明） -->
+        <activity
+            android:name="com.umeng.soexample.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 钉钉回调 Activity -->
+        <activity
+            android:name="com.umeng.soexample.ddshare.DDShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- QQ 授权回调 Activity -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101830139" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:exported" />
+
+        <!-- FileProvider：用于 Android 7.0+ 文件 URI 共享 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 微博 SDK 兼容旧版 HTTP 库 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.samsung.android.game.gamebooster.NOT_A_GAME"
+            android:value="true" />
+
+        <!-- ===== 友盟推送配置（取值来自 build.gradle 的 manifestPlaceholders，
+             与 umeng_push_sdk-2.4.0 官方 example 一致） ===== -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY}" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="${UMENG_MESSAGE_SECRET}" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL}" />
+
+        <!-- ===== 厂商推送通道 ===== -->
+
+        <!-- 小米 -->
+        <meta-data
+            android:name="org.android.agoo.xiaomi.app_id"
+            android:value="appid=${XIAOMI_APP_ID}" />
+        <meta-data
+            android:name="org.android.agoo.xiaomi.app_key"
+            android:value="appkey=${XIAOMI_APP_KEY}" />
+
+        <!-- 华为 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=${HUAWEI_APP_ID}" />
+
+        <!-- 荣耀 -->
+        <meta-data
+            android:name="com.hihonor.push.app_id"
+            android:value="${HONOR_APP_ID}" />
+
+        <!-- OPPO -->
+        <meta-data
+            android:name="org.android.agoo.oppo.app_key"
+            android:value="${OPPO_APP_KEY}" />
+        <meta-data
+            android:name="org.android.agoo.oppo.app_secret"
+            android:value="${OPPO_APP_SECRET}" />
+
+        <!-- VIVO -->
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="${VIVO_APP_KEY}" />
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value="${VIVO_APP_ID}" />
+
+        <!-- 魅族 -->
+        <meta-data
+            android:name="org.android.agoo.meizu.app_id"
+            android:value="appid=${MEIZU_APP_ID}" />
+        <meta-data
+            android:name="org.android.agoo.meizu.app_key"
+            android:value="appkey=${MEIZU_APP_KEY}" />
+    </application>
+</manifest>

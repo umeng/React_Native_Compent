@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 允许 debug 构建明文连接 Metro (localhost:8081)；release 不含此 overlay -->
+    <application android:usesCleartextTraffic="true" />
+</manifest>
